@@ -17,7 +17,7 @@ const Home = () => {
                         Understanding how the brain shapes identity, creativity, and human potential.
                     </p>
                     <div className="hero-cta">
-                        <Button href="https://elizabethmateer.substack.com/subscribe?next=https%3A%2F%2Fsubstack.com%2F%40elizabethmateer&utm_source=profile-page&utm_medium=web&utm_campaign=substack_profile&just_signed_up=true" target="_blank" variant="primary" className="btn-large">Subscribe to the Letter</Button>
+                        <Button href="https://elizabethmateer.substack.com/?utm_campaign=pub&utm_medium=web" target="_blank" variant="primary" className="btn-large">Subscribe to the Letter</Button>
                         <p className="hero-cta-subtext">Monthly reflections on identity, creativity, and the architecture of becoming.</p>
                     </div>
                 </div>
