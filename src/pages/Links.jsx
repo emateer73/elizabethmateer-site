@@ -26,7 +26,7 @@ const Links = () => {
 
                 <div className="links-section writing-section">
                     <h3 className="links-section-label">Essays</h3>
-                    <a href="https://substack.com/@elizabethmateer" target="_blank" rel="noopener noreferrer" className="btn-outline">
+                    <a href="https://elizabethmateer.substack.com/subscribe?next=https%3A%2F%2Fsubstack.com%2F%40elizabethmateer&utm_source=profile-page&utm_medium=web&utm_campaign=substack_profile&just_signed_up=true" target="_blank" rel="noopener noreferrer" className="btn-outline">
                         Subscribe to Monthly Essays
                     </a>
                 </div>

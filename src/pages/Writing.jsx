@@ -61,8 +61,8 @@ const Writing = () => {
                     )}
 
                     <div className="button-group">
-                        <Button href="https://substack.com" target="_blank" variant="outline">Read on Substack <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        <Button href="https://substack.com" target="_blank" variant="primary">Subscribe</Button>
+                        <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="outline">Read on Substack <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                        <Button href="https://elizabethmateer.substack.com/subscribe?next=https%3A%2F%2Fsubstack.com%2F%40elizabethmateer&utm_source=profile-page&utm_medium=web&utm_campaign=substack_profile&just_signed_up=true" target="_blank" variant="primary">Subscribe</Button>
                     </div>
                 </div>
 
