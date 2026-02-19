@@ -68,6 +68,7 @@ const Writing = () => {
 
                 <hr className="divider" />
 
+                {/*
                 <div className="writing-section">
                     <div className="writing-header">
                         <h2 className="section-heading">Psychology Today</h2>
@@ -96,6 +97,7 @@ const Writing = () => {
                         <Button href="https://www.psychologytoday.com/" target="_blank" variant="outline">Read Latest Posts <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
                     </div>
                 </div>
+*/}
 
                 <hr className="divider" />
 

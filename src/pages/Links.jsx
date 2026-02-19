@@ -15,11 +15,11 @@ const Links = () => {
                 <div className="links-section connect-section">
                     <h3 className="links-section-label">Connect</h3>
                     <div className="social-links-group">
-                        <a href="https://www.instagram.com/elizabeth_mateer" target="_blank" rel="noopener noreferrer" className="link-social">
-                            Instagram
-                        </a>
                         <a href="https://www.tiktok.com/@beeblejuice" target="_blank" rel="noopener noreferrer" className="link-social">
                             TikTok
+                        </a>
+                        <a href="https://www.instagram.com/elizabeth_mateer" target="_blank" rel="noopener noreferrer" className="link-social">
+                            Instagram
                         </a>
                     </div>
                 </div>
