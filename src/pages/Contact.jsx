@@ -12,9 +12,9 @@ const Contact = () => {
             <div className="contact-page">
                 <div className="container">
                     <h1 className="page-title text-center">Thank You</h1>
-                    <div className="contact-wrapper" style={{ justifyContent: 'center' }}>
-                        <div className="contact-info" style={{ textAlign: 'center', width: '100%', maxWidth: '600px' }}>
-                            <p className="contact-intro">
+                    <div className="contact-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '40vh' }}>
+                        <div className="contact-info" style={{ textAlign: 'center', width: '100%', maxWidth: '600px', border: 'none', padding: 0 }}>
+                            <p className="contact-intro" style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
                                 Your message has been sent successfully. I will be in touch shortly.
                             </p>
                             <Button to="/" variant="primary">Return Home</Button>

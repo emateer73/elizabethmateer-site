@@ -5,7 +5,7 @@ import Button from '../components/Button';
 
 const ConsultingInquiry = () => {
     // REPLACE "CONSULTING_FORM_ID" WITH YOUR ACTUAL FORMSPREE FORM ID
-    const [state, handleSubmit] = useForm("CONSULTING_FORM_ID");
+    const [state, handleSubmit] = useForm("mnjbzeoy");
 
     if (state.succeeded) {
         return (
