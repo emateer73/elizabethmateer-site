@@ -1,0 +1,109 @@
+.speaking-page {
+    padding: var(--spacing-2xl) 0;
+}
+
+.speaking-intro {
+    max-width: 700px;
+    margin: 0 auto var(--spacing-2xl);
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+}
+
+.talks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.talk-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.talk-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.talk-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-heading);
+}
+
+.talk-card p {
+    font-family: var(--font-body);
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+}
+
+.bg-light-panel {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    border-radius: 8px;
+    margin: var(--spacing-2xl) 0;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    text-align: center;
+}
+
+.audience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.audience-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--color-accent-terracotta);
+}
+
+.audience-item span {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+}
+
+.speaking-cta {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.speaking-cta h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.speaking-topics-simple-list {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.speaking-topics-simple-list li {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    line-height: 1.4;
+}
+
+.speaking-topics-simple-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}

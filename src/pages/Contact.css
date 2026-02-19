@@ -1,0 +1,105 @@
+.contact-page {
+    padding: var(--spacing-2xl) 0;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-2xl);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    border-right: 1px solid var(--color-border);
+    padding-right: var(--spacing-xl);
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-secondary);
+}
+
+.email-label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.email-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.email-link:hover {
+    border-bottom-color: var(--color-text-heading);
+}
+
+.clinical-note {
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-md);
+    background-color: #FEF3C7;
+    /* Light yellow alert */
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #92400E;
+}
+
+.clinical-note p {
+    margin-bottom: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-text-heading);
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .contact-info {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+        padding-right: 0;
+        padding-bottom: var(--spacing-xl);
+    }
+}

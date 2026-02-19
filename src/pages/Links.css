@@ -1,0 +1,158 @@
+.links-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-2xl) var(--spacing-md);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+}
+
+.links-container {
+    width: 100%;
+    max-width: 360px;
+    /* Narrower for focus */
+    text-align: center;
+}
+
+/* Header */
+.links-header {
+    margin-bottom: 5rem;
+    /* Generous spacing */
+}
+
+.links-name {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--color-text-heading);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: -0.02em;
+}
+
+.links-title {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.links-bio {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 280px;
+    margin: 0 auto;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Sections */
+.links-section {
+    margin-bottom: 4rem;
+}
+
+.links-section-label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+/* Social Links - Connect Section */
+.social-links-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.link-social {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--color-text-heading);
+    transition: all 0.2s ease;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    align-self: center;
+}
+
+.link-social:hover {
+    opacity: 0.7;
+    border-bottom-color: var(--color-border);
+}
+
+/* Outline Button (Essays) */
+.btn-outline {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: transparent;
+    color: var(--color-text-heading);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid var(--color-text-heading);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-text-heading);
+    color: #fff;
+}
+
+/* Text Link (Website) */
+.btn-text-link {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-heading);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-text-link:hover {
+    border-bottom-color: var(--color-text-heading);
+}
+
+.inline-arrow {
+    margin-left: 6px;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+}
+
+.btn-text-link:hover .inline-arrow {
+    transform: translate(2px, -2px);
+    opacity: 1;
+}
+
+
+/* Professional Link */
+.link-professional {
+    display: inline-block;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    padding-bottom: 2px;
+}
+
+.link-professional:hover {
+    color: var(--color-text-heading);
+    border-color: var(--color-border);
+}

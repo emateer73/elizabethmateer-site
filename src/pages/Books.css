@@ -1,0 +1,106 @@
+.books-page {
+    padding: var(--spacing-2xl) 0;
+}
+
+.books-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+    max-width: 900px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
+.book-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.book-cover-placeholder {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    background-color: var(--color-bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    font-family: var(--font-heading);
+    text-align: center;
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.cover-text {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.book-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-heading);
+}
+
+.book-year {
+    font-family: var(--font-body);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.book-desc {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    max-width: 500px;
+}
+
+.book-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.events-section {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+}
+
+.events-placeholder {
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+    .book-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+
+    .book-cover-placeholder {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .book-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .book-actions {
+        justify-content: center;
+    }
+}
+
+.book-cover-wrapper {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

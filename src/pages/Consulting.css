@@ -1,0 +1,94 @@
+.consulting-landing-page {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-bg-primary);
+}
+
+.consulting-landing-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.consulting-hero {
+    margin-bottom: var(--spacing-3xl);
+    text-align: center;
+}
+
+.consulting-hero-content {
+    max-width: 650px;
+    margin: var(--spacing-lg) auto 0;
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.consulting-hero-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+.consulting-hero-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Engagement Areas */
+.engagement-areas-section {
+    margin-top: 100px;
+    /* Restored spacing */
+    margin-bottom: var(--spacing-3xl);
+}
+
+.engagement-list {
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+}
+
+.engagement-item {
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.engagement-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--color-text-heading);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.engagement-item p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Engagement Structure */
+.engagement-structure-section {
+    margin-top: 100px;
+    /* Added spacing */
+    margin-bottom: var(--spacing-3xl);
+}
+
+.structure-text {
+    max-width: 600px;
+    margin: var(--spacing-lg) auto 0;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.consulting-cta-section {
+    margin-top: 120px;
+    /* Increased spacing */
+}
+
+.cta-intro {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+}

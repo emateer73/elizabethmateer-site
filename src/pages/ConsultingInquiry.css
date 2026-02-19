@@ -1,0 +1,125 @@
+.consulting-page {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-bg-primary);
+    min-height: 80vh;
+}
+
+.consulting-container {
+    max-width: 600px;
+    /* Narrow width for focus */
+    margin: 0 auto;
+}
+
+.consulting-header {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.consulting-subtext {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: var(--spacing-md) auto 0;
+    line-height: 1.6;
+}
+
+.consulting-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-label {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--color-text-heading);
+    font-weight: 500;
+}
+
+.required {
+    color: var(--color-accent-terracotta);
+    /* Or a subtle indicator */
+    margin-left: 4px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-secondary);
+    /* Slightly lighter/different bg */
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--color-text-heading);
+    box-shadow: 0 0 0 2px rgba(26, 42, 58, 0.05);
+    /* Subtle focus ring */
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Placeholder styling */
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.form-actions {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.btn-submit {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--color-text-heading);
+    /* Navy */
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+/* Confirmation State */
+.consulting-confirmation {
+    text-align: center;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.confirmation-text {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin: var(--spacing-lg) 0 var(--spacing-2xl);
+    line-height: 1.6;
+}
