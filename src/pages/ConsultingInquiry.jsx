@@ -1,36 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import './ConsultingInquiry.css';
 import Button from '../components/Button';
 
 const ConsultingInquiry = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        organization: '',
-        email: '',
-        overview: '',
-        scope: '',
-        timeline: '',
-        budget: ''
-    });
+    // REPLACE "CONSULTING_FORM_ID" WITH YOUR ACTUAL FORMSPREE FORM ID
+    const [state, handleSubmit] = useForm("CONSULTING_FORM_ID");
 
-    const [isSubmitted, setIsSubmitted] = useState(false);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you would typically send the data to a backend or email service
-        console.log('Form submitted:', formData);
-        setIsSubmitted(true);
-    };
-
-    if (isSubmitted) {
+    if (state.succeeded) {
         return (
             <div className="consulting-page">
                 <div className="container consulting-container">
@@ -63,10 +40,13 @@ const ConsultingInquiry = () => {
                             type="text"
                             id="name"
                             name="name"
-                            value={formData.name}
-                            onChange={handleChange}
                             required
                             className="form-input"
+                        />
+                        <ValidationError
+                            prefix="Name"
+                            field="name"
+                            errors={state.errors}
                         />
                     </div>
 
@@ -76,10 +56,13 @@ const ConsultingInquiry = () => {
                             type="text"
                             id="organization"
                             name="organization"
-                            value={formData.organization}
-                            onChange={handleChange}
                             required
                             className="form-input"
+                        />
+                        <ValidationError
+                            prefix="Organization"
+                            field="organization"
+                            errors={state.errors}
                         />
                     </div>
 
@@ -89,10 +72,13 @@ const ConsultingInquiry = () => {
                             type="email"
                             id="email"
                             name="email"
-                            value={formData.email}
-                            onChange={handleChange}
                             required
                             className="form-input"
+                        />
+                        <ValidationError
+                            prefix="Email"
+                            field="email"
+                            errors={state.errors}
                         />
                     </div>
 
@@ -101,11 +87,14 @@ const ConsultingInquiry = () => {
                         <textarea
                             id="overview"
                             name="overview"
-                            value={formData.overview}
-                            onChange={handleChange}
                             required
                             className="form-textarea"
                             placeholder="Please include intended impact, audience, and key objectives."
+                        />
+                        <ValidationError
+                            prefix="Project Overview"
+                            field="overview"
+                            errors={state.errors}
                         />
                     </div>
 
@@ -114,8 +103,6 @@ const ConsultingInquiry = () => {
                         <select
                             id="scope"
                             name="scope"
-                            value={formData.scope}
-                            onChange={handleChange}
                             className="form-select"
                         >
                             <option value="">Select scope...</option>
@@ -125,6 +112,11 @@ const ConsultingInquiry = () => {
                             <option value="Founder / Technology Advisory">Founder / Technology Advisory</option>
                             <option value="Other">Other</option>
                         </select>
+                        <ValidationError
+                            prefix="Scope"
+                            field="scope"
+                            errors={state.errors}
+                        />
                     </div>
 
                     <div className="form-group">
@@ -132,8 +124,6 @@ const ConsultingInquiry = () => {
                         <select
                             id="timeline"
                             name="timeline"
-                            value={formData.timeline}
-                            onChange={handleChange}
                             className="form-select"
                         >
                             <option value="">Select timeline...</option>
@@ -141,6 +131,11 @@ const ConsultingInquiry = () => {
                             <option value="1–3 months">1–3 months</option>
                             <option value="Flexible">Flexible</option>
                         </select>
+                        <ValidationError
+                            prefix="Timeline"
+                            field="timeline"
+                            errors={state.errors}
+                        />
                     </div>
 
                     <div className="form-group">
@@ -148,8 +143,6 @@ const ConsultingInquiry = () => {
                         <select
                             id="budget"
                             name="budget"
-                            value={formData.budget}
-                            onChange={handleChange}
                             className="form-select"
                         >
                             <option value="">Select budget...</option>
@@ -158,10 +151,17 @@ const ConsultingInquiry = () => {
                             <option value="$10,000+">$10,000+</option>
                             <option value="To be determined">To be determined</option>
                         </select>
+                        <ValidationError
+                            prefix="Budget"
+                            field="budget"
+                            errors={state.errors}
+                        />
                     </div>
 
                     <div className="form-actions">
-                        <button type="submit" className="btn-submit">Submit Inquiry</button>
+                        <button type="submit" className="btn-submit" disabled={state.submitting}>
+                            {state.submitting ? "Sending..." : "Submit Inquiry"}
+                        </button>
                     </div>
                 </form>
             </div>

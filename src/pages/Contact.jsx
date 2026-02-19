@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import Button from '../components/Button';
 import './Contact.css';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        inquiryType: 'Media / Interview',
-        message: ''
-    });
+    // REPLACE "CONTACT_FORM_ID" WITH YOUR ACTUAL FORMSPREE FORM ID
+    const [state, handleSubmit] = useForm("mykdprbk");
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Placeholder for form submission logic
-        alert('Thank you for your message. This is a demo form.');
-        console.log(formData);
-    };
+    if (state.succeeded) {
+        return (
+            <div className="contact-page">
+                <div className="container">
+                    <h1 className="page-title text-center">Thank You</h1>
+                    <div className="contact-wrapper" style={{ justifyContent: 'center' }}>
+                        <div className="contact-info" style={{ textAlign: 'center', width: '100%', maxWidth: '600px' }}>
+                            <p className="contact-intro">
+                                Your message has been sent successfully. I will be in touch shortly.
+                            </p>
+                            <Button to="/" variant="primary">Return Home</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="contact-page">
@@ -54,9 +54,12 @@ const Contact = () => {
                                 type="text"
                                 id="name"
                                 name="name"
-                                value={formData.name}
-                                onChange={handleChange}
                                 required
+                            />
+                            <ValidationError
+                                prefix="Name"
+                                field="name"
+                                errors={state.errors}
                             />
                         </div>
 
@@ -66,9 +69,12 @@ const Contact = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                value={formData.email}
-                                onChange={handleChange}
                                 required
+                            />
+                            <ValidationError
+                                prefix="Email"
+                                field="email"
+                                errors={state.errors}
                             />
                         </div>
 
@@ -77,8 +83,6 @@ const Contact = () => {
                             <select
                                 id="inquiryType"
                                 name="inquiryType"
-                                value={formData.inquiryType}
-                                onChange={handleChange}
                             >
                                 <option value="Media / Interview">Media / Interview</option>
                                 <option value="Speaking">Speaking</option>
@@ -86,6 +90,11 @@ const Contact = () => {
                                 <option value="Collaboration">Collaboration</option>
                                 <option value="Other">Other</option>
                             </select>
+                            <ValidationError
+                                prefix="Inquiry Type"
+                                field="inquiryType"
+                                errors={state.errors}
+                            />
                         </div>
 
                         <div className="form-group">
@@ -94,13 +103,18 @@ const Contact = () => {
                                 id="message"
                                 name="message"
                                 rows="5"
-                                value={formData.message}
-                                onChange={handleChange}
                                 required
                             ></textarea>
+                            <ValidationError
+                                prefix="Message"
+                                field="message"
+                                errors={state.errors}
+                            />
                         </div>
 
-                        <Button variant="primary" type="submit">Send Message</Button>
+                        <Button variant="primary" type="submit" disabled={state.submitting}>
+                            {state.submitting ? "Sending..." : "Send Message"}
+                        </Button>
                     </form>
                 </div>
             </div>
