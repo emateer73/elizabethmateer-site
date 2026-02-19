@@ -41,6 +41,13 @@
     letter-spacing: 0.1em;
 }
 
+.website-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .links-bio {
     font-family: var(--font-body);
     font-size: 0.9rem;

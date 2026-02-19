@@ -36,6 +36,9 @@ const Links = () => {
                     <a href="/" rel="noopener noreferrer" className="btn-text-link">
                         Visit Full Website <ArrowUpRight size={14} className="inline-arrow" />
                     </a>
+                    <a href="https://searchingforhomepoet.com" target="_blank" rel="noopener noreferrer" className="btn-text-link">
+                        Searching for Home (Poetry) <ArrowUpRight size={14} className="inline-arrow" />
+                    </a>
                 </div>
 
                 <div className="links-section professional-section">
