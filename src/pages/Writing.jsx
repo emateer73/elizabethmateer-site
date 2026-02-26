@@ -68,36 +68,24 @@ const Writing = () => {
 
                 <hr className="divider" />
 
-                {/*
                 <div className="writing-section">
                     <div className="writing-header">
                         <h2 className="section-heading">Psychology Today</h2>
-                        <p className="section-subheading">Selected essays from her Psychology Today column on identity, creativity, and cognitive science.</p>
+                        <p className="section-subheading">Selected essays from her Psychology Today column, <em>The Architecture of Identity</em>, exploring the intersection of neuropsychology and creativity.</p>
                     </div>
 
                     <div className="writing-grid">
                         <article className="writing-card">
-                            <h3>The Neuropsychology of Creativity</h3>
-                            <p>How brain networks cooperate to produce novel ideas.</p>
-                            <Button href="#" variant="text">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        </article>
-                        <article className="writing-card">
-                            <h3>Navigating Life Transitions</h3>
-                            <p>Understanding the cognitive load of change and how to adapt.</p>
-                            <Button href="#" variant="text">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        </article>
-                        <article className="writing-card">
-                            <h3>Agency and Self-Authorship</h3>
-                            <p>Taking control of your narrative in a distracted world.</p>
-                            <Button href="#" variant="text">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                            <h3>The Architecture of Identity: How the Brain Builds a Self</h3>
+                            <p>An exploration of how neurons and narratives weave together to construct our sense of self.</p>
+                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202602/the-architecture-of-identity-how-the-brain-builds-a-self" target="_blank" variant="text">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
                         </article>
                     </div>
 
                     <div className="text-center mt-lg">
-                        <Button href="https://www.psychologytoday.com/" target="_blank" variant="outline">Read Latest Posts <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                        <Button href="https://www.psychologytoday.com/us/contributors/elizabeth-mateer-phd" target="_blank" variant="outline">Read Latest Posts <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
                     </div>
                 </div>
-*/}
 
                 <hr className="divider" />
 
