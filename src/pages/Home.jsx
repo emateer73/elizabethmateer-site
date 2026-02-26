@@ -90,7 +90,7 @@ const Home = () => {
                             <h2 className="featured-title">The Architecture of Identity</h2>
                             <h3 className="featured-subtitle">Where neuropsychology meets creativity and growth</h3>
                             <p className="featured-desc">Psychology Today blog: The Architecture of Identity</p>
-                            <Button href="#" variant="outline">Visit the blog</Button>
+                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" variant="outline">Visit</Button>
                         </div>
                     </div>
                 </div>
