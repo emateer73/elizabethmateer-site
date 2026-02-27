@@ -1,53 +1,186 @@
 .research-page {
-    padding: var(--spacing-2xl) 0;
+    /* Using full bleed for the hero visual, so padding-top is managed by the visual header */
+    padding-bottom: var(--spacing-2xl);
+}
+
+.research-header-visual {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    /* Subtle height, not taking over the whole screen */
+    min-height: 250px;
+    max-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    /* Align title over the image */
+    justify-content: center;
+}
+
+.research-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(243, 242, 239, 0.88);
+    /* Heavy white/stone overlay */
+    z-index: 1;
+}
+
+.research-title-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-width-max);
+    width: 100%;
+    padding: 0 var(--spacing-md) var(--spacing-xl);
+    margin: 0 auto;
+    text-align: left;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    /* Increased size */
+    color: #111;
+    /* Darkened */
+    margin-bottom: 0;
+    letter-spacing: -0.02em;
 }
 
 .research-content-wrapper {
     max-width: 800px;
-    margin: 0 auto;
+    margin: var(--spacing-2xl) auto 0;
+    padding: 0 var(--spacing-md);
 }
 
 .research-section {
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: calc(var(--spacing-2xl) * 1.2);
+    /* Increased pacing by ~20% */
 }
 
-.overview p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+.section-heading {
+    font-size: 2.4rem;
+    /* Increased size */
+    color: #111;
+    /* Darkened */
+    margin-bottom: var(--spacing-lg);
+    letter-spacing: -0.01em;
 }
 
-.topics-list {
-    list-style: disc;
-    padding-left: var(--spacing-lg);
-}
-
-.topics-list li {
-    font-size: 1.1rem;
-    margin-bottom: var(--spacing-sm);
+.research-section p {
+    font-size: 1.15rem;
+    /* Editorial read size */
+    line-height: 1.6;
     color: var(--color-text-primary);
 }
 
-.publications-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
+/* Specific to Philosophy */
+.philosophy p {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #222;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    padding-left: var(--spacing-lg);
+    margin-left: -var(--spacing-lg);
+    /* Outset the border */
+    font-weight: 400;
 }
 
-.pub-item {
-    border-left: 2px solid var(--color-accent-sage);
+.topics-list {
+    list-style: none;
+    /* Removed default disc */
+    padding: 0;
+}
+
+.topics-list li {
+    font-size: 1.15rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+    position: relative;
     padding-left: var(--spacing-md);
 }
 
-.pub-year {
-    display: block;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
+.topics-list li::before {
+    content: "—";
+    /* Editorial bullet */
+    position: absolute;
+    left: 0;
     color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-xs);
+}
+
+/* Publications */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    /* Increased spacing */
+}
+
+/* Group wrapper logic - since year is inside each item right now we style the item */
+.pub-item {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    /* Clean architectural line */
+    padding-left: var(--spacing-lg);
+    position: relative;
+}
+
+.pub-year {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
     font-weight: 500;
 }
 
 .pub-citation {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
     margin-bottom: 0;
+}
+
+.pub-citation strong {
+    font-weight: 600;
+    color: #111;
+}
+
+.doi-link {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-left: var(--spacing-sm);
+    transition: color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.doi-link:hover {
+    color: #111;
+    border-color: #111;
+    opacity: 1;
+    /* Reset global link hover */
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.8rem;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .philosophy p {
+        margin-left: 0;
+        padding-left: var(--spacing-md);
+    }
 }
