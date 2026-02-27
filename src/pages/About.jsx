@@ -56,6 +56,7 @@ const About = () => {
                                 <h4>Education & Training</h4>
                                 <ul className="credential-list">
                                     <li><strong>Ph.D., Clinical Psychology</strong> (APA-accredited), Seattle Pacific University</li>
+                                    <li><strong>M.S. in Psychological Science</strong>, Seattle Pacific University</li>
                                     <li><strong>M.A., Counseling for Mental Health and Wellness</strong>, New York University</li>
                                     <li><strong>B.A., English Literature (Creative Writing)</strong>, Hunter College</li>
                                 </ul>
