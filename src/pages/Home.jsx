@@ -41,11 +41,20 @@ const Home = () => {
                     <ul className="at-a-glance-list">
                         <li>Clinical Fellow in Psychology at <strong>Harvard Medical School</strong></li>
                         <li>Author of Searching for Home (2024)</li>
-                        <li>Founder of <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>PsychDraft</a>, an AI-assisted platform reimagining neuropsychological documentation through systems design and cognitive workflow</li>
                         <li>Strategic advisor at the intersection of psychology, identity, and systems design</li>
                         <li>Contributor, Psychology Today</li>
                         <li>Speaker on identity, memory, and creativity</li>
                     </ul>
+                </div>
+            </section>
+
+            {/* Innovation Section */}
+            <section className="innovation-section">
+                <div className="container">
+                    <span className="at-a-glance-label">Innovation</span>
+                    <p className="innovation-text">
+                        Founder of <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer" className="innovation-link">PsychDraft</a>, an AI-assisted platform reimagining neuropsychological documentation through systems design and cognitive workflow.
+                    </p>
                 </div>
             </section>
 
