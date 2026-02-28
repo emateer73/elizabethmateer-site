@@ -61,8 +61,7 @@ const Writing = () => {
                     )}
 
                     <div className="button-group">
-                        <Button href="https://elizabethmateer.substack.com/?utm_campaign=pub&utm_medium=web" target="_blank" variant="outline">Read on Substack <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        <Button href="https://elizabethmateer.substack.com/?utm_campaign=pub&utm_medium=web" target="_blank" variant="primary">Subscribe</Button>
+                        <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="primary">Enter Where Attention Goes</Button>
                     </div>
                 </div>
 

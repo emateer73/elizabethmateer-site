@@ -26,8 +26,8 @@ const Links = () => {
 
                 <div className="links-section writing-section">
                     <h3 className="links-section-label">Essays</h3>
-                    <a href="https://elizabethmateer.substack.com/?utm_campaign=pub&utm_medium=web" target="_blank" rel="noopener noreferrer" className="btn-outline">
-                        Subscribe to Monthly Essays
+                    <a href="https://elizabethmateer.substack.com/" target="_blank" rel="noopener noreferrer" className="btn-outline">
+                        Read Where Attention Goes
                     </a>
                 </div>
 

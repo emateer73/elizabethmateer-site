@@ -1,14 +1,15 @@
 .hero-section {
-    padding: var(--spacing-2xl) 0 var(--spacing-xl);
-    text-align: center;
-    background-color: var(--color-bg-primary);
+    padding: var(--spacing-4xl) 0 var(--spacing-4xl);
+    text-align: left;
+    background-color: var(--color-text-heading);
+    color: var(--color-bg-primary);
 }
 
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: var(--spacing-sm);
     letter-spacing: -0.03em;
-    color: var(--color-text-heading);
+    color: var(--color-bg-primary);
 }
 
 .hero-subtitle {
@@ -17,40 +18,79 @@
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-text-secondary);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: var(--spacing-lg);
 }
 
 .hero-primary {
-    font-size: 1.5rem;
+    font-size: clamp(3.5rem, 6vw, 5rem);
     font-family: var(--font-heading);
-    max-width: 800px;
-    margin: 0 auto var(--spacing-md);
-    line-height: 1.4;
-    color: var(--color-text-primary);
+    max-width: 900px;
+    margin: 0 0 var(--spacing-sm);
+    line-height: 1.1;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero-primary-subtext {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+    line-height: 1.6;
 }
 
 .hero-secondary {
     font-size: 1.1rem;
     color: var(--color-text-secondary);
     max-width: 600px;
-    margin: 0 auto;
 }
 
 .hero-cta {
-    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
 }
 
-.hero-cta .btn-large {
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
+.hero-cta .btn-cta-primary {
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 1.25rem 2.5rem;
+    font-size: 0.95rem;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-heading);
+    border: none;
+}
+
+.hero-cta .btn-cta-primary:hover {
+    background-color: #fff;
+}
+
+.hero-secondary-link {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.hero-secondary-link:hover {
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
 .hero-cta-subtext {
     font-family: var(--font-body);
     font-size: 0.95rem;
     color: var(--color-text-secondary);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
     font-style: italic;
 }
 
@@ -60,7 +100,6 @@
 
 .bg-light {
     background-color: var(--color-bg-secondary);
-    /* Update specific section bg if different from global */
 }
 
 .start-here-grid {
@@ -261,24 +300,64 @@
 
 /* Innovation Section */
 .innovation-section {
-    padding: 0 0 var(--spacing-xl) 0;
-    /* Removing top padding since it follows At a Glance closely */
+    padding: var(--spacing-4xl) 0;
     text-align: center;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-text-heading);
+    color: var(--color-bg-primary);
 }
 
-.innovation-text {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    color: var(--color-text-primary);
+.innovation-container {
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.innovation-link {
-    color: inherit;
-    text-decoration: underline;
-    font-weight: 600;
+.innovation-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: var(--spacing-md);
+}
+
+.innovation-heading {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-bg-primary);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 500;
+}
+
+.innovation-body {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+    font-weight: 300;
+}
+
+.innovation-cta {
+    margin-top: var(--spacing-md);
+}
+
+.btn-explore-clean {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    padding: 0;
+}
+
+.btn-explore-clean:hover {
+    color: #fff;
+    background: transparent;
 }
 
 /* Featured In Section */
@@ -286,7 +365,7 @@
 .featured-in-section {
     padding: var(--spacing-md) 0;
     /* Reduced vertical padding */
-    margin-top: var(--spacing-2xl);
+    margin-top: var(--spacing-5xl);
     /* Increased spacing from hero */
     text-align: center;
     background-color: var(--color-bg-card);

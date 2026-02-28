@@ -10,15 +10,22 @@ const Home = () => {
         <div className="home-page">
             {/* Hero Section */}
             <section className="hero-section">
-                <div className="container hero-container">
+                <div className="container hero-container text-left">
                     <h1 className="hero-title">Elizabeth Mateer, Ph.D.</h1>
-                    <h2 className="hero-subtitle">Neuropsychology Fellow | Researcher | Writer</h2>
+                    <h2 className="hero-subtitle">Neuropsychology Fellow | Writer | Founder</h2>
                     <p className="hero-primary">
-                        Understanding how the brain shapes identity, creativity, and human potential.
+                        Where Attention Goes
+                    </p>
+                    <p className="hero-primary-subtext">
+                        Monthly essays on creativity, identity, and meaning-making.
                     </p>
                     <div className="hero-cta">
-                        <Button href="https://elizabethmateer.substack.com/?utm_campaign=pub&utm_medium=web" target="_blank" variant="primary" className="btn-large">Subscribe to the Letter</Button>
-                        <p className="hero-cta-subtext">Monthly reflections on identity, creativity, and the architecture of becoming.</p>
+                        <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="primary" className="btn-large btn-cta-primary">
+                            ENTER WHERE ATTENTION GOES
+                        </Button>
+                        <a href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" className="hero-secondary-link">
+                            Read The Architecture of Identity (Psychology Today)
+                        </a>
                     </div>
                 </div>
             </section>
@@ -50,11 +57,17 @@ const Home = () => {
 
             {/* Innovation Section */}
             <section className="innovation-section">
-                <div className="container">
-                    <span className="at-a-glance-label">Innovation</span>
-                    <p className="innovation-text">
-                        Founder of <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer" className="innovation-link">PsychDraft</a>, an AI-assisted platform reimagining neuropsychological documentation through systems design and cognitive workflow.
+                <div className="container innovation-container">
+                    <span className="innovation-label">INNOVATION</span>
+                    <h2 className="innovation-heading">PsychDraft</h2>
+                    <p className="innovation-body">
+                        PsychDraft is an AI-assisted cognitive workflow platform reimagining neuropsychological documentation through systems design, privacy-conscious infrastructure, and clinical precision.
                     </p>
+                    <div className="innovation-cta">
+                        <Button href="https://www.psychdraft.com" target="_blank" variant="text" className="btn-explore-clean">
+                            Explore PsychDraft <ArrowRight size={16} style={{ marginLeft: '4px' }} />
+                        </Button>
+                    </div>
                 </div>
             </section>
 
