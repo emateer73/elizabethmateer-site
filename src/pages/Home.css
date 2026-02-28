@@ -1,5 +1,6 @@
 .hero-section {
-    padding: 10rem 0 8rem;
+    padding: 11.5rem 0 9.2rem;
+    /* Increased vertical spacing by 15% */
     text-align: left;
     background-color: var(--color-bg-primary);
 }
@@ -27,7 +28,8 @@
     font-family: var(--font-heading);
     max-width: 900px;
     margin: 0 0 var(--spacing-lg);
-    line-height: 1.1;
+    line-height: 1.05;
+    /* Tightened line-height */
     color: var(--color-text-heading);
     font-weight: 700;
 }
@@ -40,6 +42,14 @@
     margin-bottom: 4rem;
     max-width: 600px;
     line-height: 1.6;
+}
+
+.hero-primary-subtext em {
+    font-style: italic;
+    font-weight: 400;
+    /* Subtle weight increase */
+    color: var(--color-text-heading);
+    /* Deeper contrast */
 }
 
 .hero-secondary {
@@ -59,12 +69,14 @@
 .hero-cta .btn-cta-primary {
     font-family: var(--font-body);
     font-weight: 500;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
+    /* Increased spacing */
     padding: 0.85rem 1.8rem;
     font-size: 0.9rem;
     background-color: transparent;
     color: var(--color-text-heading);
-    border: 1px solid var(--color-text-heading);
+    border: 1px solid rgba(26, 42, 58, 0.25);
+    /* Refined, lighter border thickness */
     transition: all 0.3s ease;
 }
 
@@ -97,7 +109,8 @@
 }
 
 .section {
-    padding: var(--spacing-2xl) 0;
+    padding: 10rem 0;
+    /* Extended spacing between sections */
 }
 
 .bg-light {
@@ -133,51 +146,7 @@
     color: var(--color-text-heading);
 }
 
-.featured-section {
-    background-color: var(--color-text-heading);
-    color: var(--color-bg-primary);
-    text-align: center;
-}
 
-.featured-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: var(--spacing-xl) 0;
-}
-
-.featured-label {
-    display: inline-block;
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-bottom: var(--spacing-lg);
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.featured-title {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: var(--spacing-sm);
-}
-
-.featured-subtitle {
-    font-family: var(--font-body);
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: var(--spacing-lg);
-}
-
-.featured-content .btn-outline {
-    color: #fff;
-    border-color: #fff;
-}
-
-.featured-content .btn-outline:hover {
-    background-color: #fff;
-    color: var(--color-text-heading);
-}
 
 .section-title {
     text-align: center;
@@ -240,7 +209,8 @@
 
 /* At a Glance Section */
 .at-a-glance-section {
-    padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+    padding: 5rem 0 4rem 0;
+    /* Increase padding rhythm */
     text-align: center;
     border-top: 1px solid var(--color-border);
     background-color: var(--color-bg-secondary);
@@ -298,10 +268,13 @@
 
 /* Innovation Section */
 .innovation-section {
-    padding: var(--spacing-4xl) 0;
+    padding: 8rem 0;
+    /* Spacious editorial padding */
     text-align: center;
-    background-color: var(--color-text-heading);
-    color: var(--color-bg-primary);
+    background-color: var(--color-bg-secondary);
+    /* Back to neutral editorial background */
+    border-top: 1px solid var(--color-border);
+    /* Thin demarcation separating concepts */
 }
 
 .innovation-container {
@@ -318,14 +291,14 @@
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text-secondary);
     margin-bottom: var(--spacing-md);
 }
 
 .innovation-heading {
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--color-bg-primary);
+    color: var(--color-text-heading);
     margin-bottom: var(--spacing-lg);
     font-weight: 500;
 }
@@ -333,8 +306,9 @@
 .innovation-body {
     font-family: var(--font-body);
     font-size: 1.15rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.45;
+    /* Tighter line height for cohesion */
+    color: var(--color-text-primary);
     margin-bottom: var(--spacing-xl);
     font-weight: 300;
 }
@@ -346,16 +320,20 @@
 .btn-explore-clean {
     font-family: var(--font-body);
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text-secondary);
+    /* Restrained link color */
     text-transform: none;
     letter-spacing: 0;
     font-weight: 400;
     padding: 0;
+    border-bottom: 1px solid transparent;
 }
 
 .btn-explore-clean:hover {
-    color: #fff;
+    color: var(--color-text-heading);
+    /* Slight contrast on hover */
     background: transparent;
+    border-bottom: 1px solid var(--color-text-heading);
 }
 
 /* Featured In Section */

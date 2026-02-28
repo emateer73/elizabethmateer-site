@@ -17,7 +17,7 @@ const Home = () => {
                         Where Attention Goes
                     </p>
                     <p className="hero-primary-subtext">
-                        Monthly essays on creativity, identity, and meaning-making.
+                        Monthly essays on creativity, identity, and <em>meaning-making</em>.
                     </p>
                     <div className="hero-cta">
                         <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="primary" className="btn-large btn-cta-primary">
@@ -103,20 +103,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Featured Section */}
-            <section className="section featured-section">
-                <div className="container">
-                    <div className="featured-wrapper">
-                        <span className="featured-label">Featured</span>
-                        <div className="featured-content">
-                            <h2 className="featured-title">The Architecture of Identity</h2>
-                            <h3 className="featured-subtitle">Where neuropsychology meets creativity and growth</h3>
-                            <p className="featured-desc">Psychology Today blog: The Architecture of Identity</p>
-                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" variant="outline">Visit</Button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             {/* Areas of Focus */}
             <section className="section bg-light">
