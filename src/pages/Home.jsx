@@ -79,13 +79,7 @@ const Home = () => {
                             <Brain size={32} className="card-icon" />
                             <h3>Psychology Today</h3>
                             <p>Read the latest articles on neuropsychology and creativity.</p>
-                            <Button href="#" variant="text">Read on Psychology Today <ArrowRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        </div>
-                        <div className="card">
-                            <BookOpen size={32} className="card-icon" />
-                            <h3>Books</h3>
-                            <p>Poetry and prose exploring identity, loss, reinvention, and growth.</p>
-                            <Button to="/books" variant="text">Explore the books <ArrowRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" variant="text">Read on Psychology Today <ArrowRight size={16} style={{ marginLeft: '4px' }} /></Button>
                         </div>
                         <div className="card">
                             <Mic size={32} className="card-icon" />
