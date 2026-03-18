@@ -7,7 +7,7 @@
 }
 
 .writing-section {
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 .writing-header {
@@ -54,7 +54,7 @@
     border: 0;
     height: 1px;
     background-color: var(--color-border);
-    margin: var(--spacing-2xl) 0;
+    margin: var(--spacing-xl) 0;
 }
 
 .writing-list {
@@ -111,7 +111,7 @@
 
 .writing-intro {
     max-width: 800px;
-    margin: 0 auto var(--spacing-2xl);
+    margin: 0 auto var(--spacing-xl);
     text-align: center;
     font-size: 1.2rem;
     color: var(--color-text-primary);
@@ -140,8 +140,8 @@
 .literary-section {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto var(--spacing-2xl);
-    padding: var(--spacing-xl) 0;
+    margin: 0 auto var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
 }
 
 .substack-preview-card {
