@@ -13,7 +13,10 @@ const Home = () => {
                 <div className="container hero-container text-center">
                     <h1 className="hero-title">Elizabeth Mateer, Ph.D.</h1>
                     <p className="hero-subtitle">
-                        Clinical Neuropsychology Fellow | Writer | Founder
+                        Clinical Neuropsychology Fellow, writer, and founder.
+                    </p>
+                    <p className="hero-primary-subtext" style={{ margin: "0 auto 2.5rem" }}>
+                        Writing about attention, identity, creativity, and the ways we make meaning.
                     </p>
                     <div className="hero-cta-group">
                         <Button to="/writing" variant="primary" className="btn-large btn-cta-primary">
@@ -43,9 +46,9 @@ const Home = () => {
             {/* Writing Section */}
             <section className="writing-preview-section section">
                 <div className="container text-center">
-                    <h2 className="section-label" style={{marginBottom: "2rem"}}>Writing</h2>
+                    <h2 className="section-label" style={{marginBottom: "1rem"}}>Writing</h2>
                     <p className="writing-preview-body">
-                        Essays and commentary on identity, attention, and meaning across platforms.
+                        Essays on identity, attention, and meaning across Substack and Psychology Today.
                     </p>
                     <div className="writing-preview-links">
                         <a href="https://elizabethmateer.substack.com/" target="_blank" rel="noopener noreferrer" className="writing-preview-link">
@@ -78,7 +81,7 @@ const Home = () => {
                         </div>
                         <div className="work-card">
                             <h3>Searching for Home Collective</h3>
-                            <p>Literary programming, salon culture, and creative community.</p>
+                            <p>A literary salon and creative platform for writers drawn to craft, risk, and meaningful exchange.</p>
                             <Button href="https://www.searchingforhomecollective.com/" target="_blank" variant="text" className="work-cta">Explore the Collective →</Button>
                         </div>
                     </div>
