@@ -13,10 +13,7 @@ const Home = () => {
                 <div className="container hero-container text-left">
                     <h1 className="hero-title">Elizabeth Mateer, Ph.D.</h1>
                     <p className="hero-subtitle">
-                        Psychologist, writer, and founder.
-                    </p>
-                    <p className="hero-primary-subtext">
-                        A public-facing body of work on attention, identity, creativity, and modern life.
+                        Clinical Neuropsychology Fellow | Writer | Founder
                     </p>
                     <div className="hero-cta-group">
                         <Button to="/writing" variant="primary" className="btn-large btn-cta-primary">
