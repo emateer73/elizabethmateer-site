@@ -20,26 +20,26 @@ const About = () => {
                     </div>
 
                     <div className="about-text-column">
-                        <h1 className="page-title">About Elizabeth Mateer, Ph.D.</h1>
+                        <h1 className="page-title">About Dr. Elizabeth Mateer</h1>
 
                         <p className="bio-paragraph">
-                            Elizabeth Mateer, Ph.D. works at the intersection of neuropsychology and creativity, exploring how attention, identity, and lived experience shape who we become.
+                            Elizabeth works at the intersection of neuropsychology and creativity, exploring how attention, identity, and lived experience shape who we become.
                         </p>
 
                         <p className="bio-paragraph">
-                            Across both her clinical work and creative writing, she is interested in how individuals construct meaning—through art, work, and the stories they tell about their lives. Her work examines the neuropsychological foundations of attention, resilience, and self-authorship, with particular focus on how people navigate change and build coherent identities over time.
+                            Across both her clinical work and creative writing, Dr. Mateer is interested in how individuals construct meaning—through art, work, and the stories they tell about their lives. Her work examines the neuropsychological foundations of attention, resilience, and self-authorship, with particular focus on how people navigate change and build coherent identities over time.
                         </p>
 
                         <p className="bio-paragraph">
-                            Dr. Mateer conducts neuropsychological evaluations across diverse medical and psychiatric populations and is currently completing advanced clinical training affiliated with Harvard Medical School. Her research focuses on attention and traumatic brain injury, with an emphasis on translating complex scientific findings into insights relevant to everyday life. She is especially interested in how cognitive processes influence creativity, decision-making, and long-term growth.
+                            Elizabeth conducts neuropsychological evaluations across diverse medical and psychiatric populations and is currently completing advanced clinical training affiliated with Harvard Medical School. Her research focuses on attention and traumatic brain injury, with an emphasis on translating complex scientific findings into insights relevant to everyday life. She is especially interested in how cognitive processes influence creativity, decision-making, and long-term growth.
                         </p>
 
                         <p className="bio-paragraph">
-                            In addition to her scientific work, she is the author of two poetry collections, <em>Searching for Home</em> (2024) and <em>A New Type of Breakfast</em> (2026). Across both her research and creative writing, Dr. Mateer returns to a central question: how do individuals build meaning in the face of uncertainty? Her work bridges rigorous neuroscience with lived experience, illuminating how attention, resilience, and intentional self-authorship shape the ongoing architecture of becoming.
+                            In addition to her scientific work, Dr. Mateer is the author of two poetry collections, <em>Searching for Home</em> (2024) and <em>A New Type of Breakfast</em> (2026). Across both her research and creative writing, she returns to a central question: how do individuals build meaning in the face of uncertainty? Her work bridges rigorous neuroscience with lived experience, illuminating how attention, resilience, and intentional self-authorship shape the ongoing architecture of becoming.
                         </p>
 
                         <p className="bio-paragraph">
-                            In addition to her writing and clinical work, Dr. Mateer is the founder of <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>PsychDraft</a>, an AI-assisted platform designed to improve clinical documentation in neuropsychology. The venture reflects her broader interest in systems design, cognitive workflow, and the future of professional practice.
+                            In addition to her writing and clinical work, Elizabeth is the founder of <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>PsychDraft</a>, an AI-assisted platform designed to improve clinical documentation in neuropsychology. The venture reflects her broader interest in systems design, cognitive workflow, and the future of professional practice.
                         </p>
 
                         <div className="credentials-section">
