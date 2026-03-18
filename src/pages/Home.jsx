@@ -52,7 +52,7 @@ const Home = () => {
                             Where Attention Goes →
                         </a>
                         <a href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" className="writing-preview-link">
-                            Psychology Today Column →
+                            Psychology Today →
                         </a>
                         <Button to="/writing" variant="text" className="writing-preview-link-btn">
                             Read all writing →
