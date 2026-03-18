@@ -90,10 +90,13 @@ const Writing = () => {
 
                 <div className="writing-section literary-section">
                     <h2 className="section-heading">Literary & Creative Work</h2>
-                    <p style={{ marginBottom: '2rem', maxWidth: '800px', margin: '0 auto 2rem' }}>
-                        In addition to her essays and research, Elizabeth is the author of two poetry collections, <em>Searching for Home</em> (2024) and <em>A New Type of Breakfast</em> (2026). Her poetry and creative work have appeared in literary journals, magazines, and anthologies.
+                    <p style={{ marginBottom: '1rem', maxWidth: '800px', margin: '0 auto 1rem' }}>
+                        Elizabeth is the author of two poetry collections, <em>Searching for Home</em> (2024) and <em>A New Type of Breakfast</em> (2026).
                     </p>
-                    <Button href="https://www.searchingforhomepoet.com/" target="_blank" variant="outline">View Literary Archive <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                    <p style={{ marginBottom: '2rem', maxWidth: '800px', margin: '0 auto 2rem' }}>
+                        Her work has appeared in literary journals, magazines, and anthologies, and serves as the foundation for Searching for Home Collective — a literary salon and evolving creative platform devoted to craft, risk, and artistic exchange.
+                    </p>
+                    <Button href="https://www.searchingforhomecollective.com/" target="_blank" variant="outline">Explore the Collective <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
                 </div>
 
                 <div className="writing-contact-cta">
