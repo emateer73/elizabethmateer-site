@@ -23,81 +23,64 @@
     margin-bottom: var(--spacing-2xl);
 }
 
-.hero-primary {
-    font-size: clamp(2.5rem, 5vw, 3.8rem);
-    font-family: var(--font-heading);
-    max-width: 900px;
-    margin: 0 0 var(--spacing-lg);
-    line-height: 1.05;
-    /* Tightened line-height */
-    color: var(--color-text-heading);
-    font-weight: 700;
-}
-
 .hero-primary-subtext {
     font-family: var(--font-body);
     font-size: 1.15rem;
     font-weight: 300;
     color: var(--color-text-secondary);
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     max-width: 600px;
     line-height: 1.6;
 }
 
-.hero-primary-subtext em {
-    font-style: italic;
-    font-weight: 400;
-    /* Subtle weight increase */
-    color: var(--color-text-heading);
-    /* Deeper contrast */
-}
-
-.hero-secondary {
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    max-width: 600px;
-}
-
-.hero-cta {
+.hero-cta-group {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
     gap: var(--spacing-md);
-    margin-top: 0;
+    margin-bottom: var(--spacing-2xl);
 }
 
-.hero-cta .btn-cta-primary {
+.hero-cta-group .btn-cta-primary,
+.hero-cta-group .btn-cta-outline {
     font-family: var(--font-body);
     font-weight: 500;
     letter-spacing: 0.12em;
-    /* Increased spacing */
     padding: 0.85rem 1.8rem;
     font-size: 0.9rem;
-    background-color: transparent;
-    color: var(--color-text-heading);
-    border: 1px solid rgba(26, 42, 58, 0.25);
-    /* Refined, lighter border thickness */
     transition: all 0.3s ease;
 }
 
-.hero-cta .btn-cta-primary:hover {
+.hero-cta-group .btn-cta-primary {
     background-color: var(--color-text-heading);
     color: var(--color-bg-primary);
+    border: 1px solid var(--color-text-heading);
 }
 
-.hero-sub-link {
+.hero-cta-group .btn-cta-primary:hover {
+    background-color: transparent;
+    color: var(--color-text-heading);
+}
+
+.hero-cta-group .btn-cta-outline {
+    background-color: transparent;
+    color: var(--color-text-heading);
+    border: 1px solid rgba(26, 42, 58, 0.25);
+}
+
+.hero-cta-group .btn-cta-outline:hover {
+    background-color: transparent;
+    border-color: var(--color-text-heading);
+}
+
+.hero-credentials {
     font-family: var(--font-body);
     font-size: 0.85rem;
     color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 2px;
-}
-
-.hero-sub-link:hover {
-    color: var(--color-text-primary);
-    border-bottom-color: var(--color-text-primary);
+    line-height: 1.5;
+    max-width: 800px;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-md);
+    margin-bottom: 0;
 }
 
 .section {
@@ -157,36 +140,59 @@
     }
 }
 
-/* Identity Section */
-.identity-section {
+/* Writing Section */
+.writing-preview-section {
     padding: 6rem 0;
-    background-color: var(--color-bg-primary);
     border-top: 1px solid var(--color-border);
 }
 
-.identity-heading {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    color: var(--color-text-heading);
-    margin-bottom: var(--spacing-lg);
-    font-weight: 500;
-}
-
-.identity-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    text-align: center;
-}
-
-.identity-list li {
+.writing-preview-body {
     font-family: var(--font-body);
     font-size: 1.15rem;
     color: var(--color-text-primary);
+    margin-bottom: var(--spacing-2xl);
     font-weight: 300;
+}
+
+.writing-preview-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.writing-preview-link {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-heading);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.writing-preview-link:hover {
+    color: var(--color-text-primary);
+    border-bottom-color: var(--color-text-primary);
+}
+
+.writing-preview-link-btn {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: none;
+    padding: 0;
+    letter-spacing: 0;
+    border-bottom: 1px solid transparent;
+    margin-top: var(--spacing-sm);
+}
+
+.writing-preview-link-btn:hover {
+    color: var(--color-text-heading);
+    background: transparent;
+    border-bottom-color: var(--color-text-heading);
 }
 
 /* Work Section */

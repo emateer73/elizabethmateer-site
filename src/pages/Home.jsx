@@ -12,20 +12,23 @@ const Home = () => {
             <section className="hero-section">
                 <div className="container hero-container text-left">
                     <h1 className="hero-title">Elizabeth Mateer, Ph.D.</h1>
-                    <p className="hero-primary">
-                        Where Attention Goes
+                    <p className="hero-subtitle">
+                        Psychologist, writer, and founder.
                     </p>
                     <p className="hero-primary-subtext">
-                        Essays on attention, identity, and the architecture of meaning.
+                        A public-facing body of work on attention, identity, creativity, and modern life.
                     </p>
-                    <div className="hero-cta">
-                        <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="primary" className="btn-large btn-cta-primary">
-                            ENTER WHERE ATTENTION GOES
+                    <div className="hero-cta-group">
+                        <Button to="/writing" variant="primary" className="btn-large btn-cta-primary">
+                            Read Writing
                         </Button>
-                        <a href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" className="hero-sub-link">
-                            Latest: The Architecture of Identity (Psychology Today) →
-                        </a>
+                        <Button to="/contact" variant="outline" className="btn-large btn-cta-outline">
+                            Work With Me
+                        </Button>
                     </div>
+                    <p className="hero-credentials">
+                        Clinical Fellow in Psychology at Harvard Medical School · Founder, PsychDraft · Founder & Literary Curator, Searching for Home Collective
+                    </p>
                 </div>
             </section>
 
@@ -40,37 +43,46 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Identity Block */}
-            <section className="identity-section section">
+            {/* Writing Section */}
+            <section className="writing-preview-section section">
                 <div className="container text-center">
-                    <h2 className="identity-heading">Elizabeth Mateer, Ph.D.</h2>
-                    <ul className="identity-list">
-                        <li>– Clinical Fellow in Psychology at Harvard Medical School</li>
-                        <li>– Founder, PsychDraft</li>
-                        <li>– Founder & Literary Curator, Searching for Home Collective</li>
-                    </ul>
+                    <h2 className="section-label" style={{marginBottom: "2rem"}}>Writing</h2>
+                    <p className="writing-preview-body">
+                        Essays and commentary on identity, attention, and meaning across platforms.
+                    </p>
+                    <div className="writing-preview-links">
+                        <a href="https://elizabethmateer.substack.com/" target="_blank" rel="noopener noreferrer" className="writing-preview-link">
+                            Where Attention Goes →
+                        </a>
+                        <a href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" className="writing-preview-link">
+                            Psychology Today Column →
+                        </a>
+                        <Button to="/writing" variant="text" className="writing-preview-link-btn">
+                            Read all writing →
+                        </Button>
+                    </div>
                 </div>
             </section>
 
             {/* Work Section */}
             <section className="work-section section bg-light">
                 <div className="container">
-                    <h2 className="section-label text-center" style={{marginBottom: "3rem"}}>Selected Work</h2>
+                    <h2 className="section-label text-center" style={{marginBottom: "3rem"}}>Work</h2>
                     <div className="work-cards-grid">
                         <div className="work-card">
-                            <h3>Writing</h3>
-                            <p>Essays on attention, identity, and creativity. Including Psychology Today.</p>
-                            <Button to="/writing" variant="text" className="work-cta">Read Writing →</Button>
-                        </div>
-                        <div className="work-card">
                             <h3>Speaking</h3>
-                            <p>Talks on neuropsychology, identity, and performance.</p>
+                            <p>Talks on neuropsychology, identity, creativity, and performance.</p>
                             <Button to="/speaking" variant="text" className="work-cta">Invite to Speak →</Button>
                         </div>
                         <div className="work-card">
                             <h3>Consulting</h3>
-                            <p>Strategic advisory at the intersection of psychology and culture.</p>
+                            <p>Strategic advisory at the intersection of psychology, culture, and systems thinking.</p>
                             <Button to="/consulting" variant="text" className="work-cta">Explore Consulting →</Button>
+                        </div>
+                        <div className="work-card">
+                            <h3>Searching for Home Collective</h3>
+                            <p>Literary programming, salon culture, and creative community.</p>
+                            <Button href="https://www.searchingforhomecollective.com/" target="_blank" variant="text" className="work-cta">Explore the Collective →</Button>
                         </div>
                     </div>
                 </div>
@@ -82,7 +94,7 @@ const Home = () => {
                     <span className="venture-label">Venture</span>
                     <h2 className="venture-heading">PsychDraft</h2>
                     <p className="venture-body">
-                        PsychDraft is an AI-assisted platform reimagining neuropsychological documentation through systems design and clinical precision.
+                        An AI-assisted platform reimagining neuropsychological documentation through systems design and clinical precision.
                     </p>
                     <div className="venture-cta">
                         <Button href="https://www.psychdraft.com" target="_blank" variant="text" className="btn-venture-link">
