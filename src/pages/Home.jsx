@@ -10,7 +10,7 @@ const Home = () => {
         <div className="home-page">
             {/* Hero Section */}
             <section className="hero-section">
-                <div className="container hero-container text-left">
+                <div className="container hero-container text-center">
                     <h1 className="hero-title">Elizabeth Mateer, Ph.D.</h1>
                     <p className="hero-subtitle">
                         Clinical Neuropsychology Fellow | Writer | Founder

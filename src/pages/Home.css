@@ -1,7 +1,6 @@
 .hero-section {
-    padding: 11.5rem 0 9.2rem;
-    /* Increased vertical spacing by 15% */
-    text-align: left;
+    padding: 8rem 0 6rem;
+    text-align: center;
     background-color: var(--color-bg-primary);
 }
 
@@ -36,6 +35,7 @@
 .hero-cta-group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-2xl);
 }
@@ -74,17 +74,17 @@
 
 .hero-credentials {
     font-family: var(--font-body);
-    font-size: 0.85rem;
+    font-size: 1.15rem; /* Increased size to match at-a-glance styling */
     color: var(--color-text-secondary);
-    line-height: 1.5;
+    line-height: 1.6;
     max-width: 800px;
+    margin: 0 auto;
     border-top: 1px solid var(--color-border);
-    padding-top: var(--spacing-md);
-    margin-bottom: 0;
+    padding-top: var(--spacing-lg);
 }
 
 .section {
-    padding: 8rem 0; /* Clear, extended spacing */
+    padding: 4rem 0; /* Tightened spacing further */
 }
 
 .bg-light {
@@ -93,8 +93,8 @@
 
 /* Featured In Section */
 .featured-in-section {
-    padding: var(--spacing-xl) 0;
-    margin-top: 2rem;
+    padding: var(--spacing-lg) 0;
+    margin-top: 0;
     text-align: center;
     border-top: 1px solid var(--color-border);
 }
@@ -142,7 +142,7 @@
 
 /* Writing Section */
 .writing-preview-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     border-top: 1px solid var(--color-border);
 }
 
@@ -274,7 +274,7 @@
 
 /* Venture Section */
 .venture-section {
-    padding: 6rem 0; /* Reduced prominence */
+    padding: 4rem 0; /* Reduced prominence and tightened spacing */
     background-color: var(--color-bg-primary);
     text-align: center;
 }
