@@ -12,19 +12,18 @@ const Home = () => {
             <section className="hero-section">
                 <div className="container hero-container text-left">
                     <h1 className="hero-title">Elizabeth Mateer, Ph.D.</h1>
-                    <h2 className="hero-subtitle">Neuropsychology Fellow | Writer | Founder</h2>
                     <p className="hero-primary">
                         Where Attention Goes
                     </p>
                     <p className="hero-primary-subtext">
-                        Monthly essays on creativity, identity, and <em>meaning-making</em>.
+                        Essays on attention, identity, and the architecture of meaning.
                     </p>
                     <div className="hero-cta">
                         <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="primary" className="btn-large btn-cta-primary">
                             ENTER WHERE ATTENTION GOES
                         </Button>
-                        <a href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" className="hero-secondary-link">
-                            Read The Architecture of Identity (Psychology Today)
+                        <a href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" className="hero-sub-link">
+                            Latest: The Architecture of Identity (Psychology Today) →
                         </a>
                     </div>
                 </div>
@@ -41,109 +40,54 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* At a Glance Section */}
-            <section className="at-a-glance-section">
-                <div className="container">
-                    <span className="at-a-glance-label">At a Glance</span>
-                    <ul className="at-a-glance-list">
-                        <li>Clinical Fellow in Psychology at <strong>Harvard Medical School</strong></li>
-                        <li>Author of Searching for Home (2024)</li>
-                        <li>Strategic advisor at the intersection of psychology, identity, and systems design</li>
-                        <li>Contributor, Psychology Today</li>
-                        <li>Speaker on identity, memory, and creativity</li>
+            {/* Identity Block */}
+            <section className="identity-section section">
+                <div className="container text-center">
+                    <h2 className="identity-heading">Elizabeth Mateer, Ph.D.</h2>
+                    <ul className="identity-list">
+                        <li>– Clinical Fellow in Psychology at Harvard Medical School</li>
+                        <li>– Founder, PsychDraft</li>
+                        <li>– Founder & Literary Curator, Searching for Home Collective</li>
                     </ul>
                 </div>
             </section>
 
-            {/* Innovation Section */}
-            <section className="innovation-section">
-                <div className="container innovation-container">
-                    <span className="innovation-label">INNOVATION</span>
-                    <h2 className="innovation-heading">PsychDraft</h2>
-                    <p className="innovation-body">
-                        PsychDraft is an AI-assisted cognitive workflow platform reimagining neuropsychological documentation through systems design, privacy-conscious infrastructure, and clinical precision.
-                    </p>
-                    <div className="innovation-cta">
-                        <Button href="https://www.psychdraft.com" target="_blank" variant="text" className="btn-explore-clean">
-                            Explore PsychDraft <ArrowRight size={16} style={{ marginLeft: '4px' }} />
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
-            {/* Start Here Section */}
-            <section className="section bg-light">
+            {/* Work Section */}
+            <section className="work-section section bg-light">
                 <div className="container">
-                    <div className="start-here-grid">
-                        <div className="card">
-                            <Brain size={32} className="card-icon" />
-                            <h3>Psychology Today</h3>
-                            <p>Read the latest articles on neuropsychology and creativity.</p>
-                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" variant="text">Read on Psychology Today <ArrowRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        </div>
-                        <div className="card">
-                            <Mic size={32} className="card-icon" />
-                            <h3>Speaking</h3>
-                            <p>Keynotes and talks on neuropsychology, creativity, identity, and performance.</p>
-                            <Button to="/speaking" variant="text">Invite Dr. Mateer <ArrowRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        </div>
-                        <div className="card">
-                            <Compass size={32} className="card-icon" />
-                            <h3>Consulting</h3>
-                            <p>Strategic psychological advisory for publishers, founders, and research teams working at the intersection of cognition and culture.</p>
-                            <Button to="/consulting" variant="text">Explore Consulting <ArrowRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-            {/* Areas of Focus */}
-            <section className="section bg-light">
-                <div className="container">
-                    <h2 className="section-title">Areas of Focus</h2>
-                    <div className="focus-grid">
-                        <div className="focus-item">
-                            <Zap className="focus-icon" />
-                            <p>Attention and cognitive functioning</p>
-                        </div>
-                        <div className="focus-item">
-                            <User className="focus-icon" />
-                            <p>Identity, meaning-making, and self-authorship</p>
-                        </div>
-                        <div className="focus-item">
-                            <PenTool className="focus-icon" />
-                            <p>The neuropsychology of creativity</p>
-                        </div>
-                        <div className="focus-item">
-                            <Globe className="focus-icon" />
-                            <p>Culture, behavior, and modern life</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Work with Dr. Mateer */}
-            <section className="section">
-                <div className="container">
-                    <h2 className="section-title">Work with Dr. Mateer</h2>
-                    <div className="work-grid">
-                        <div className="work-column">
+                    <h2 className="section-label text-center" style={{marginBottom: "3rem"}}>Selected Work</h2>
+                    <div className="work-cards-grid">
+                        <div className="work-card">
                             <h3>Writing</h3>
-                            <p>Essays, articles, and commentary on neuropsychology and culture.</p>
-                            <Button to="/contact" variant="text">Contact for Writing</Button>
+                            <p>Essays on attention, identity, and creativity. Including Psychology Today.</p>
+                            <Button to="/writing" variant="text" className="work-cta">Read Writing →</Button>
                         </div>
-                        <div className="work-column">
+                        <div className="work-card">
                             <h3>Speaking</h3>
-                            <p>Keynotes and workshops for universities, corporate wellness, and creative communities.</p>
-                            <Button to="/contact" variant="text">Contact for Speaking</Button>
+                            <p>Talks on neuropsychology, identity, and performance.</p>
+                            <Button to="/speaking" variant="text" className="work-cta">Invite to Speak →</Button>
                         </div>
-                        <div className="work-column">
-                            <h3>Collaborations</h3>
-                            <p>Interdisciplinary projects bridging science, art, and human potential.</p>
-                            <Button to="/contact" variant="text">Contact for Collabs</Button>
+                        <div className="work-card">
+                            <h3>Consulting</h3>
+                            <p>Strategic advisory at the intersection of psychology and culture.</p>
+                            <Button to="/consulting" variant="text" className="work-cta">Explore Consulting →</Button>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Venture Section */}
+            <section className="venture-section section">
+                <div className="container venture-container">
+                    <span className="venture-label">Venture</span>
+                    <h2 className="venture-heading">PsychDraft</h2>
+                    <p className="venture-body">
+                        PsychDraft is an AI-assisted platform reimagining neuropsychological documentation through systems design and clinical precision.
+                    </p>
+                    <div className="venture-cta">
+                        <Button href="https://www.psychdraft.com" target="_blank" variant="text" className="btn-venture-link">
+                            Explore PsychDraft →
+                        </Button>
                     </div>
                 </div>
             </section>
