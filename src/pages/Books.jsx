@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../components/Button';
 import { Users, Mic, BookOpen, Coffee } from 'lucide-react';
 import SearchingHomeCover from '../assets/searching-for-home.webp';
+import BreakfastCover from '../assets/a new type of breakfast book cover.jpg';
 import './Books.css';
 
 const Books = () => {
@@ -11,6 +12,22 @@ const Books = () => {
                 <h1 className="page-title text-center">Books</h1>
 
                 <div className="books-grid">
+                    <div className="book-card">
+                        <div className="book-cover-wrapper">
+                            <img src={BreakfastCover} alt="Cover of A New Type of Breakfast" className="book-cover" />
+                        </div>
+                        <div className="book-details">
+                            <h2 className="book-title">A New Type of Breakfast</h2>
+                            <p className="book-year">2026</p>
+                            <p className="book-desc">
+                                Tracing the evolution of identity and the process of becoming through the lens of daily rituals and neuropsychological insight.
+                            </p>
+                            <div className="book-actions">
+                                <Button href="https://www.finishinglinepress.com/product/a-new-type-of-breakfast-by-elizabeth-mateer/" variant="primary">Pre-order Now</Button>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="book-card">
                         <div className="book-cover-wrapper">
                             <img src={SearchingHomeCover} alt="Cover of Searching for Home" className="book-cover" />
@@ -24,23 +41,6 @@ const Books = () => {
                             <div className="book-actions">
                                 <Button href="https://thepoetrybox.com/bookstore/searching" variant="primary">Buy Now</Button>
                                 <Button to="/books/searching-for-home" variant="outline">Learn More</Button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="book-card">
-                        <div className="book-cover-placeholder">
-                            <span className="sr-only">Cover of A New Type of Breakfast</span>
-                            <div className="cover-text">A New Type of Breakfast</div>
-                        </div>
-                        <div className="book-details">
-                            <h2 className="book-title">A New Type of Breakfast</h2>
-                            <p className="book-year">2026</p>
-                            <p className="book-desc">
-                                Tracing the evolution of identity and the process of becoming through the lens of daily rituals and neuropsychological insight.
-                            </p>
-                            <div className="book-actions">
-                                <Button href="https://www.finishinglinepress.com/product/a-new-type-of-breakfast-by-elizabeth-mateer/" variant="primary">Pre-order Now</Button>
                             </div>
                         </div>
                     </div>
