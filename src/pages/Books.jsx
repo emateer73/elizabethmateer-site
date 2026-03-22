@@ -20,7 +20,7 @@ const Books = () => {
                             <h2 className="book-title">A New Type of Breakfast</h2>
                             <p className="book-year">2026</p>
                             <p className="book-desc">
-                                Tracing the evolution of identity and the process of becoming through the lens of daily rituals and neuropsychological insight.
+                                A New Type of Breakfast traces the long aftermath of early hurt and the ways neglect, loss, and silence shape us long after the original damage has passed. The title poem marks a breaking point: the dissolution of hope, followed by the quiet possibility of a new beginning.
                             </p>
                             <div className="book-actions">
                                 <Button href="https://www.finishinglinepress.com/product/a-new-type-of-breakfast-by-elizabeth-mateer/" variant="primary">Pre-order Now</Button>
