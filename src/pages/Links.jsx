@@ -11,6 +11,10 @@ const Links = () => {
                     <h2 className="links-title">Neuropsychology Fellow & Writer</h2>
 
                 </header>
+                
+                <a href="https://www.finishinglinepress.com/product/a-new-type-of-breakfast-by-elizabeth-mateer/" target="_blank" rel="noopener noreferrer" className="btn-prominent">
+                    Pre-order my upcoming book
+                </a>
 
                 <div className="links-section connect-section">
                     <h3 className="links-section-label">Connect</h3>

@@ -40,7 +40,7 @@ const Books = () => {
                                 Tracing the evolution of identity and the process of becoming through the lens of daily rituals and neuropsychological insight.
                             </p>
                             <div className="book-actions">
-                                <span className="pre-order-text">Available for pre-order in March 2026</span>
+                                <Button href="https://www.finishinglinepress.com/product/a-new-type-of-breakfast-by-elizabeth-mateer/" variant="primary">Pre-order Now</Button>
                             </div>
                         </div>
                     </div>

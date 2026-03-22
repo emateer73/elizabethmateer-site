@@ -19,7 +19,7 @@
 
 /* Header */
 .links-header {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     /* Generous spacing */
 }
 
@@ -162,4 +162,27 @@
 .link-professional:hover {
     color: var(--color-text-heading);
     border-color: var(--color-border);
+}
+
+/* Prominent Button (Pre-order) */
+.btn-prominent {
+    display: block;
+    width: 100%;
+    padding: 18px 24px;
+    background-color: var(--color-text-heading);
+    color: var(--color-bg-primary); /* Assuming background is light, this makes text readable */
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-prominent:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
