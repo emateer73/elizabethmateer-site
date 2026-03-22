@@ -18,7 +18,7 @@ const Links = () => {
                         <a href="https://www.tiktok.com/@beeblejuice" target="_blank" rel="noopener noreferrer" className="link-social">
                             TikTok
                         </a>
-                        <a href="https://www.instagram.com/elizabethmateer_" target="_blank" rel="noopener noreferrer" className="link-social">
+                        <a href="https://www.instagram.com/elizabeth_mateer/" target="_blank" rel="noopener noreferrer" className="link-social">
                             Instagram
                         </a>
                     </div>
