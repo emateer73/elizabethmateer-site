@@ -21,6 +21,7 @@ const Navbar = () => {
         { name: 'Books', path: '/books' },
         { name: 'Research', path: '/research' },
         { name: 'Speaking', path: '/speaking' },
+        { name: 'Private 1:1 Work', path: '/private-work' },
         { name: 'Consulting', path: '/consulting' },
         { name: 'Contact', path: '/contact' },
     ];

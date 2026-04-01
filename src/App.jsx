@@ -15,6 +15,8 @@ import Links from './pages/Links';
 
 import Consulting from './pages/Consulting';
 import ConsultingInquiry from './pages/ConsultingInquiry';
+import PrivateWork from './pages/PrivateWork';
+import PrivateWorkInquiry from './pages/PrivateWorkInquiry';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/consulting" element={<Consulting />} />
               <Route path="/consulting-inquiry" element={<ConsultingInquiry />} />
+              <Route path="/private-work" element={<PrivateWork />} />
+              <Route path="/private-work-inquiry" element={<PrivateWorkInquiry />} />
             </Routes>
           </Layout>
         } />

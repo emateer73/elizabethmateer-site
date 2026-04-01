@@ -1,0 +1,191 @@
+.inquiry-page {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-bg-primary);
+}
+
+.inquiry-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inquiry-header {
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-md);
+}
+
+.inquiry-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-lg);
+}
+
+.inquiry-intro {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-md);
+}
+
+.inquiry-intro:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Reusing the subtle divider from PrivateWork */
+.form-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    max-width: 120px;
+    margin: var(--spacing-xl) auto var(--spacing-3xl);
+    opacity: 0.6;
+}
+
+/* Elegant Form Container */
+.elegant-form {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    text-align: left;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+@media (max-width: 600px) {
+    .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+.form-group {
+    margin-bottom: var(--spacing-2xl); /* Generous vertical spacing */
+}
+
+.form-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-heading);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0.02em;
+}
+
+.required {
+    color: var(--color-accent-terracotta);
+    opacity: 0.8;
+}
+
+/* Very light line-style inputs */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    transition: border-color 0.3s ease;
+    border-radius: 0; /* Override any mobile browser styling */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-text-heading);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 40px; /* Let the rows attribute drive the height mostly */
+    padding-top: var(--spacing-sm);
+    line-height: 1.5;
+}
+
+/* Checkbox refinement */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-top: calc(var(--spacing-3xl) * 0.8);
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.form-checkbox {
+    margin-top: 4px;
+    cursor: pointer;
+    accent-color: var(--color-text-heading);
+}
+
+.checkbox-label {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: var(--spacing-2xl);
+}
+
+.btn-submit {
+    display: inline-block;
+    padding: 10px 24px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-bg-primary);
+    background-color: var(--color-text-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.08em; /* Subtly increased letter spacing */
+    border: 1px solid var(--color-text-heading);
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.btn-submit:hover:not(:disabled) {
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow support for the lift */
+    background-color: var(--color-text-primary);
+}
+
+.btn-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Inquiry Confirmation State */
+.inquiry-confirmation {
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.confirmation-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: var(--spacing-lg);
+}
+
+.confirmation-text {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-2xl);
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}

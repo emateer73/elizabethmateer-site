@@ -27,7 +27,7 @@
 
 .navbar-links {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: clamp(1rem, 2vw, var(--spacing-lg));
 }
 
 .navbar-links li a {
