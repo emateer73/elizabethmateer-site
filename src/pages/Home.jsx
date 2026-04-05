@@ -4,31 +4,37 @@ import { ArrowRight, BookOpen, Mic, PenTool, Brain, User, Zap, Globe, Compass } 
 import './Home.css';
 import PsychTodayLogo from '../assets/psychology today.png';
 import NRTimesLogo from '../assets/nr times new logo.png';
+import RedProfileImage from '../assets/red profile.jpg';
 
 const Home = () => {
     return (
         <div className="home-page">
             {/* Hero Section */}
             <section className="hero-section">
-                <div className="container hero-container text-center">
-                    <h1 className="hero-title">Elizabeth Mateer, Ph.D.</h1>
-                    <p className="hero-subtitle">
-                        Clinical Neuropsychology Fellow, writer, and founder.
-                    </p>
-                    <p className="hero-primary-subtext" style={{ margin: "0 auto 2.5rem" }}>
-                        Writing about attention, identity, creativity, and the ways we make meaning.
-                    </p>
-                    <div className="hero-cta-group">
-                        <Button to="/writing" variant="primary" className="btn-large btn-cta-primary">
-                            Read Writing
-                        </Button>
-                        <Button to="/contact" variant="outline" className="btn-large btn-cta-outline">
-                            Work With Me
-                        </Button>
+                <div className="container hero-container">
+                    <div className="hero-content">
+                        <h1 className="hero-title animate-text">Elizabeth Mateer, Ph.D.</h1>
+                        <p className="hero-subtitle animate-text delay-1">
+                            Clinical Neuropsychology Fellow, writer, and founder.
+                        </p>
+                        <p className="hero-primary-subtext animate-text delay-2">
+                            Writing about attention, identity, creativity, and the ways we make meaning.
+                        </p>
+                        <div className="hero-cta-group animate-text delay-3">
+                            <Button to="/writing" variant="primary" className="btn-large btn-cta-primary">
+                                Read Writing
+                            </Button>
+                            <Button to="/contact" variant="outline" className="btn-large btn-cta-outline">
+                                Work With Me
+                            </Button>
+                        </div>
+                        <p className="hero-credentials animate-text delay-4">
+                            Clinical Fellow in Psychology at Harvard Medical School · Founder, PsychDraft · Founder & Literary Curator, Searching for Home Collective
+                        </p>
                     </div>
-                    <p className="hero-credentials">
-                        Clinical Fellow in Psychology at Harvard Medical School · Founder, PsychDraft · Founder & Literary Curator, Searching for Home Collective
-                    </p>
+                    <div className="hero-image-wrapper">
+                        <img src={RedProfileImage} alt="Elizabeth Mateer" className="hero-image animate-image" />
+                    </div>
                 </div>
             </section>
 

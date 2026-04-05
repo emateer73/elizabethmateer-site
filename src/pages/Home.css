@@ -1,12 +1,26 @@
 .hero-section {
-    padding: 4rem 0 2rem;
-    text-align: center;
+    padding: 120px 40px;
     background-color: var(--color-bg-primary);
 }
 
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 520px;
+    text-align: left;
+}
+
 .hero-title {
-    font-size: clamp(1.75rem, 3vw, 2.2rem);
-    margin-bottom: var(--spacing-sm);
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    margin-bottom: 10px; /* 8-12px */
     letter-spacing: -0.02em;
     color: var(--color-text-heading);
     font-weight: 500;
@@ -19,7 +33,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 14px; /* 12-16px */
 }
 
 .hero-primary-subtext {
@@ -27,17 +41,14 @@
     font-size: 1.15rem;
     font-weight: 300;
     color: var(--color-text-secondary);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    margin-bottom: 28px; /* 24-32px */
     line-height: 1.6;
 }
 
 .hero-cta-group {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    gap: 14px; /* 12-16px */
+    margin-bottom: 32px;
 }
 
 .hero-cta-group .btn-cta-primary,
@@ -45,43 +56,128 @@
     font-family: var(--font-body);
     font-weight: 500;
     letter-spacing: 0.12em;
-    padding: 0.85rem 1.8rem;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
 .hero-cta-group .btn-cta-primary {
-    background-color: var(--color-text-heading);
+    background-color: #0c121e; /* Darker background */
     color: var(--color-bg-primary);
-    border: 1px solid var(--color-text-heading);
+    border: 1px solid #0c121e;
+    padding: 1.1rem 2rem; /* Slightly larger padding */
 }
 
 .hero-cta-group .btn-cta-primary:hover {
     background-color: transparent;
-    color: var(--color-text-heading);
+    color: #0c121e;
 }
 
 .hero-cta-group .btn-cta-outline {
     background-color: transparent;
     color: var(--color-text-heading);
     border: 1px solid rgba(26, 42, 58, 0.25);
-    padding: 0.85rem 1.2rem;
+    padding: 1.1rem 1.4rem;
 }
 
 .hero-cta-group .btn-cta-outline:hover {
-    background-color: transparent;
     border-color: var(--color-text-heading);
 }
 
 .hero-credentials {
     font-family: var(--font-body);
-    font-size: 1.15rem; /* Increased size to match at-a-glance styling */
+    font-size: 1.05rem;
     color: var(--color-text-secondary);
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
     border-top: 1px solid var(--color-border);
     padding-top: var(--spacing-md);
+    margin: 0;
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    max-width: 480px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top; /* Start from top to crop slightly above head */
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04); /* Very subtle shadow */
+}
+
+/* Animations */
+.animate-text {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.3s ease-out forwards;
+}
+
+.animate-text.delay-1 { animation-delay: 0.05s; }
+.animate-text.delay-2 { animation-delay: 0.1s; }
+.animate-text.delay-3 { animation-delay: 0.15s; }
+.animate-text.delay-4 { animation-delay: 0.2s; }
+
+.animate-image {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-out 0.4s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-container {
+        gap: 30px;
+    }
+    .hero-image-wrapper {
+        max-width: 380px;
+    }
+    .hero-section {
+        padding: 100px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 70px 24px;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .hero-cta-group {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .hero-image-wrapper {
+        max-width: 100%;
+    }
 }
 
 .section {
