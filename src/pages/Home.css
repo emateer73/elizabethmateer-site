@@ -6,21 +6,22 @@
 .hero-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
+    align-items: flex-start; /* Align image and text blocks at the top */
+    max-width: 1140px;
     margin: 0 auto;
-    gap: 40px;
+    gap: 50px; /* 40-60px gap */
 }
 
 .hero-content {
     flex: 1;
-    max-width: 520px;
+    max-width: 480px; /* Constrain text to 460-520px */
     text-align: left;
+    margin-top: 8px; /* Slightly drop text so image top aligns with H1 top */
 }
 
 .hero-title {
     font-size: clamp(2rem, 3.5vw, 2.5rem);
-    margin-bottom: 10px; /* 8-12px */
+    margin-bottom: 10px;
     letter-spacing: -0.02em;
     color: var(--color-text-heading);
     font-weight: 500;
@@ -33,7 +34,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-secondary);
-    margin-bottom: 14px; /* 12-16px */
+    margin-bottom: 14px;
 }
 
 .hero-primary-subtext {
@@ -41,14 +42,15 @@
     font-size: 1.15rem;
     font-weight: 300;
     color: var(--color-text-secondary);
-    margin-bottom: 28px; /* 24-32px */
+    margin-bottom: 28px;
     line-height: 1.6;
 }
 
 .hero-cta-group {
     display: flex;
-    gap: 14px; /* 12-16px */
-    margin-bottom: 32px;
+    align-items: center; /* Align both buttons on same baseline */
+    gap: 10px; /* 8-12px gap */
+    margin-bottom: 34px;
 }
 
 .hero-cta-group .btn-cta-primary,
@@ -62,10 +64,10 @@
 }
 
 .hero-cta-group .btn-cta-primary {
-    background-color: #0c121e; /* Darker background */
+    background-color: #0c121e;
     color: var(--color-bg-primary);
     border: 1px solid #0c121e;
-    padding: 1.1rem 2rem; /* Slightly larger padding */
+    padding: 0.95rem 1.8rem; /* Slightly reduced padding */
 }
 
 .hero-cta-group .btn-cta-primary:hover {
@@ -77,7 +79,7 @@
     background-color: transparent;
     color: var(--color-text-heading);
     border: 1px solid rgba(26, 42, 58, 0.25);
-    padding: 1.1rem 1.4rem;
+    padding: 0.95rem 1.4rem; /* Slightly reduced padding */
 }
 
 .hero-cta-group .btn-cta-outline:hover {
@@ -86,19 +88,18 @@
 
 .hero-credentials {
     font-family: var(--font-body);
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--color-text-secondary);
     line-height: 1.6;
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--spacing-md);
     margin: 0;
+    /* Removed border-top line for cleanup */
 }
 
 .hero-image-wrapper {
     flex: 1;
-    max-width: 480px;
+    max-width: 550px; /* Increased image size by ~15% */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Sit closer to the right edge */
 }
 
 .hero-image {
@@ -106,15 +107,15 @@
     height: auto;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    object-position: center top; /* Start from top to crop slightly above head */
-    border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04); /* Very subtle shadow */
+    object-position: center top;
+    border-radius: 6px; /* Decreased border-radius to 6px */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02); /* Extremely subtle shadow, barely there */
 }
 
 /* Animations */
 .animate-text {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(10px);
     animation: fadeUp 0.3s ease-out forwards;
 }
 
@@ -125,7 +126,7 @@
 
 .animate-image {
     opacity: 0;
-    animation: fadeIn 0.4s ease-out 0.4s forwards;
+    animation: fadeIn 0.4s ease-out 0.3s forwards;
 }
 
 @keyframes fadeUp {
