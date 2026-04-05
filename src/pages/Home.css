@@ -1,22 +1,22 @@
 .hero-section {
-    padding: 120px 40px;
+    padding: 120px 24px 150px 40px; /* Reduced right padding, added bottom padding */
     background-color: var(--color-bg-primary);
 }
 
 .hero-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align image and text blocks at the top */
-    max-width: 1140px;
+    align-items: flex-start;
+    max-width: 1180px;
     margin: 0 auto;
-    gap: 50px; /* 40-60px gap */
+    gap: 50px;
 }
 
 .hero-content {
     flex: 1;
-    max-width: 480px; /* Constrain text to 460-520px */
+    max-width: 480px;
     text-align: left;
-    margin-top: 8px; /* Slightly drop text so image top aligns with H1 top */
+    margin-top: 0;
 }
 
 .hero-title {
@@ -34,7 +34,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-secondary);
-    margin-bottom: 14px;
+    margin-bottom: 20px; /* Increased spacing +6px */
 }
 
 .hero-primary-subtext {
@@ -42,14 +42,14 @@
     font-size: 1.15rem;
     font-weight: 300;
     color: var(--color-text-secondary);
-    margin-bottom: 28px;
+    margin-bottom: 36px; /* Increased spacing +8px */
     line-height: 1.6;
 }
 
 .hero-cta-group {
     display: flex;
-    align-items: center; /* Align both buttons on same baseline */
-    gap: 10px; /* 8-12px gap */
+    align-items: baseline; /* Perfect baseline alignment */
+    gap: 8px; /* Reduced gap between buttons */
     margin-bottom: 34px;
 }
 
@@ -67,7 +67,7 @@
     background-color: #0c121e;
     color: var(--color-bg-primary);
     border: 1px solid #0c121e;
-    padding: 0.95rem 1.8rem; /* Slightly reduced padding */
+    padding: 1.15rem 1.8rem; /* Increased vertical padding */
 }
 
 .hero-cta-group .btn-cta-primary:hover {
@@ -79,7 +79,7 @@
     background-color: transparent;
     color: var(--color-text-heading);
     border: 1px solid rgba(26, 42, 58, 0.25);
-    padding: 0.95rem 1.4rem; /* Slightly reduced padding */
+    padding: 0.95rem 1.4rem;
 }
 
 .hero-cta-group .btn-cta-outline:hover {
@@ -92,14 +92,14 @@
     color: var(--color-text-secondary);
     line-height: 1.6;
     margin: 0;
-    /* Removed border-top line for cleanup */
 }
 
 .hero-image-wrapper {
     flex: 1;
-    max-width: 550px; /* Increased image size by ~15% */
+    max-width: 590px; /* Increased image size by ~8% */
     display: flex;
-    justify-content: flex-end; /* Sit closer to the right edge */
+    justify-content: flex-end;
+    margin-top: -16px; /* Moved image up slightly to align with top of name */
 }
 
 .hero-image {
@@ -149,9 +149,10 @@
     }
     .hero-image-wrapper {
         max-width: 380px;
+        margin-top: 0;
     }
     .hero-section {
-        padding: 100px 40px;
+        padding: 100px 30px 130px 40px;
     }
 }
 
@@ -194,7 +195,7 @@
     padding: var(--spacing-lg) 0;
     margin-top: 0;
     text-align: center;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(0, 0, 0, 0.04); /* Subtler divider line */
 }
 
 .featured-in-label {
