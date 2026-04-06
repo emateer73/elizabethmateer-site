@@ -34,9 +34,7 @@ const Writing = () => {
                 <h1 className="page-title text-center">Writing</h1>
 
                 <div className="writing-intro">
-                    <p>Elizabeth Mateer writes about identity, attention, creativity, and the cognitive architecture of becoming.</p>
-                    <p>Her essays explore how individuals construct meaning in periods of transition—how attention shapes agency, how resilience is built neurologically and narratively, and how creativity emerges from constraint. Bridging neuroscience and lived experience, her work translates complex psychological research into ideas relevant to everyday life.</p>
-                    <p>Her work returns to a central question: how do we build coherent identities in a distracted, rapidly changing world?</p>
+                    <p>Writing on identity, attention, and becoming.</p>
                 </div>
 
                 <div className="writing-section text-center">
