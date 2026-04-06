@@ -50,7 +50,6 @@ const Books = () => {
                     <h2 className="section-title">Events & Readings</h2>
                     <div className="events-placeholder">
                         <p>Upcoming dates to be announced soon.</p>
-                        <Button href="#" variant="text">Join the mailing list for updates</Button>
                     </div>
                 </section>
             </div>

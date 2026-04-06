@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: var(--color-bg-primary);
     padding: var(--spacing-2xl) var(--spacing-md);
     color: var(--color-text-primary);
@@ -12,177 +11,191 @@
 
 .links-container {
     width: 100%;
-    max-width: 360px;
-    /* Narrower for focus */
+    max-width: 440px; /* Expansive enough for the new typographic hierarchy */
     text-align: center;
 }
 
 /* Header */
 .links-header {
-    margin-bottom: 2rem;
-    /* Generous spacing */
+    margin-bottom: 2.5rem;
 }
 
 .links-name {
     font-family: var(--font-heading);
-    font-size: 1.75rem;
+    font-size: 1.85rem;
     color: var(--color-text-heading);
-    margin-bottom: var(--spacing-xs);
-    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
 }
 
 .links-title {
     font-family: var(--font-body);
-    font-size: 0.95rem;
-    color: var(--color-text-secondary);
-    font-weight: 400;
-    margin-bottom: var(--spacing-md);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.website-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.links-bio {
-    font-family: var(--font-body);
     font-size: 0.9rem;
     color: var(--color-text-secondary);
-    line-height: 1.6;
-    max-width: 280px;
-    margin: 0 auto;
-    font-style: italic;
-    opacity: 0.8;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-md);
 }
 
-/* Sections */
-.links-section {
+/* Prominent Primary CTA */
+.btn-prominent {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    background-color: #111;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px; /* Clean, tight corner */
     margin-bottom: 4rem;
+    transition: all 0.2s ease;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.btn-prominent:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Sections Foundation */
+.links-section {
+    margin-bottom: 3.5rem;
 }
 
 .links-section-label {
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
-    opacity: 0.6;
+    margin-bottom: 2rem;
+    opacity: 0.8;
     font-weight: 500;
 }
 
-/* Social Links - Connect Section */
-.social-links-group {
+/* Explore Work Hub */
+.work-items-group {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 
-.link-social {
+.work-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-item-title {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    text-decoration: none;
     color: var(--color-text-heading);
-    transition: all 0.2s ease;
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
-    display: inline-block;
-    align-self: center;
+    margin-bottom: 6px;
+    font-weight: 500;
 }
 
-.link-social:hover {
-    opacity: 0.7;
-    border-bottom-color: var(--color-border);
-}
-
-/* Outline Button (Essays) */
-.btn-outline {
-    display: block;
-    width: 100%;
-    padding: 14px 20px;
-    background-color: transparent;
-    color: var(--color-text-heading);
+.work-item-subtext {
     font-family: var(--font-body);
-    font-size: 1rem;
-    text-decoration: none;
-    border: 1px solid var(--color-text-heading);
-    border-radius: 2px;
-    transition: all 0.2s ease;
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
 }
 
-.btn-outline:hover {
-    background-color: var(--color-text-heading);
-    color: #fff;
-}
-
-/* Text Link (Website) */
-.btn-text-link {
+.work-item-cta {
     display: inline-flex;
     align-items: center;
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--color-text-heading);
     text-decoration: none;
     border-bottom: 1px solid var(--color-border);
     padding-bottom: 4px;
+    font-weight: 500;
     transition: all 0.2s ease;
 }
 
-.btn-text-link:hover {
+.work-item-cta:hover {
     border-bottom-color: var(--color-text-heading);
+    color: var(--color-text-secondary);
 }
 
 .inline-arrow {
     margin-left: 6px;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: transform 0.2s ease;
 }
 
-.btn-text-link:hover .inline-arrow {
-    transform: translate(2px, -2px);
-    opacity: 1;
+.work-item-cta:hover .inline-arrow {
+    transform: translate(4px, 0); /* Right arrow glide */
 }
 
+/* Follow the Work Section */
+.social-links-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
 
-/* Professional Link */
-.link-professional {
-    display: inline-block;
+.link-social {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--color-text-heading);
+    transition: color 0.2s ease;
+}
+
+.link-social:hover {
+    color: var(--color-text-secondary);
+}
+
+/* Footer Layout */
+.footer-links-group {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.footer-links-group .links-section {
+    margin-bottom: 0;
+}
+
+.footer-links-group .links-section-label {
+    font-size: 0.65rem;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.link-quiet {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
     color: var(--color-text-secondary);
     text-decoration: none;
-    font-size: 0.95rem;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease, color 0.2s ease;
-    padding-bottom: 2px;
+    transition: color 0.2s ease;
 }
 
-.link-professional:hover {
+.link-quiet:hover {
     color: var(--color-text-heading);
-    border-color: var(--color-border);
 }
 
-/* Prominent Button (Pre-order) */
-.btn-prominent {
-    display: block;
-    width: 100%;
-    padding: 18px 24px;
-    background-color: var(--color-text-heading);
-    color: var(--color-bg-primary); /* Assuming background is light, this makes text readable */
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 2px;
-    margin-bottom: 2rem;
-    transition: all 0.2s ease;
-    text-align: center;
-}
+/* Mobile Polish */
+@media (max-width: 600px) {
+    .links-page {
+        padding-top: 4rem;
+    }
 
-.btn-prominent:hover {
-    opacity: 0.95;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    .btn-prominent {
+        margin-bottom: 3.5rem;
+    }
+    
+    .footer-links-group {
+        flex-direction: column;
+        gap: 2.5rem;
+        margin-top: 4rem;
+    }
 }
