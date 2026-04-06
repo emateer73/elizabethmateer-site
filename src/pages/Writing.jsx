@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import './Writing.css';
 
 const Writing = () => {
-    const [latestPost, setLatestPost] = React.useState(null);
+    const [posts, setPosts] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
@@ -12,7 +12,7 @@ const Writing = () => {
             .then(response => response.json())
             .then(data => {
                 if (data.items && data.items.length > 0) {
-                    setLatestPost(data.items[0]);
+                    setPosts(data.items.slice(0, 3));
                 }
                 setLoading(false);
             })
@@ -37,54 +37,61 @@ const Writing = () => {
                     <p>Writing on identity, attention, and becoming.</p>
                 </div>
 
-                <div className="writing-section text-center">
-                    <h2 className="section-heading">Monthly Essays (Substack)</h2>
-                    <p className="section-subheading">Monthly long-form essays published at @elizabethmateer.</p>
-                    <p className="section-description">
-                        These essays explore identity, attention in the digital age, creativity, and the psychology of self-authorship. Written directly for readers, these essays offer sustained inquiry beyond the constraints of platform-driven publishing.
-                    </p>
-
-                    {latestPost && (
-                        <div className="substack-preview-card">
-                            <span className="substack-badge">Latest Post</span>
-                            <h3 className="substack-title">{latestPost.title}</h3>
-                            <p className="substack-excerpt">
-                                {stripHtml(latestPost.description).substring(0, 160)}...
-                            </p>
-                            <div className="substack-meta">
-                                <span className="substack-date">{new Date(latestPost.pubDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                            </div>
-                            <Button href={latestPost.link} target="_blank" variant="text">Read Story <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                <div className="featured-publications">
+                    <div className="pub-column substack-column">
+                        <div className="pub-header">
+                            <h2 className="section-heading">Where Attention Goes</h2>
+                            <p className="section-subheading">Monthly Essays</p>
                         </div>
-                    )}
 
-                    <div className="button-group">
-                        <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="primary">Enter Where Attention Goes</Button>
+                        {posts.length > 0 && (
+                            <div className="editorial-primary-post">
+                                <span className="editorial-date">{new Date(posts[0].pubDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                                <h3 className="editorial-title">{posts[0].title}</h3>
+                                <p className="editorial-excerpt">
+                                    {stripHtml(posts[0].description).substring(0, 160)}...
+                                </p>
+                                <Button href={posts[0].link} target="_blank" variant="text" className="editorial-read-cta">Read Essay <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                            </div>
+                        )}
+
+                        {posts.length > 1 && (
+                            <div className="editorial-secondary-posts">
+                                {posts.slice(1).map((post, index) => (
+                                    <div key={index} className="editorial-small-post">
+                                        <h4 className="editorial-small-title">{post.title}</h4>
+                                        <Button href={post.link} target="_blank" variant="text" className="editorial-read-cta small">Read Essay <ArrowUpRight size={14} style={{ marginLeft: '4px' }} /></Button>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        <div className="pub-cta">
+                            <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="primary">Enter Where Attention Goes</Button>
+                        </div>
+                    </div>
+
+                    <div className="pub-column pt-column">
+                        <div className="pub-header">
+                            <h2 className="section-heading">Psychology Today</h2>
+                            <p className="section-subheading">The Architecture of Identity</p>
+                        </div>
+
+                        <div className="editorial-primary-post">
+                            <h3 className="editorial-title">The Architecture of Identity: How the Brain Builds a Self</h3>
+                            <p className="editorial-excerpt">
+                                An exploration of how neurons and narratives weave together to construct our sense of self.
+                            </p>
+                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202602/the-architecture-of-identity-how-the-brain-builds-a-self" target="_blank" variant="text" className="editorial-read-cta">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                        </div>
+
+                        <div className="pub-cta">
+                            <Button href="https://www.psychologytoday.com/us/contributors/elizabeth-mateer-phd" target="_blank" variant="outline">View All Columns <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                        </div>
                     </div>
                 </div>
 
-                <hr className="divider" />
-
-                <div className="writing-section">
-                    <div className="writing-header">
-                        <h2 className="section-heading">Psychology Today</h2>
-                        <p className="section-subheading">Selected essays from her Psychology Today column, <em>The Architecture of Identity</em>, exploring the intersection of neuropsychology and creativity.</p>
-                    </div>
-
-                    <div className="writing-grid">
-                        <article className="writing-card">
-                            <h3>The Architecture of Identity: How the Brain Builds a Self</h3>
-                            <p>An exploration of how neurons and narratives weave together to construct our sense of self.</p>
-                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202602/the-architecture-of-identity-how-the-brain-builds-a-self" target="_blank" variant="text">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        </article>
-                    </div>
-
-                    <div className="text-center mt-lg">
-                        <Button href="https://www.psychologytoday.com/us/contributors/elizabeth-mateer-phd" target="_blank" variant="outline">Read Latest Posts <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                    </div>
-                </div>
-
-                <hr className="divider" />
+                <hr className="divider" style={{ opacity: 0.3, margin: '60px 0' }} />
 
                 <div className="writing-section literary-section">
                     <h2 className="section-heading">Literary & Creative Work</h2>

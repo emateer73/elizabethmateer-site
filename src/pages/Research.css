@@ -37,7 +37,7 @@
     width: 100%;
     padding: 0 var(--spacing-md) var(--spacing-xl);
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .page-title {
