@@ -67,14 +67,14 @@ const Writing = () => {
                         )}
 
                         <div className="pub-cta">
-                            <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="primary">Enter Where Attention Goes</Button>
+                            <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="text" style={{ fontSize: '1.05rem' }}>Enter Where Attention Goes <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
                         </div>
                     </div>
 
                     <div className="pub-column pt-column">
                         <div className="pub-header">
                             <h2 className="section-heading">Psychology Today</h2>
-                            <p className="section-subheading">The Architecture of Identity</p>
+                            <p className="section-subheading" style={{ textTransform: 'none', letterSpacing: '0', fontSize: '1rem' }}>Regular contributor to Psychology Today</p>
                         </div>
 
                         <div className="editorial-primary-post">
@@ -95,12 +95,12 @@ const Writing = () => {
                         </div>
 
                         <div className="pub-cta">
-                            <Button href="https://www.psychologytoday.com/us/contributors/elizabeth-mateer-phd" target="_blank" variant="outline">View All Columns <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                            <Button href="https://www.psychologytoday.com/us/contributors/elizabeth-mateer-phd" target="_blank" variant="text" style={{ fontSize: '1.05rem' }}>View All Columns <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
                         </div>
                     </div>
                 </div>
 
-                <hr className="divider" style={{ opacity: 0.3, margin: '60px 0' }} />
+                <hr className="divider" style={{ opacity: 0.05, margin: '80px 0 100px' }} />
 
                 <div className="writing-section literary-section">
                     <h2 className="section-heading">Literary & Creative Work</h2>

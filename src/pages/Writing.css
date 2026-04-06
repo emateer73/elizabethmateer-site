@@ -55,8 +55,8 @@
 /* NEW EDITORIAL STYLES */
 .featured-publications {
     display: grid;
-    grid-template-columns: 1.25fr 1fr; /* Substack slightly more dominant */
-    gap: 60px;
+    grid-template-columns: 1.35fr 1fr; /* Substack more dominant */
+    gap: 80px; /* Increased horizontal spacing */
     margin: 60px 0 80px;
     align-items: start;
 }
@@ -75,9 +75,9 @@
 }
 
 .pub-header {
-    margin-bottom: 40px;
-    border-bottom: 1px solid rgba(0,0,0,0.06); /* subtle divider */
-    padding-bottom: 24px;
+    margin-bottom: 50px; /* Increased spacing */
+    padding-bottom: 0px; /* Removed border layout completely */
+
 }
 
 .pub-header .section-heading {
@@ -98,7 +98,7 @@
 }
 
 .editorial-primary-post {
-    margin-bottom: 40px;
+    margin-bottom: 60px; /* Increased vertical spacing */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -116,14 +116,16 @@
 
 .editorial-title {
     font-family: var(--font-heading);
-    font-size: 2.1rem;
-    line-height: 1.3;
-    margin-bottom: 16px;
+    font-size: 2.5rem; /* ~20% increase for Substack */
+    line-height: 1.25;
+    margin-bottom: 20px;
     color: var(--color-text-heading);
+    letter-spacing: -0.02em;
 }
 
 .pt-column .editorial-title {
-    font-size: 1.8rem; /* secondary column receives slightly smaller heading */
+    font-size: 1.95rem; /* secondary column receives slightly smaller heading */
+    letter-spacing: -0.01em;
 }
 
 .editorial-excerpt {
@@ -155,10 +157,10 @@
 .editorial-secondary-posts {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 36px; /* more breathable */
     margin-bottom: 40px;
-    border-top: 1px solid rgba(0,0,0,0.06);
-    padding-top: 30px;
+    /* Softened/removed separators */
+
 }
 
 .editorial-small-post {
@@ -169,14 +171,16 @@
 
 .editorial-small-title {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.15rem; /* smaller, quieter font */
     color: var(--color-text-heading);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     line-height: 1.4;
+    opacity: 0.95;
 }
 
 .editorial-read-cta.small {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    opacity: 0.75; /* Lighter metadata feel */
 }
 
 .pub-cta {
