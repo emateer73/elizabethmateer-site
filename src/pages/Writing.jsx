@@ -78,11 +78,20 @@ const Writing = () => {
                         </div>
 
                         <div className="editorial-primary-post">
-                            <h3 className="editorial-title">The Architecture of Identity: How the Brain Builds a Self</h3>
+                            <span className="editorial-date">March 30, 2026</span>
+                            <h3 className="editorial-title">Why Creative People Struggle to Commit to One Path</h3>
                             <p className="editorial-excerpt">
-                                An exploration of how neurons and narratives weave together to construct our sense of self.
+                                Struggling to choose one path may reflect cognitive flexibility, not indecision. Creative people often thrive by integrating multiple identities.
                             </p>
-                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202602/the-architecture-of-identity-how-the-brain-builds-a-self" target="_blank" variant="text" className="editorial-read-cta">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202603/why-creative-people-struggle-to-commit-to-one-path" target="_blank" variant="text" className="editorial-read-cta">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                        </div>
+
+                        <div className="editorial-secondary-posts">
+                            <div className="editorial-small-post">
+                                <span className="editorial-date" style={{marginBottom: '8px', fontSize: '0.8rem'}}>March 19, 2026</span>
+                                <h4 className="editorial-small-title">Why Handwriting Is Better for Your Brain Than Typing</h4>
+                                <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202603/why-handwriting-is-better-for-your-brain-than-typing" target="_blank" variant="text" className="editorial-read-cta small">Read Article <ArrowUpRight size={14} style={{ marginLeft: '4px' }} /></Button>
+                            </div>
                         </div>
 
                         <div className="pub-cta">
