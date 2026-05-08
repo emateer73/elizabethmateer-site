@@ -445,7 +445,61 @@
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        background-color: #FDFBF7;
+    }
+
+    .hero-background-portrait {
+        position: relative;
+        height: 55vh; /* Portrait takes the top half */
+        width: 100%;
+        z-index: 1;
+        background-position: center top; /* Ensure face is visible */
+    }
+
+    .hero-background-gradient {
+        display: none; /* Not needed in stacked layout */
+    }
+
+    .hero-container {
+        padding: 40px 24px 80px;
+        min-height: auto;
+        z-index: 2;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
     .hero-title {
-        white-space: normal; /* Allow wrapping on mobile */
+        white-space: normal;
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 24px;
+    }
+
+    .hero-primary-subtext {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-cta-group .btn-cta-primary,
+    .hero-cta-group .btn-cta-outline {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
     }
 }
