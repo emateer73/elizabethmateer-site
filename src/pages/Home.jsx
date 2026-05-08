@@ -4,18 +4,25 @@ import { ArrowRight, BookOpen, Mic, PenTool, Brain, User, Zap, Globe, Compass } 
 import './Home.css';
 import PsychTodayLogo from '../assets/psychology today.png';
 import NRTimesLogo from '../assets/nr times new logo.png';
-import RedProfileImage from '../assets/red profile.jpg';
+import PortraitImage from '../assets/profile6.png'; // Updated portrait image
 
 const Home = () => {
     return (
         <div className="home-page">
             {/* Hero Section */}
             <section className="hero-section">
+                {/* Full-bleed portrait background */}
+                <div className="hero-background-portrait" style={{ backgroundImage: `url(${PortraitImage})` }}></div>
+                {/* Seamless atmospheric gradient for text readability and cinematic depth */}
+                <div className="hero-background-gradient"></div>
+
                 <div className="container hero-container">
                     <div className="hero-content">
-                        <h1 className="hero-title animate-text">Elizabeth Mateer, Ph.D.</h1>
+                        <h1 className="hero-title animate-text">
+                            Elizabeth Mateer,<br/>Ph.D.
+                        </h1>
                         <p className="hero-subtitle animate-text delay-1">
-                            Clinical Neuropsychology Fellow, writer, and founder.
+                            CLINICAL NEUROPSYCHOLOGY FELLOW,<br/>WRITER, AND FOUNDER.
                         </p>
                         <p className="hero-primary-subtext animate-text delay-2">
                             Writing about attention, identity, creativity, and the ways we make meaning.
@@ -31,9 +38,6 @@ const Home = () => {
                         <p className="hero-credentials animate-text delay-4">
                             Clinical Fellow in Psychology at Harvard Medical School · Founder, PsychDraft · Founder & Literary Curator, Searching for Home Collective
                         </p>
-                    </div>
-                    <div className="hero-image-wrapper">
-                        <img src={RedProfileImage} alt="Elizabeth Mateer" className="hero-image animate-image" />
                     </div>
                 </div>
             </section>

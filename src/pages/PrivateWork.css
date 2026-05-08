@@ -22,94 +22,82 @@
 }
 
 .private-work-hero-content {
-    max-width: 600px;
+    max-width: 680px; /* Slightly wider for the new copy */
     margin: 0 auto;
     font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Subtle Editorial Divider with generous breathing room */
+.private-work-hero-content p {
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero-credentials-tagline {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-heading);
+    opacity: 0.8;
+    margin-top: var(--spacing-xl);
+}
+
+/* Subtle Editorial Divider */
 .editorial-divider {
     border: none;
     border-top: 1px solid var(--color-border);
     max-width: 120px;
     margin: clamp(4rem, 8vw, 6rem) auto; 
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
-/* Body Content Sections - Expanded Width */
-.private-work-content {
-    max-width: 760px; /* Expanded from 640px for a more open feel */
+/* Content Sections */
+.content-section {
     margin: 0 auto;
-    text-align: left;
+    max-width: 760px;
     padding: 0 var(--spacing-md);
 }
 
-/* CRITICAL FIX: Spacing & Rhythm */
-.content-section {
-    margin-top: clamp(4rem, 8vw, 6rem); /* 64px - 96px depending on screen size */
-    margin-bottom: 0;
-}
-
-.content-section:first-child {
-    margin-top: 0; /* Intro paragraph needs no extra top margin here */
-}
-
-/* Consistent, explicit heading spacing */
 .section-heading {
     margin-top: 0;
-    margin-bottom: clamp(1rem, 2vw, 1.5rem); /* Tighter 16-24px bottom margin */
+    margin-bottom: clamp(2rem, 4vw, 3rem);
     font-size: 1.75rem;
     line-height: 1.2;
     color: var(--color-text-heading);
+    font-weight: 400;
 }
 
-/* Paragraph Spacing - balanced and readable */
-.content-section p {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-    margin-top: 0;
-    margin-bottom: clamp(1.5rem, 3vw, 2.25rem); /* Slightly increased between paragraphs */
-}
-
-.content-section p:last-of-type {
-    margin-bottom: 0;
-}
-
-/* Proper Bullets Styling - Refined */
-.elegant-list {
-    margin: clamp(1rem, 2vw, 1.25rem) 0 clamp(1.75rem, 3.5vw, 2.5rem) 0; /* Tighter above list than section breaks */
-    padding-left: 0;
+/* Elegant Stacked List */
+.elegant-stacked-list {
     list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.elegant-list li {
+.elegant-stacked-list li {
     font-family: var(--font-body);
     font-size: 1.1rem;
     color: var(--color-text-secondary);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-sm);
-    padding-left: 1.25rem;
-    position: relative;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
 }
 
-.elegant-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 0.8em;
-    color: var(--color-text-secondary);
-    opacity: 0.6;
+/* Accordions Container */
+.accordions-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
 }
 
-/* Details Accordion Styling */
+/* Accordion Component */
 .details-accordion {
     border-top: 1px solid var(--color-border);
+}
+
+.details-accordion:last-child {
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -117,23 +105,31 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensures vertical centering */
-    padding: clamp(1.5rem, 3vw, 2rem) 0;
+    align-items: center;
+    padding: clamp(2rem, 4vw, 2.5rem) 0;
     text-align: left;
     background: transparent;
     cursor: pointer;
     border: none;
+    transition: opacity 0.3s ease;
 }
 
-.accordion-title {
-    margin-bottom: 0; /* Reset bottom margin so the + aligns perfectly */
+.accordion-header:hover {
+    opacity: 0.7;
+}
+
+.accordion-main-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-text-heading);
+    letter-spacing: -0.01em;
 }
 
 .accordion-icon {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 200;
     color: var(--color-text-heading);
-    transition: transform 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,76 +138,146 @@
 .accordion-content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .details-accordion.open .accordion-content {
-    max-height: 600px;
+    max-height: 1200px; /* Increased for longer body content */
 }
 
 .accordion-inner {
-    padding-bottom: var(--spacing-xl);
-    padding-top: var(--spacing-sm);
+    padding-bottom: clamp(3rem, 6vw, 4rem);
+    padding-top: 0;
 }
 
-/* Stacked Label + Value styling for details */
-.detail-item {
-    display: flex;
-    flex-direction: column;
+.accordion-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-heading);
+    opacity: 0.6;
     margin-bottom: var(--spacing-xl);
 }
 
-.detail-item:last-child {
-    margin-bottom: 0;
+.accordion-body-text {
+    margin-bottom: var(--spacing-2xl);
 }
 
-.detail-label {
+.accordion-body-text p {
     font-family: var(--font-body);
-    font-size: 0.85rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
     color: var(--color-text-secondary);
-    font-weight: 500;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Nested Grid Structure for Focus and Details */
+.accordion-sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+@media (max-width: 640px) {
+    .accordion-sub-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}
+
+.sub-section-title {
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-bottom: var(--spacing-xs);
-    opacity: 0.8;
+    color: var(--color-text-heading);
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
 }
 
-.detail-value {
+.minimalist-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.minimalist-bullets li {
     font-family: var(--font-body);
-    font-size: 1.15rem;
-    color: var(--color-text-heading);
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    position: relative;
     line-height: 1.5;
 }
 
-/* Availability Section (Closing) */
-.availability-section {
-    /* Emphasis spacing: aligns with other headers plus top padding */
-    margin-top: clamp(4rem, 8vw, 6rem); 
-    padding-top: clamp(3rem, 6vw, 4rem);
-    border-top: 1px solid var(--color-border);
+.minimalist-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    opacity: 0.4;
 }
 
-.availability-section p {
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
+/* Investment Styling - Understated & Refined */
+.investment-footer {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.investment-label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-heading);
+    opacity: 0.5;
+    margin-bottom: 4px;
+}
+
+.investment-value {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: var(--color-text-heading);
+    font-weight: 300;
+}
+
+/* Inquiry Section */
+.inquiry-section {
+    margin-top: clamp(4rem, 8vw, 6rem);
+}
+
+.inquiry-body {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
+.inquiry-body p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
 }
 
 .availability-cta {
-    margin-top: clamp(2rem, 5vw, 3.5rem); /* Extra space before CTA */
-    text-align: center;
+    margin-top: var(--spacing-xl);
 }
 
-/* Refined Button CTA */
 .cta-btn-refined {
-    padding: 10px 24px;
+    padding: 12px 32px;
     letter-spacing: 0.08em;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: all 0.3s ease;
 }
 
 .cta-btn-refined:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    background-color: var(--color-text-primary);
+    background-color: var(--color-text-heading);
+    color: var(--color-bg-primary);
 }
