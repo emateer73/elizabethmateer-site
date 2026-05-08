@@ -19,7 +19,7 @@ const Home = () => {
                 <div className="container hero-container">
                     <div className="hero-content">
                         <h1 className="hero-title animate-text">
-                            Elizabeth Mateer,<br/>Ph.D.
+                            Elizabeth Mateer, Ph.D.
                         </h1>
                         <p className="hero-subtitle animate-text delay-1">
                             CLINICAL NEUROPSYCHOLOGY FELLOW,<br/>WRITER, AND FOUNDER.

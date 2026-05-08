@@ -15,6 +15,10 @@ const Links = () => {
                     Pre-order A New Type of Breakfast
                 </a>
 
+                <a href="https://partiful.com/e/baLjGX6g9byOPC7TwycH" target="_blank" rel="noopener noreferrer" className="btn-prominent">
+                    RSVP to The Founder’s Mind
+                </a>
+
                 <div className="links-section">
                     <h3 className="links-section-label">Explore My Work</h3>
                     
