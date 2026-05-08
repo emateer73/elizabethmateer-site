@@ -447,7 +447,7 @@
 @media (max-width: 768px) {
     .hero-section {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         min-height: auto;
         background-color: #FDFBF7;
     }
