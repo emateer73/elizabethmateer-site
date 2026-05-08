@@ -38,7 +38,7 @@
 
 .hero-content {
     flex: 1;
-    max-width: 580px;
+    max-width: 800px; /* Increased from 580px to accommodate single-line name */
     text-align: left;
     margin-top: 0;
 }
@@ -50,6 +50,7 @@
     letter-spacing: -0.01em;
     color: #1a1a1c; /* Dark charcoal for light theme */
     font-weight: 400;
+    white-space: nowrap; /* Force single line as requested */
 }
 
 .hero-subtitle {
@@ -441,4 +442,10 @@
     color: var(--color-text-heading);
     background: transparent;
     border-bottom: 1px solid var(--color-text-heading);
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        white-space: normal; /* Allow wrapping on mobile */
+    }
 }
