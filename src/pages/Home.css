@@ -116,10 +116,11 @@
 
 .hero-credentials {
     font-family: var(--font-body);
-    font-size: 0.9rem;
-    color: rgba(26, 26, 28, 0.5);
+    font-size: 0.95rem;
+    color: rgba(26, 26, 28, 0.8);
     line-height: 1.6;
     margin: 0;
+    max-width: 600px;
 }
 
 /* Removed explicit image wrapper classes since the portrait is now an absolute background layer */

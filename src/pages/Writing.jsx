@@ -4,28 +4,48 @@ import { ArrowUpRight } from 'lucide-react';
 import './Writing.css';
 
 const Writing = () => {
-    const [posts, setPosts] = React.useState([]);
+    const [substackPosts, setSubstackPosts] = React.useState([]);
+    const [ptPosts, setPtPosts] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
-        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://elizabethmateer.substack.com/feed')
+        // Fetch Substack Feed
+        const fetchSubstack = fetch('https://api.rss2json.com/v1/api.json?rss_url=https://elizabethmateer.substack.com/feed')
             .then(response => response.json())
             .then(data => {
                 if (data.items && data.items.length > 0) {
-                    setPosts(data.items.slice(0, 3));
+                    setSubstackPosts(data.items.slice(0, 3));
                 }
-                setLoading(false);
             })
-            .catch(error => {
-                console.error('Error fetching Substack feed:', error);
-                setLoading(false);
-            });
+            .catch(error => console.error('Error fetching Substack feed:', error));
+
+        // Fetch Psychology Today Feed
+        const fetchPT = fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.psychologytoday.com/us/blog/the-architecture-of-identity/feed')
+            .then(response => response.json())
+            .then(data => {
+                if (data.items && data.items.length > 0) {
+                    setPtPosts(data.items.slice(0, 3));
+                }
+            })
+            .catch(error => console.error('Error fetching PT feed:', error));
+
+        Promise.all([fetchSubstack, fetchPT]).finally(() => {
+            setLoading(false);
+        });
     }, []);
 
     const stripHtml = (html) => {
         let tmp = document.createElement("DIV");
         tmp.innerHTML = html;
         return tmp.textContent || tmp.innerText || "";
+    };
+
+    const formatDate = (dateString) => {
+        return new Date(dateString).toLocaleDateString(undefined, { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
     };
 
     return (
@@ -38,61 +58,73 @@ const Writing = () => {
                 </div>
 
                 <div className="featured-publications">
+                    {/* Substack Column */}
                     <div className="pub-column substack-column">
                         <div className="pub-header">
                             <h2 className="section-heading">Where Attention Goes</h2>
                             <p className="section-subheading">Monthly Essays</p>
                         </div>
 
-                        {posts.length > 0 && (
-                            <div className="editorial-primary-post">
-                                <span className="editorial-date">{new Date(posts[0].pubDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                                <h3 className="editorial-title">{posts[0].title}</h3>
-                                <p className="editorial-excerpt">
-                                    {stripHtml(posts[0].description).substring(0, 160)}...
-                                </p>
-                                <Button href={posts[0].link} target="_blank" variant="text" className="editorial-read-cta">Read Essay <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                            </div>
-                        )}
+                        {substackPosts.length > 0 ? (
+                            <>
+                                <div className="editorial-primary-post">
+                                    <span className="editorial-date">{formatDate(substackPosts[0].pubDate)}</span>
+                                    <h3 className="editorial-title">{substackPosts[0].title}</h3>
+                                    <p className="editorial-excerpt">
+                                        {stripHtml(substackPosts[0].description).substring(0, 160)}...
+                                    </p>
+                                    <Button href={substackPosts[0].link} target="_blank" variant="text" className="editorial-read-cta">Read Essay <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                                </div>
 
-                        {posts.length > 1 && (
-                            <div className="editorial-secondary-posts">
-                                {posts.slice(1).map((post, index) => (
-                                    <div key={index} className="editorial-small-post">
-                                        <h4 className="editorial-small-title">{post.title}</h4>
-                                        <Button href={post.link} target="_blank" variant="text" className="editorial-read-cta small">Read Essay <ArrowUpRight size={14} style={{ marginLeft: '4px' }} /></Button>
+                                {substackPosts.length > 1 && (
+                                    <div className="editorial-secondary-posts">
+                                        {substackPosts.slice(1).map((post, index) => (
+                                            <div key={index} className="editorial-small-post">
+                                                <h4 className="editorial-small-title">{post.title}</h4>
+                                                <Button href={post.link} target="_blank" variant="text" className="editorial-read-cta small">Read Essay <ArrowUpRight size={14} style={{ marginLeft: '4px' }} /></Button>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
-                            </div>
-                        )}
+                                )}
+                            </>
+                        ) : !loading && <p>Latest essays loading...</p>}
 
                         <div className="pub-cta">
                             <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="text" style={{ fontSize: '1.05rem' }}>Enter Where Attention Goes <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
                         </div>
                     </div>
 
+                    {/* PT Column */}
                     <div className="pub-column pt-column">
                         <div className="pub-header">
                             <h2 className="section-heading">Psychology Today</h2>
-                            <p className="section-subheading" style={{ textTransform: 'none', letterSpacing: '0', fontSize: '1rem' }}>Regular contributor to Psychology Today</p>
+                            <p className="section-subheading" style={{ textTransform: 'none', letterSpacing: '0', fontSize: '1rem' }}>The Architecture of Identity</p>
                         </div>
 
-                        <div className="editorial-primary-post">
-                            <span className="editorial-date">March 30, 2026</span>
-                            <h3 className="editorial-title">Why Creative People Struggle to Commit to One Path</h3>
-                            <p className="editorial-excerpt">
-                                Struggling to choose one path may reflect cognitive flexibility, not indecision. Creative people often thrive by integrating multiple identities.
-                            </p>
-                            <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202603/why-creative-people-struggle-to-commit-to-one-path" target="_blank" variant="text" className="editorial-read-cta">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
-                        </div>
+                        {ptPosts.length > 0 ? (
+                            <>
+                                <div className="editorial-primary-post">
+                                    <span className="editorial-date">{formatDate(ptPosts[0].pubDate)}</span>
+                                    <h3 className="editorial-title">{ptPosts[0].title}</h3>
+                                    <p className="editorial-excerpt">
+                                        {stripHtml(ptPosts[0].description).substring(0, 160)}...
+                                    </p>
+                                    <Button href={ptPosts[0].link} target="_blank" variant="text" className="editorial-read-cta">Read Article <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
+                                </div>
 
-                        <div className="editorial-secondary-posts">
-                            <div className="editorial-small-post">
-                                <span className="editorial-date" style={{marginBottom: '8px', fontSize: '0.8rem'}}>March 19, 2026</span>
-                                <h4 className="editorial-small-title">Why Handwriting Is Better for Your Brain Than Typing</h4>
-                                <Button href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202603/why-handwriting-is-better-for-your-brain-than-typing" target="_blank" variant="text" className="editorial-read-cta small">Read Article <ArrowUpRight size={14} style={{ marginLeft: '4px' }} /></Button>
-                            </div>
-                        </div>
+                                {ptPosts.length > 1 && (
+                                    <div className="editorial-secondary-posts">
+                                        {ptPosts.slice(1, 3).map((post, index) => (
+                                            <div key={index} className="editorial-small-post">
+                                                <span className="editorial-date" style={{marginBottom: '8px', fontSize: '0.8rem'}}>{formatDate(post.pubDate)}</span>
+                                                <h4 className="editorial-small-title">{post.title}</h4>
+                                                <Button href={post.link} target="_blank" variant="text" className="editorial-read-cta small">Read Article <ArrowUpRight size={14} style={{ marginLeft: '4px' }} /></Button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </>
+                        ) : !loading && <p>Latest articles loading...</p>}
 
                         <div className="pub-cta">
                             <Button href="https://www.psychologytoday.com/us/contributors/elizabeth-mateer-phd" target="_blank" variant="text" style={{ fontSize: '1.05rem' }}>View All Columns <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
