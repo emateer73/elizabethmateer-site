@@ -631,7 +631,7 @@ const FoundersMind = () => {
                             <div className="research-theme-header">
                                 <h3 className="research-theme-title">Founder Personality and Entrepreneurship</h3>
                             </div>
-                            <div className="research-item">
+                            <div className="research-item" style={{ marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px dashed var(--color-border)' }}>
                                 <p className="research-citation">
                                     McCarthy, P. X., Gong, X., Braesemann, F., Stephany, F., Rizoiu, M.-A., & Kern, M. L. (2023). The impact of founder personalities on startup success. <em>Scientific Reports</em>, 13, 17200.
                                 </p>
@@ -650,6 +650,22 @@ const FoundersMind = () => {
                                     Note: The reflection quiz on this page is inspired by themes from this literature, but it is not a reproduction of any validated measure.
                                 </div>
                             </div>
+                            <div className="research-item">
+                                <p className="research-citation">
+                                    Freiberg, B., & Matz, S. C. (2023). Founder personality and entrepreneurial outcomes: A large-scale field study of technology startups. <em>Proceedings of the National Academy of Sciences</em>, 120(19), e2215829120.
+                                </p>
+                                <a 
+                                    href="https://doi.org/10.1073/pnas.2215829120" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="research-link"
+                                >
+                                    View Article Source <ExternalLink size={12} style={{ marginLeft: '4px' }} />
+                                </a>
+                                <p className="research-summary">
+                                    A large-scale study demonstrating how founder personality traits predict startup success and growth. It shows that diverse, well-configured founder personalities are highly correlated with raising venture capital and achieving scale.
+                                </p>
+                            </div>
                         </div>
 
                         {/* Theme 2 */}
@@ -657,7 +673,7 @@ const FoundersMind = () => {
                             <div className="research-theme-header">
                                 <h3 className="research-theme-title">Cognitive Ability, Personality, and Entrepreneurial Outcomes</h3>
                             </div>
-                            <div className="research-item">
+                            <div className="research-item" style={{ marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px dashed var(--color-border)' }}>
                                 <p className="research-citation">
                                     Bergner, S. (2020). Being Smart Is Not Enough: Personality Traits and Vocational Interests Incrementally Predict Intention, Status and Success of Leaders and Entrepreneurs Beyond Cognitive Ability. <em>Frontiers in Psychology</em>, 11, 204.
                                 </p>
@@ -671,6 +687,22 @@ const FoundersMind = () => {
                                 </a>
                                 <p className="research-summary">
                                     Cognitive ability matters, but it does not fully explain who becomes an entrepreneur or who performs well. Personality traits and vocational interests help shape how intelligence is deployed.
+                                </p>
+                            </div>
+                            <div className="research-item">
+                                <p className="research-citation">
+                                    Zhao, H., Seibert, S. E., & Lumpkin, G. T. (2010). The Relationship of Personality to Entrepreneurial Intentions and Performance: A Meta-Analytic Review. <em>Journal of Management</em>, 36(2), 381–404.
+                                </p>
+                                <a 
+                                    href="https://doi.org/10.1177/0149206309335187" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="research-link"
+                                >
+                                    View Article Source <ExternalLink size={12} style={{ marginLeft: '4px' }} />
+                                </a>
+                                <p className="research-summary">
+                                    A comprehensive meta-analytic review establishing the robust relationships between Big Five personality dimensions and both entrepreneurial intentions and actual performance. It highlights how personality configuration is a significant predictor of business outcomes.
                                 </p>
                             </div>
                         </div>
@@ -698,7 +730,30 @@ const FoundersMind = () => {
                             </div>
                         </div>
 
-                        {/* Theme 4 */}
+                        {/* Theme 4 - Attention, Working Memory, and Cognitive Load */}
+                        <div className="research-theme-card">
+                            <div className="research-theme-header">
+                                <h3 className="research-theme-title">Attention, Working Memory, and Cognitive Load</h3>
+                            </div>
+                            <div className="research-item">
+                                <p className="research-citation">
+                                    Balconi, M., Rovelli, K., Angioletti, L., & Allegretta, R. A. (2024). Working Memory Workload When Making Complex Decisions: A Behavioral and EEG Study. <em>Sensors (Basel, Switzerland)</em>, 24(17), 5754.
+                                </p>
+                                <a 
+                                    href="https://doi.org/10.3390/s24175754" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="research-link"
+                                >
+                                    View Article Source <ExternalLink size={12} style={{ marginLeft: '4px' }} />
+                                </a>
+                                <p className="research-summary">
+                                    Investigates working memory workload and neural markers (using EEG) during complex, high-stakes decision-making. The study highlights how high cognitive load, information complexity, and uncertainty tax working memory capacities, impacting the speed and quality of strategic execution.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Theme 5 */}
                         <div className="research-theme-card">
                             <div className="research-theme-header">
                                 <h3 className="research-theme-title">Achievement, Identity, and Motivation</h3>
@@ -709,6 +764,22 @@ const FoundersMind = () => {
                                 </p>
                                 <p className="research-summary">
                                     This framework explores how ambition can be meaningful while still needing a life structure that supports autonomy, competence, and connection. It details why the pursuit of goals can feel more organizing than the arrival, emphasizing the core human needs (autonomy, competence, and relatedness) that protect energy and identity from burnout.
+                                </p>
+                            </div>
+                            <div className="research-item" style={{ marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px dashed var(--color-border)' }}>
+                                <p className="research-citation">
+                                    Muñoz, P., Barton, M., Braun, S., Chowdhury, F., Jayne-Little, N., Rowland, J., Sykes, K., Smith, J., Talbot-Jones, C., Taggart, A., & Komes, J. (2023). The deterioration of self-worth in entrepreneurship. <em>Journal of Business Venturing Insights</em>, 20, e00430.
+                                </p>
+                                <a 
+                                    href="https://doi.org/10.1016/j.jbvi.2023.e00430" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="research-link"
+                                >
+                                    View Article Source <ExternalLink size={12} style={{ marginLeft: '4px' }} />
+                                </a>
+                                <p className="research-summary">
+                                    Examines how the extreme emotional and cognitive pressures of building a startup can lead to an erosion of personal self-worth. The research underscores the psychological cost of identifying too closely with one's business and the crucial importance of boundary setting and self-care.
                                 </p>
                             </div>
                             <div className="research-item">
