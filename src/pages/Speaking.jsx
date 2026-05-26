@@ -49,7 +49,7 @@ const Speaking = () => {
                             <span>Hosted as part of Boston Tech Week.</span>
                         </div>
                         
-                        <div className="event-cta">
+                        <div className="event-cta" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center', marginTop: '16px' }}>
                             <Button 
                                 href="https://partiful.com/e/baLjGX6g9byOPC7TwycH" 
                                 variant="outline" 
@@ -57,6 +57,13 @@ const Speaking = () => {
                                 external
                             >
                                 RSVP <ExternalLink size={14} style={{ marginLeft: '6px', opacity: 0.6 }} />
+                            </Button>
+                            <Button 
+                                to="/founders-mind" 
+                                variant="primary" 
+                                className="btn-resources"
+                            >
+                                Access Supplemental Resources
                             </Button>
                         </div>
                     </div>
