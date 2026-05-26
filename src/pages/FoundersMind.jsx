@@ -237,7 +237,7 @@ const FoundersMind = () => {
                 <div className="container">
                     <p className="fm-hero-meta">Boston Tech Week • May 2026</p>
                     <h1 className="fm-hero-title">The Founder’s Mind</h1>
-                    <p className="fm-hero-subtitle">Resources from the Boston Tech Week founder breakfast</p>
+                    <p className="fm-hero-subtitle">Resources from Boston Tech Week</p>
                     
                     <p className="fm-hero-intro">
                         Building a company is not only an execution problem. It is a cognitive and psychological demand on attention, working memory, decision-making, identity, and emotional regulation.
@@ -705,7 +705,7 @@ const FoundersMind = () => {
                             </div>
                             <div className="research-item" style={{ marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px dashed var(--color-border)' }}>
                                 <p className="research-citation">
-                                    Ryan, R. M., & Deci, E. L. (n.d.). Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being.
+                                    Ryan, R. M., & Deci, E. L. (2000). Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being.
                                 </p>
                                 <p className="research-summary">
                                     This framework explores how ambition can be meaningful while still needing a life structure that supports autonomy, competence, and connection. It details why the pursuit of goals can feel more organizing than the arrival, emphasizing the core human needs (autonomy, competence, and relatedness) that protect energy and identity from burnout.
