@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Button from '../components/Button';
 import { ExternalLink, Check, ChevronRight, ChevronLeft, RefreshCw, BookOpen } from 'lucide-react';
+import FoundersMindImg from "../assets/founder's mind event.png";
+import NeuroImg from "../assets/neuro.jpg";
+import FoundersMind1 from "../assets/foundersmind1.jpg";
+import FoundersMind2 from "../assets/foundersmind2.jpg";
+import FoundersMind4 from "../assets/foundersmind4.jpg";
 import './FoundersMind.css';
 
 // Profiles data structure
@@ -122,7 +127,7 @@ const FoundersMind = () => {
             createdMeta = true;
         }
         const prevDesc = metaDesc.getAttribute('content');
-        metaDesc.setAttribute('content', 'Resources, founder profile reflection tool, and research from The Founder’s Mind, a Boston Tech Week breakfast on the psychology of building.');
+        metaDesc.setAttribute('content', 'Explore cognitive profiles, frameworks, reflection tools, and scientific research from The Founder’s Mind — Dr. Elizabeth Mateer’s signature talk on entrepreneurship psychology.');
 
         return () => {
             if (createdMeta) {
@@ -235,14 +240,15 @@ const FoundersMind = () => {
             {/* 1. Hero Section */}
             <header className="fm-hero">
                 <div className="container">
-                    <p className="fm-hero-meta">Boston Tech Week • May 2026</p>
+                    <span className="fm-hero-meta">Signature Talk & Framework</span>
                     <h1 className="fm-hero-title">The Founder’s Mind</h1>
-                    <p className="fm-hero-subtitle">Resources from Boston Tech Week</p>
+                    <p className="fm-hero-subtitle">Founder Psychology, Cognitive Performance & the Mental Demands of Building</p>
+                    <p className="fm-hero-credibility">Presented in founder, academic, and interdisciplinary settings, including Boston Tech Week.</p>
                     
                     <p className="fm-hero-intro">
-                        Building a company is not only an execution problem. It is a cognitive and psychological demand on attention, working memory, decision-making, identity, and emotional regulation.
+                        Building something ambitious is not only an execution problem — it is also a cognitive and psychological challenge involving attention, working memory, identity, emotional regulation, uncertainty tolerance, and decision-making.
                         <br /><br />
-                        This page includes the reflection tools, frameworks, and research referenced during <em>The Founder’s Mind: A Founder Breakfast on the Psychology of Building</em>, curated by <strong>Elizabeth Mateer, PhD</strong> — Founder, PsychDraft.
+                        This page includes selected frameworks, reflection tools, and research explored through The Founder’s Mind — a research-informed conversation on the psychology of building, curated by <strong>Elizabeth Mateer, PhD</strong> — Founder, PsychDraft.
                     </p>
 
                     <div className="fm-hero-ctas">
@@ -269,10 +275,29 @@ const FoundersMind = () => {
                         </Button>
                     </div>
                     <p style={{ marginTop: '24px', fontSize: '0.85rem', fontStyle: 'italic', color: 'var(--color-text-secondary)' }}>
-                        Bookmark this page or keep the QR code handy — these tools are designed to be revisited after the event.
+                        Bookmark this page — these tools are designed to be revisited regularly as your company and cognitive demands scale.
                     </p>
                 </div>
             </header>
+
+            {/* About the Talk Section */}
+            <section className="fm-about-section">
+                <div className="container">
+                    <div className="fm-about-card">
+                        <h3 className="fm-about-title">About the Talk</h3>
+                        <div className="fm-about-content">
+                            <p className="fm-about-text">
+                                The Founder’s Mind explores the hidden psychological demands of entrepreneurship and ambitious work — including cognitive load, identity shifts, burnout risk, creativity, attention, emotional regulation, and decision-making under uncertainty.
+                            </p>
+                            <p className="fm-about-text">
+                                Originally developed for founder communities, the talk has since expanded into broader conversations on human performance, reinvention, and meaningful work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr className="editorial-divider" />
 
             {/* 2. Cognitive Profile Reflection Tool */}
             <section id="reflection-tool" className="fm-section" ref={quizRef}>
@@ -387,7 +412,7 @@ const FoundersMind = () => {
                             </div>
                         </div>
                     ) : (
-                        /* Results Dashboard Dashboard */
+                        /* Results Dashboard */
                         <div className="results-dashboard">
                             <div className="results-heading">
                                 <h3>Your Founder Mind Configuration</h3>
@@ -510,6 +535,8 @@ const FoundersMind = () => {
                 </div>
             </section>
 
+            <hr className="editorial-divider" />
+
             {/* 3. P.A.C.E. Framework Section */}
             <section id="pace-framework" className="fm-section">
                 <div className="container">
@@ -576,6 +603,8 @@ const FoundersMind = () => {
                 </div>
             </section>
 
+            <hr className="editorial-divider" />
+
             {/* 4. Founder Attention Audit Section */}
             <section id="attention-audit" className="fm-section">
                 <div className="container">
@@ -614,6 +643,8 @@ const FoundersMind = () => {
                     </div>
                 </div>
             </section>
+
+            <hr className="editorial-divider" />
 
             {/* 5. Research Referenced Section */}
             <section id="research-referenced" className="fm-section">
@@ -744,7 +775,7 @@ const FoundersMind = () => {
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="research-link"
-                                >
+                                  >
                                     View Article Source <ExternalLink size={12} style={{ marginLeft: '4px' }} />
                                 </a>
                                 <p className="research-summary">
@@ -804,6 +835,79 @@ const FoundersMind = () => {
                 </div>
             </section>
 
+            <hr className="editorial-divider" />
+
+            {/* Curated Event Photos Section: "In Conversation" */}
+            <section className="fm-conversation-section">
+                <div className="container">
+                    <div className="fm-section-header">
+                        <h2 className="fm-section-title">In Conversation</h2>
+                        <p className="fm-section-intro">Selected moments from founder gatherings, workshops, and conversations on the psychology of building.</p>
+                    </div>
+                    
+                    <div className="fm-photo-grid">
+                        <div className="fm-photo-item">
+                            <div className="fm-photo-frame">
+                                <img src={FoundersMind1} alt="Boston Tech Week · Founder Breakfast" />
+                            </div>
+                            <span className="fm-photo-caption">Boston Tech Week · Founder Breakfast</span>
+                        </div>
+                        <div className="fm-photo-item">
+                            <div className="fm-photo-frame">
+                                <img src={FoundersMind2} alt="Founder conversations on identity, cognition, and entrepreneurship" />
+                            </div>
+                            <span className="fm-photo-caption">Founder conversations on identity, cognition, and entrepreneurship</span>
+                        </div>
+                        <div className="fm-photo-item">
+                            <div className="fm-photo-frame">
+                                <img src={FoundersMind4} alt="Speaking on attention, decision-making, and founder psychology" />
+                            </div>
+                            <span className="fm-photo-caption">Speaking on attention, decision-making, and founder psychology</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr className="editorial-divider" />
+
+            {/* Selective Video Access Section: "Watch the Talk" */}
+            <section className="fm-video-section">
+                <div className="container">
+                    <div className="fm-video-card">
+                        <h3 className="fm-video-title">Watch the Talk</h3>
+                        <p className="fm-video-text">
+                            The Founder’s Mind has been presented in multiple settings and adapted to different audiences. Because portions are customized to context, recordings are shared selectively.
+                        </p>
+                        <div className="fm-video-cta-wrapper">
+                            <Button to="/contact" variant="primary" className="btn-fm-video">
+                                Request Access to Recording →
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr className="editorial-divider" />
+
+            {/* Soft Speaking CTA Section */}
+            <section className="fm-speaking-cta-section">
+                <div className="container">
+                    <div className="fm-speaking-cta-card">
+                        <h3 className="fm-speaking-cta-title">Bring The Founder’s Mind to Your Organization</h3>
+                        <p className="fm-speaking-cta-text">
+                            Available for founder communities, accelerators, universities, leadership groups, healthcare audiences, and interdisciplinary teams.
+                        </p>
+                        <div className="fm-speaking-cta-wrapper">
+                            <Button to="/contact" variant="primary" className="btn-fm-speaking-cta">
+                                Speaking Inquiry →
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr className="editorial-divider" />
+
             {/* 6. Continue the Conversation Section */}
             <section className="fm-cta-section">
                 <div className="fm-cta-card">
@@ -813,7 +917,6 @@ const FoundersMind = () => {
                     </p>
 
                     <div className="fm-cta-buttons">
-                        {/* Note: Update the LinkedIn URL in task list if desired */}
                         <Button 
                             href="https://www.linkedin.com/in/elizabeth-mateer-phd-39b8a5192/" 
                             variant="primary" 
@@ -850,7 +953,7 @@ const FoundersMind = () => {
                         
                         <div className="fm-pdf-form">
                             <Button 
-                                href="mailto:elizabethmateerphd@gmail.com?subject=Request%20Founder%27s%20Mind%20Framework%20PDF&body=Hi%20Dr.%20Mateer%2C%0A%0AI%20attended%20The%20Founder%27s%20Mind%20breakfast%20at%20Boston%20Tech%20Week%20and%20would%20love%20to%20receive%20the%20framework%20as%20a%20PDF%20resource.%0A%0AThank%20you%21" 
+                                href="mailto:elizabethmateerphd@gmail.com?subject=Request%20Founder%27s%20Mind%20Framework%20PDF&body=Hi%20Dr.%20Mateer%2C%0A%0AI%20would%20love%20to%20receive%20the%20Founder%27s%20Mind%20framework%20as%20a%20PDF%20resource.%0A%0AThank%20you%21" 
                                 variant="primary" 
                                 className="btn-fm-pdf"
                             >
