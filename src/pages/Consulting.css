@@ -92,3 +92,259 @@
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-lg);
 }
+
+/* Subtle Editorial Divider */
+.editorial-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    max-width: 120px;
+    margin: clamp(4rem, 8vw, 6rem) auto; 
+    opacity: 0.4;
+}
+
+.private-work-divider {
+    max-width: 200px;
+    margin-top: clamp(6rem, 10vw, 8rem);
+    margin-bottom: clamp(6rem, 10vw, 8rem);
+    opacity: 0.25; /* Even lighter divider for private work transition */
+}
+
+/* Select Private Work Section styles */
+.private-work-section {
+    padding-top: var(--spacing-md);
+    margin-bottom: clamp(4rem, 8vw, 6rem);
+}
+
+.private-work-section-title {
+    font-family: var(--font-heading);
+    font-size: 1.45rem; /* Quieter than the default h2 headings */
+    font-weight: 500;
+    color: var(--color-text-heading);
+    opacity: 0.85; /* Quieter typography treatment */
+    letter-spacing: -0.01em;
+    margin-bottom: var(--spacing-lg);
+}
+
+.private-work-intro {
+    max-width: 600px;
+    margin: 0 auto clamp(3rem, 6vw, 4rem);
+    padding: 0 var(--spacing-md);
+}
+
+.private-work-intro p {
+    font-family: var(--font-body);
+    font-size: 1.05rem; /* Quieter font scale */
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Private Work Accordion overrides */
+.private-work-accordions {
+    max-width: 680px; /* Slightly narrower layout to feel more selective & intimate */
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.private-work-accordions .details-accordion {
+    border-top: 1px solid rgba(229, 228, 224, 0.6); /* Even subtler border lines */
+}
+
+.private-work-accordions .details-accordion:last-child {
+    border-bottom: 1px solid rgba(229, 228, 224, 0.6);
+}
+
+.private-work-accordions .accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem) 0; /* More compact header padding */
+    text-align: left;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.private-work-accordions .accordion-header:hover {
+    opacity: 0.7;
+}
+
+.private-work-accordions .accordion-main-title {
+    margin: 0;
+    font-size: 1.25rem; /* Quieter heading scale than original 1.5rem */
+    font-weight: 400;
+    color: var(--color-text-heading);
+    opacity: 0.9;
+    letter-spacing: -0.01em;
+}
+
+.private-work-accordions .accordion-icon {
+    font-size: 1.25rem;
+    font-weight: 200;
+    color: var(--color-text-heading);
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.private-work-accordions .accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.private-work-accordions .details-accordion.open .accordion-content {
+    max-height: 1200px;
+}
+
+.private-work-accordions .accordion-inner {
+    padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+    padding-top: 0.5rem;
+}
+
+.private-work-accordions .accordion-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.8rem; /* Quieter uppercase subtitle */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-heading);
+    opacity: 0.5;
+    margin-bottom: var(--spacing-lg);
+}
+
+.private-work-accordions .accordion-body-text {
+    margin-bottom: var(--spacing-xl);
+}
+
+.private-work-accordions .accordion-body-text p {
+    font-family: var(--font-body);
+    font-size: 1rem; /* Muted from 1.1rem to 1rem */
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Accordion details lists */
+.private-work-accordions .accordion-sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+@media (max-width: 640px) {
+    .private-work-accordions .accordion-sub-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+.private-work-accordions .sub-section-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-heading);
+    margin-bottom: var(--spacing-md);
+    opacity: 0.8;
+}
+
+.private-work-accordions .minimalist-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.private-work-accordions .minimalist-bullets li {
+    font-family: var(--font-body);
+    font-size: 0.95rem; /* Muted list items */
+    color: var(--color-text-secondary);
+    margin-bottom: 0.4rem;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.private-work-accordions .minimalist-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    opacity: 0.3;
+}
+
+/* Investment footer */
+.private-work-accordions .investment-footer {
+    border-top: 1px solid rgba(229, 228, 224, 0.6);
+    padding-top: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.private-work-accordions .investment-label {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-heading);
+    opacity: 0.45;
+    margin-bottom: 2px;
+}
+
+.private-work-accordions .investment-value {
+    font-family: var(--font-body);
+    font-size: 1.15rem; /* Slightly smaller investment value */
+    color: var(--color-text-heading);
+    font-weight: 300;
+}
+
+/* Private Work Request Section */
+.private-work-request {
+    margin-top: clamp(4rem, 8vw, 6rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.private-work-request .request-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem; /* Lower heading scale than main consulting CTA */
+    font-weight: 500;
+    color: var(--color-text-heading);
+    opacity: 0.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+.private-work-request .request-body {
+    max-width: 550px; /* Slightly narrower intro block */
+    margin: 0 auto var(--spacing-xl);
+    padding: 0 var(--spacing-md);
+}
+
+.private-work-request .request-body p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.private-work-request .request-cta {
+    margin-top: var(--spacing-lg);
+}
+
+.private-work-request .cta-btn-refined {
+    padding: 10px 28px; /* Slightly smaller button padding than dominant CTA */
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    transition: all 0.3s ease;
+}
+
+.private-work-request .cta-btn-refined:hover {
+    transform: translateY(-1px);
+    background-color: var(--color-text-heading);
+    color: var(--color-bg-primary);
+}
