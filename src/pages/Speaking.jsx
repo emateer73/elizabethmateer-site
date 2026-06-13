@@ -3,8 +3,8 @@ import Button from '../components/Button';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import FoundersMindImg from "../assets/founder's mind event.png";
 import NeuroImg from "../assets/neuro.jpg";
-import SpeakingAudience from "../assets/speaking_audience.png";
-import SpeakingStage from "../assets/speaking_stage.png";
+import FoundersMind1 from "../assets/foundersmind1.jpg";
+import FoundersMind2 from "../assets/foundersmind2.jpg";
 import FoundersMind4 from "../assets/foundersmind4.jpg";
 import './Speaking.css';
 
@@ -99,21 +99,21 @@ const Speaking = () => {
                     <div className="curated-photo-grid">
                         <div className="grid-item item-large">
                             <div className="grid-image-frame">
-                                <img src={SpeakingAudience} alt="Speaking with MIT Sloan Fellows on founder cognition, identity, and sustainable performance." />
+                                <img src={FoundersMind1} alt="Boston Tech Week · Founder Breakfast" />
                             </div>
-                            <span className="grid-caption">Speaking with MIT Sloan Fellows on founder cognition, identity, and sustainable performance.</span>
+                            <span className="grid-caption">Boston Tech Week · Founder Breakfast</span>
                         </div>
                         <div className="grid-item item-medium">
                             <div className="grid-image-frame">
-                                <img src={SpeakingStage} alt="Conversations on founder psychology, complementary teams, and building under uncertainty." />
+                                <img src={FoundersMind2} alt="Founder conversations on identity, cognition, and entrepreneurship" />
                             </div>
-                            <span className="grid-caption">Conversations on founder psychology, complementary teams, and building under uncertainty.</span>
+                            <span className="grid-caption">Founder conversations on identity, cognition, and entrepreneurship</span>
                         </div>
                         <div className="grid-item item-medium-alt">
                             <div className="grid-image-frame">
-                                <img src={FoundersMind4} alt="Boston Tech Week — The Founder’s Mind." />
+                                <img src={FoundersMind4} alt="Speaking on attention, decision-making, and founder psychology" />
                             </div>
-                            <span className="grid-caption">Boston Tech Week — The Founder’s Mind.</span>
+                            <span className="grid-caption">Speaking on attention, decision-making, and founder psychology</span>
                         </div>
                     </div>
                 </section>
