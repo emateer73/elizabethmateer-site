@@ -3,8 +3,8 @@ import Button from '../components/Button';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import FoundersMindImg from "../assets/founder's mind event.png";
 import NeuroImg from "../assets/neuro.jpg";
-import FoundersMind1 from "../assets/foundersmind1.jpg";
-import FoundersMind2 from "../assets/foundersmind2.jpg";
+import SpeakingAudience from "../assets/speaking_audience.png";
+import SpeakingStage from "../assets/speaking_stage.png";
 import FoundersMind4 from "../assets/foundersmind4.jpg";
 import './Speaking.css';
 
@@ -18,13 +18,13 @@ const Speaking = () => {
                     <h1 className="page-title text-center">Speaking & Workshops</h1>
                     <div className="speaking-intro">
                         <p className="editorial-lead">
-                            Dr. Elizabeth Mateer speaks at the intersection of psychology, neurocognition, identity, creativity, and human performance — translating complex ideas into intellectually rigorous, emotionally resonant, and practically useful conversations.
+                            Dr. Elizabeth Mateer speaks at the intersection of psychology, neurocognition, founder performance, identity, creativity, and human potential — translating complex ideas into intellectually rigorous, emotionally resonant, and practically useful conversations.
                         </p>
                         <p className="editorial-body">
-                            Her work explores how people think, build, adapt, create, and construct meaning during periods of ambition, uncertainty, reinvention, and rapid technological change.
+                            Her work explores how people think, build, adapt, create, and construct meaning during periods of ambition, uncertainty, reinvention, and rapid technological change. Recent conversations have explored founder psychology, decision-making under uncertainty, identity shifts, cognitive flexibility, creativity, burnout, and sustainable performance.
                         </p>
                         <p className="speaking-audiences-subtle">
-                            Recent talks include founder communities, academic institutions, literary organizations, healthcare professionals, and interdisciplinary audiences.
+                            Recent invited conversations include the MIT Sloan Fellows MBA, Boston Tech Week, founder communities, academic institutions, healthcare organizations, and interdisciplinary audiences.
                         </p>
                     </div>
                 </header>
@@ -54,7 +54,7 @@ const Speaking = () => {
                             
                             <div className="talk-context-line">
                                 <span className="context-bullet"></span>
-                                <p>Recently presented at Boston Tech Week</p>
+                                <p>Recently invited by Boston Tech Week & MIT Sloan Fellows MBA</p>
                             </div>
                             
                             <div className="talk-ctas">
@@ -77,6 +77,16 @@ const Speaking = () => {
                     </div>
                 </section>
 
+                {/* Recent Audiences Credibility Strip */}
+                <section className="recent-audiences-section">
+                    <div className="recent-audiences-container">
+                        <h4 className="recent-audiences-title">Recent Audiences</h4>
+                        <p className="recent-audiences-list">
+                            MIT Sloan Fellows MBA &bull; Boston Tech Week &bull; Founder Communities &bull; Healthcare Organizations &bull; Academic Institutions
+                        </p>
+                    </div>
+                </section>
+
                 <hr className="editorial-divider" />
 
                 {/* Curated Event Photos: "Recent Conversations" Section */}
@@ -89,21 +99,21 @@ const Speaking = () => {
                     <div className="curated-photo-grid">
                         <div className="grid-item item-large">
                             <div className="grid-image-frame">
-                                <img src={FoundersMind1} alt="Boston Tech Week · Founder Breakfast" />
+                                <img src={SpeakingAudience} alt="Speaking with MIT Sloan Fellows on founder cognition, identity, and sustainable performance." />
                             </div>
-                            <span className="grid-caption">Boston Tech Week · Founder Breakfast</span>
+                            <span className="grid-caption">Speaking with MIT Sloan Fellows on founder cognition, identity, and sustainable performance.</span>
                         </div>
                         <div className="grid-item item-medium">
                             <div className="grid-image-frame">
-                                <img src={FoundersMind2} alt="Founder conversations on identity, cognition, and entrepreneurship" />
+                                <img src={SpeakingStage} alt="Conversations on founder psychology, complementary teams, and building under uncertainty." />
                             </div>
-                            <span className="grid-caption">Founder conversations on identity, cognition, and entrepreneurship</span>
+                            <span className="grid-caption">Conversations on founder psychology, complementary teams, and building under uncertainty.</span>
                         </div>
                         <div className="grid-item item-medium-alt">
                             <div className="grid-image-frame">
-                                <img src={FoundersMind4} alt="Speaking on attention, decision-making, and founder psychology" />
+                                <img src={FoundersMind4} alt="Boston Tech Week — The Founder’s Mind." />
                             </div>
-                            <span className="grid-caption">Speaking on attention, decision-making, and founder psychology</span>
+                            <span className="grid-caption">Boston Tech Week — The Founder’s Mind.</span>
                         </div>
                     </div>
                 </section>

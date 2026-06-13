@@ -266,6 +266,33 @@
     opacity: 1;
 }
 
+/* Recent Audiences Credibility Line */
+.recent-audiences-section {
+    text-align: center;
+    padding: 0 var(--spacing-md);
+    max-width: 820px;
+    margin: clamp(2rem, 4vw, 3rem) auto 0 auto;
+}
+
+.recent-audiences-title {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--color-accent-terracotta);
+    margin-bottom: var(--spacing-sm);
+}
+
+.recent-audiences-list {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-style: italic;
+    color: var(--color-text-heading);
+    line-height: 1.65;
+    margin: 0;
+}
+
 /* 3. In Conversation Grid */
 .in-conversation-section {
     padding: 0 var(--spacing-md);
