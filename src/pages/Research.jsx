@@ -14,13 +14,6 @@ const Research = () => {
 
             <div className="container">
                 <div className="research-content-wrapper">
-                    <section className="research-section overview">
-                        <h2 className="section-heading">Overview</h2>
-                        <p>
-                            Dr. Mateer's research focuses on the intersection of cognitive functioning, brain injury, and the lived experience of recovery. She is particularly interested in how attention mechanisms recover after traumatic brain injury and how these cognitive processes influence an individual's sense of identity and agency.
-                        </p>
-                    </section>
-
                     <section className="research-section philosophy">
                         <h2 className="section-heading">Research Philosophy</h2>
                         <p>

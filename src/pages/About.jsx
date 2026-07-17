@@ -35,7 +35,7 @@ const About = () => {
                         </p>
 
                         <p className="bio-paragraph">
-                            In addition to her scientific work, Dr. Mateer is the author of two poetry collections, <em>Searching for Home</em> (2024) and <em>A New Type of Breakfast</em> (2026). Across both her research and creative writing, she returns to a central question: how do individuals build meaning in the face of uncertainty? Her work bridges rigorous neuroscience with lived experience, illuminating how attention, resilience, and intentional self-authorship shape the ongoing architecture of becoming.
+                            In addition to her scientific work, Dr. Mateer is the author of two poetry collections, <em>Searching for Home</em> (2024) and <em>A New Type of Breakfast</em> (2026).
                         </p>
 
                         <p className="bio-paragraph">
