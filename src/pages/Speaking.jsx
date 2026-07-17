@@ -94,7 +94,7 @@ const Speaking = () => {
                 {/* Featured Talks Section */}
                 <section className="featured-talks-section">
                     <div className="section-header-block">
-                        <h2 className="section-heading text-center">Featured Talks</h2>
+                        <h2 className="section-heading text-center">Recent Engagements</h2>
                         <p className="section-subtitle text-center">Selected conversations, workshops, and invited talks.</p>
                     </div>
 
@@ -152,7 +152,7 @@ const Speaking = () => {
                 {/* Curated Event Photos: "Recent Conversations" Section */}
                 <section className="in-conversation-section">
                     <div className="section-header-block">
-                        <h2 className="section-heading text-center">Recent Conversations</h2>
+                        <h2 className="section-heading text-center">In the Room</h2>
                         <p className="section-subtitle text-center">Selected moments from workshops, talks, founder gatherings, and public conversations.</p>
                     </div>
 
@@ -166,15 +166,15 @@ const Speaking = () => {
                             </div>
                             <div className="grid-item item-medium">
                                 <div className="grid-image-frame">
-                                    <img src={FoundersMind2} alt="Founder conversations on identity, cognition, and entrepreneurship" />
+                                    <img src={FoundersMind2} alt="Boston Tech Week" />
                                 </div>
-                                <span className="grid-caption">Founder conversations on identity, cognition, and entrepreneurship</span>
+                                <span className="grid-caption">Boston Tech Week</span>
                             </div>
                             <div className="grid-item item-medium-alt">
                                 <div className="grid-image-frame">
-                                    <img src={FoundersMind4} alt="Speaking on attention, decision-making, and founder psychology" />
+                                    <img src={FoundersMind4} alt="Boston Tech Week" />
                                 </div>
-                                <span className="grid-caption">Speaking on attention, decision-making, and founder psychology</span>
+                                <span className="grid-caption">Boston Tech Week</span>
                             </div>
                         </div>
 
@@ -187,15 +187,15 @@ const Speaking = () => {
                             </div>
                             <div className="grid-item item-medium">
                                 <div className="grid-image-frame">
-                                    <img src={MIT2} alt="Q&A session with MIT Sloan Fellows MBA Program" />
+                                    <img src={MIT2} alt="MIT Sloan Fellows MBA" />
                                 </div>
-                                <span className="grid-caption">Q&A session with MIT Sloan Fellows MBA Program</span>
+                                <span className="grid-caption">MIT Sloan Fellows MBA</span>
                             </div>
                             <div className="grid-item item-medium-alt">
                                 <div className="grid-image-frame">
-                                    <img src={MIT3} alt="Invited talk on neuropsychology and leadership at MIT" />
+                                    <img src={MIT3} alt="MIT Sloan Fellows MBA" />
                                 </div>
-                                <span className="grid-caption">Invited talk on neuropsychology and leadership at MIT</span>
+                                <span className="grid-caption">MIT Sloan Fellows MBA</span>
                             </div>
                         </div>
                     </div>

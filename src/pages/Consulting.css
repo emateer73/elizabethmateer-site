@@ -347,4 +347,40 @@
     transform: translateY(-1px);
     background-color: var(--color-text-heading);
     color: var(--color-bg-primary);
+}
+
+/* Private Practice Visual Break Wrapper */
+.private-work-outer-wrapper {
+    background-color: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.private-practice-header {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+}
+
+.private-practice-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--color-accent-terracotta);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.private-practice-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: var(--color-text-heading);
+    font-weight: 600;
+    margin: 0;
+}
+
+.private-work-outer-wrapper .private-work-section {
+    padding-top: 0;
+    margin-bottom: 0;
 }
