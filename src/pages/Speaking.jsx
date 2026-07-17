@@ -6,6 +6,10 @@ import NeuroImg from "../assets/neuro.jpg";
 import FoundersMind1 from "../assets/foundersmind1.jpg";
 import FoundersMind2 from "../assets/foundersmind2.jpg";
 import FoundersMind4 from "../assets/foundersmind4.jpg";
+import FFRImg from "../assets/FFR.png";
+import MIT1 from "../assets/MIT1.jpg";
+import MIT2 from "../assets/MIT2.jpg";
+import MIT3 from "../assets/MIT3.jpg";
 import './Speaking.css';
 
 const Speaking = () => {
@@ -28,6 +32,62 @@ const Speaking = () => {
                         </p>
                     </div>
                 </header>
+
+                <hr className="editorial-divider upcoming-divider" />
+
+                {/* Upcoming Talk Section */}
+                <section className="upcoming-talk-section">
+                    <div className="section-header-block">
+                        <span className="upcoming-badge">Upcoming Talk</span>
+                        <h2 className="section-heading text-center">Join the Next Masterclass</h2>
+                    </div>
+
+                    <div className="upcoming-talk-card">
+                        <div className="upcoming-image-wrapper">
+                            <img src={FFRImg} alt="Build With Your Brain: The Neuropsychology of Sustainable Entrepreneurship" className="upcoming-featured-image" />
+                        </div>
+                        
+                        <div className="upcoming-details">
+                            <span className="upcoming-host">Female Founders Rise Summer School for Founders</span>
+                            <h3 className="upcoming-title">Build With Your Brain: The Neuropsychology of Sustainable Entrepreneurship</h3>
+                            <div className="upcoming-speaker-info">
+                                <p className="upcoming-speaker"><strong>Speaker:</strong> Elizabeth Mateer, PhD</p>
+                                <p className="upcoming-founder">Founder, PsychDraft</p>
+                            </div>
+                            
+                            <div className="upcoming-description">
+                                <p>
+                                    Most founders have absorbed the same productivity advice: wake up earlier, block every hour, batch your admin, and follow someone else’s perfect routine. When that advice does not work, they often blame themselves.
+                                </p>
+                                <p>
+                                    In this free Summer School masterclass, neuropsychology fellow and PsychDraft founder Dr. Elizabeth Mateer will explain why sustainable entrepreneurship begins with understanding how your own brain works. Attendees will explore how their patterns of attention, motivation, decision-making, and stress influence the way they lead—and learn how to build around those patterns rather than against them.
+                                </p>
+                            </div>
+
+                            <div className="upcoming-takeaways">
+                                <h4>What Attendees Will Learn</h4>
+                                <ul>
+                                    <li>Understand your individual founder operating style and how it shapes the way you build and lead.</li>
+                                    <li>Structure your time, environment, and workload around how you function best.</li>
+                                    <li>Manage imposter syndrome, protect your attention, ask for support, and create a more sustainable definition of success.</li>
+                                </ul>
+                            </div>
+                            
+                            <div className="upcoming-cta-container">
+                                <Button 
+                                    href="https://luma.com/wln6qjdw" 
+                                    variant="primary" 
+                                    className="btn-upcoming-primary"
+                                >
+                                    Register for the Free Masterclass
+                                </Button>
+                                <p className="upcoming-note">
+                                    Free and open to founders, students, and anyone curious about building and leading more sustainably. Female Founders Rise membership is not required.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <hr className="editorial-divider" />
 
@@ -97,23 +157,46 @@ const Speaking = () => {
                     </div>
 
                     <div className="curated-photo-grid">
-                        <div className="grid-item item-large">
-                            <div className="grid-image-frame">
-                                <img src={FoundersMind1} alt="Boston Tech Week · Founder Breakfast" />
+                        <div className="photo-grid-group">
+                            <div className="grid-item item-large">
+                                <div className="grid-image-frame">
+                                    <img src={FoundersMind1} alt="Boston Tech Week · Founder Breakfast" />
+                                </div>
+                                <span className="grid-caption">Boston Tech Week · Founder Breakfast</span>
                             </div>
-                            <span className="grid-caption">Boston Tech Week · Founder Breakfast</span>
+                            <div className="grid-item item-medium">
+                                <div className="grid-image-frame">
+                                    <img src={FoundersMind2} alt="Founder conversations on identity, cognition, and entrepreneurship" />
+                                </div>
+                                <span className="grid-caption">Founder conversations on identity, cognition, and entrepreneurship</span>
+                            </div>
+                            <div className="grid-item item-medium-alt">
+                                <div className="grid-image-frame">
+                                    <img src={FoundersMind4} alt="Speaking on attention, decision-making, and founder psychology" />
+                                </div>
+                                <span className="grid-caption">Speaking on attention, decision-making, and founder psychology</span>
+                            </div>
                         </div>
-                        <div className="grid-item item-medium">
-                            <div className="grid-image-frame">
-                                <img src={FoundersMind2} alt="Founder conversations on identity, cognition, and entrepreneurship" />
+
+                        <div className="photo-grid-group">
+                            <div className="grid-item item-large">
+                                <div className="grid-image-frame">
+                                    <img src={MIT1} alt="MIT Sloan Fellows MBA · Presentation" />
+                                </div>
+                                <span className="grid-caption">MIT Sloan Fellows MBA · Presentation</span>
                             </div>
-                            <span className="grid-caption">Founder conversations on identity, cognition, and entrepreneurship</span>
-                        </div>
-                        <div className="grid-item item-medium-alt">
-                            <div className="grid-image-frame">
-                                <img src={FoundersMind4} alt="Speaking on attention, decision-making, and founder psychology" />
+                            <div className="grid-item item-medium">
+                                <div className="grid-image-frame">
+                                    <img src={MIT2} alt="Q&A session with MIT Sloan Fellows MBA Program" />
+                                </div>
+                                <span className="grid-caption">Q&A session with MIT Sloan Fellows MBA Program</span>
                             </div>
-                            <span className="grid-caption">Speaking on attention, decision-making, and founder psychology</span>
+                            <div className="grid-item item-medium-alt">
+                                <div className="grid-image-frame">
+                                    <img src={MIT3} alt="Invited talk on neuropsychology and leadership at MIT" />
+                                </div>
+                                <span className="grid-caption">Invited talk on neuropsychology and leadership at MIT</span>
+                            </div>
                         </div>
                     </div>
                 </section>
