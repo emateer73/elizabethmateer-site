@@ -75,7 +75,7 @@ const Links = () => {
                         <div className="work-item">
                             <h4 className="work-item-title">The Architecture of Identity</h4>
                             <p className="work-item-subtext">My Psychology Today column on how attention, memory, creativity, and experience shape who we become</p>
-                            <a href="https://www.psychologytoday.com/us/contributors/elizabeth-mateer" target="_blank" rel="noopener noreferrer" className="work-item-cta">
+                            <a href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" className="work-item-cta">
                                 Explore the Column <ArrowRight size={14} className="inline-arrow" />
                             </a>
                         </div>
@@ -122,7 +122,7 @@ const Links = () => {
                     <h3 className="links-section-label">Follow Along</h3>
                     
                     <div className="work-items-group social-items-group">
-                        <a href="https://www.tiktok.com/@beeblejuice" target="_blank" rel="noopener noreferrer" className="social-card">
+                        <a href="https://www.tiktok.com/@elizabeth_mateer" target="_blank" rel="noopener noreferrer" className="social-card">
                             <span className="social-card-title">TikTok</span>
                             <span className="social-card-subtext">Psychology, identity, creativity, and building</span>
                         </a>
