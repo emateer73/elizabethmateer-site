@@ -90,7 +90,9 @@ const AttentionEnergyAudit = () => {
 
     const handlePrint = () => {
         console.log("Analytics event: worksheet_print_clicked");
+        document.body.classList.add('printing-attention-energy-audit');
         window.print();
+        document.body.classList.remove('printing-attention-energy-audit');
     };
 
     // Calculate Summary
@@ -141,7 +143,11 @@ const AttentionEnergyAudit = () => {
     });
 
     return (
-        <div className="bwbr-tool-container print-friendly">
+        <div className="bwbr-tool-container attention-energy-print-area">
+            <h2 className="print-title print-only">Attention and Energy Week Audit</h2>
+            <p className="print-intro print-only">
+                Your calendar shows where your time goes. It does not always show when your best thinking is available. Use this audit to identify patterns in your attention and energy before redesigning your week.
+            </p>
             <div className="bwbr-tool-header no-print">
                 <div className="day-tabs">
                     {DAYS.map(day => (
@@ -157,55 +163,59 @@ const AttentionEnergyAudit = () => {
             </div>
 
             <div className="audit-grid-container">
-                <h3 className="print-only">{activeDay}</h3>
-                <div className="audit-grid">
-                    {PERIODS.map(period => (
-                        <div key={period} className="audit-period-card">
-                            <h4 className="period-title">{period}</h4>
-                            <div className="rating-row">
-                                <label>
-                                    <span>Attention (1-5)</span>
-                                    <select 
-                                        value={data[activeDay][period].attention} 
-                                        onChange={(e) => handleChange(activeDay, period, 'attention', e.target.value)}
-                                        className="rating-select"
-                                    >
-                                        <option value="">-</option>
-                                        {[1,2,3,4,5].map(n => <option key={n} value={n}>{n}</option>)}
-                                    </select>
-                                </label>
-                                <label>
-                                    <span>Energy (1-5)</span>
-                                    <select 
-                                        value={data[activeDay][period].energy} 
-                                        onChange={(e) => handleChange(activeDay, period, 'energy', e.target.value)}
-                                        className="rating-select"
-                                    >
-                                        <option value="">-</option>
-                                        {[1,2,3,4,5].map(n => <option key={n} value={n}>{n}</option>)}
-                                    </select>
-                                </label>
-                            </div>
-                            <div className="text-inputs">
-                                <input 
-                                    type="text" 
-                                    placeholder="Primary task/activity..."
-                                    value={data[activeDay][period].task}
-                                    onChange={(e) => handleChange(activeDay, period, 'task', e.target.value)}
-                                    className="audit-input"
-                                />
-                                <input 
-                                    type="text" 
-                                    placeholder="Notes (optional)..."
-                                    value={data[activeDay][period].notes}
-                                    onChange={(e) => handleChange(activeDay, period, 'notes', e.target.value)}
-                                    className="audit-input"
-                                />
-                            </div>
+                {DAYS.map(day => (
+                    <div key={day} className={`day-container ${activeDay === day ? 'active-day-screen' : 'hidden-day-screen'}`}>
+                        <h3 className="day-print-title print-only">{day}</h3>
+                        <div className="audit-grid">
+                            {PERIODS.map(period => (
+                                <div key={period} className="audit-period-card">
+                                    <h4 className="period-title">{period}</h4>
+                                    <div className="rating-row">
+                                        <label>
+                                            <span>Attention (1-5)</span>
+                                            <select 
+                                                value={data[day][period].attention} 
+                                                onChange={(e) => handleChange(day, period, 'attention', e.target.value)}
+                                                className="rating-select"
+                                            >
+                                                <option value="">-</option>
+                                                {[1,2,3,4,5].map(n => <option key={n} value={n}>{n}</option>)}
+                                            </select>
+                                        </label>
+                                        <label>
+                                            <span>Energy (1-5)</span>
+                                            <select 
+                                                value={data[day][period].energy} 
+                                                onChange={(e) => handleChange(day, period, 'energy', e.target.value)}
+                                                className="rating-select"
+                                            >
+                                                <option value="">-</option>
+                                                {[1,2,3,4,5].map(n => <option key={n} value={n}>{n}</option>)}
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div className="text-inputs">
+                                        <input 
+                                            type="text" 
+                                            placeholder="Primary task/activity..."
+                                            value={data[day][period].task}
+                                            onChange={(e) => handleChange(day, period, 'task', e.target.value)}
+                                            className="audit-input"
+                                        />
+                                        <input 
+                                            type="text" 
+                                            placeholder="Notes (optional)..."
+                                            value={data[day][period].notes}
+                                            onChange={(e) => handleChange(day, period, 'notes', e.target.value)}
+                                            className="audit-input"
+                                        />
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
-                <p className="rating-legend no-print">1 = Very Low | 3 = Moderate | 5 = Very High</p>
+                    </div>
+                ))}
+                <div className="rating-legend print-legend"><strong>Rating Key:</strong> 1 = Very Low | 3 = Moderate | 5 = Very High</div>
             </div>
 
             <div className="summary-section">
@@ -243,30 +253,28 @@ const AttentionEnergyAudit = () => {
                 
                 <h3 className="summary-title print-only">Reflection</h3>
 
-                {isReflectionActive && (
-                    <div className={`reflection-content ${!isReflectionActive ? 'print-only-hidden' : ''}`}>
-                        {[
-                            { id: 'strongestOverlap', label: 'When was your strongest overlap of attention and energy?' },
-                            { id: 'whatDoing', label: 'What were you doing during those periods?' },
-                            { id: 'fragmented', label: 'What repeatedly fragmented your attention?' },
-                            { id: 'energyConsumers', label: 'Which responsibilities consumed more energy than their importance justified?' },
-                            { id: 'energyNoFocus', label: 'When did you have energy but struggle to focus?' },
-                            { id: 'focusNoEnergy', label: 'When did you have focus but limited energy?' },
-                            { id: 'actionTasks', label: 'Which tasks should be protected, moved, batched, delegated, automated, or stopped?' },
-                            { id: 'redesignBlock', label: 'What is one block of your week you could redesign?' }
-                        ].map(q => (
-                            <div key={q.id} className="reflection-group">
-                                <label>{q.label}</label>
-                                <textarea 
-                                    value={reflection[q.id]}
-                                    onChange={(e) => handleReflectionChange(q.id, e.target.value)}
-                                    rows={2}
-                                    className="audit-textarea"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                )}
+                <div className={`reflection-content ${!isReflectionActive ? 'screen-only-hidden' : ''}`}>
+                    {[
+                        { id: 'strongestOverlap', label: 'When was your strongest overlap of attention and energy?' },
+                        { id: 'whatDoing', label: 'What were you doing during those periods?' },
+                        { id: 'fragmented', label: 'What repeatedly fragmented your attention?' },
+                        { id: 'energyConsumers', label: 'Which responsibilities consumed more energy than their importance justified?' },
+                        { id: 'energyNoFocus', label: 'When did you have energy but struggle to focus?' },
+                        { id: 'focusNoEnergy', label: 'When did you have focus but limited energy?' },
+                        { id: 'actionTasks', label: 'Which tasks should be protected, moved, batched, delegated, automated, or stopped?' },
+                        { id: 'redesignBlock', label: 'What is one block of your week you could redesign?' }
+                    ].map(q => (
+                        <div key={q.id} className="reflection-group">
+                            <label>{q.label}</label>
+                            <textarea 
+                                value={reflection[q.id]}
+                                onChange={(e) => handleReflectionChange(q.id, e.target.value)}
+                                rows={2}
+                                className="audit-textarea"
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <div className="tool-actions no-print">
@@ -281,6 +289,12 @@ const AttentionEnergyAudit = () => {
                 </Button>
             </div>
             <p className="privacy-note no-print">Your entries are saved only in your local browser storage.</p>
+            
+            <div className="print-footer print-only">
+                <strong>Build With Your Brain: The Founder Toolkit</strong><br/>
+                Elizabeth Mateer, PhD<br/>
+                {window.location.hostname}
+            </div>
         </div>
     );
 };

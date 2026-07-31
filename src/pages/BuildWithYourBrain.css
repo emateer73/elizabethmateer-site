@@ -1474,35 +1474,136 @@
     font-size: 0.85rem;
 }
 
-/* Print Styles */
-@media print {
-    .no-print {
-        display: none !important;
-    }
-    .print-only {
-        display: block !important;
-    }
-    .print-only-hidden {
-        display: none !important;
-    }
-    .print-friendly {
-        box-shadow: none !important;
-        border: none !important;
-        background: transparent !important;
-    }
-    .bwbr-tool-container {
-        margin: 0;
-        padding: 0;
-    }
-    .audit-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-    .no-break {
-        break-inside: avoid;
-    }
+.hidden-day-screen {
+    display: none;
 }
 
+.screen-only-hidden {
+    display: none;
+}
+
+/* Print Styles */
 .print-only {
     display: none;
+}
+
+@media print {
+    body.printing-attention-energy-audit {
+        visibility: hidden;
+        background: #fff;
+    }
+    
+    body.printing-attention-energy-audit .attention-energy-print-area {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        color: #000;
+    }
+
+    body.printing-attention-energy-audit .attention-energy-print-area * {
+        visibility: visible;
+    }
+
+    body.printing-attention-energy-audit .no-print {
+        display: none !important;
+    }
+
+    body.printing-attention-energy-audit .print-only {
+        display: block !important;
+    }
+
+    body.printing-attention-energy-audit .print-only-inline {
+        display: inline !important;
+    }
+
+    /* Print-specific typographic tweaks for audit */
+    .attention-energy-print-area .print-title {
+        font-size: 24pt;
+        margin-bottom: 12px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .attention-energy-print-area .print-intro {
+        font-size: 12pt;
+        margin-bottom: 24px;
+        color: #333;
+    }
+
+    .attention-energy-print-area .day-container {
+        display: block !important;
+        margin-bottom: 30px;
+        page-break-inside: avoid;
+    }
+
+    .attention-energy-print-area .day-print-title {
+        font-size: 16pt;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 4px;
+        margin-bottom: 12px;
+    }
+
+    .attention-energy-print-area .audit-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .attention-energy-print-area .audit-period-card {
+        border: 1px solid #ccc;
+        padding: 12px;
+        page-break-inside: avoid;
+        background: transparent;
+    }
+
+    .attention-energy-print-area .rating-select,
+    .attention-energy-print-area .audit-input,
+    .attention-energy-print-area .audit-textarea {
+        border: 1px solid #ddd;
+        background: transparent;
+        color: #000;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    .attention-energy-print-area .audit-textarea {
+        resize: none;
+        overflow: hidden;
+    }
+
+    .attention-energy-print-area .print-legend {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 11pt;
+    }
+
+    .attention-energy-print-area .summary-section,
+    .attention-energy-print-area .reflection-section {
+        page-break-before: auto;
+        page-break-inside: avoid;
+        margin-top: 30px;
+        border-top: 2px solid #ccc;
+        padding-top: 20px;
+    }
+
+    .attention-energy-print-area .reflection-content {
+        display: block !important;
+    }
+
+    .attention-energy-print-area .print-footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+        font-size: 10pt;
+        color: #666;
+        text-align: center;
+    }
 }
