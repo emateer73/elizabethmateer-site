@@ -18,6 +18,7 @@ import ConsultingInquiry from './pages/ConsultingInquiry';
 import PrivateWork from './pages/PrivateWork';
 import PrivateWorkInquiry from './pages/PrivateWorkInquiry';
 import FoundersMind from './pages/FoundersMind';
+import BuildWithYourBrain from './pages/BuildWithYourBrain';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Route path="/private-work" element={<Navigate to="/consulting" replace />} />
               <Route path="/private-work-inquiry" element={<PrivateWorkInquiry />} />
               <Route path="/founders-mind" element={<FoundersMind />} />
+              <Route path="/build-with-your-brain" element={<BuildWithYourBrain />} />
             </Routes>
           </Layout>
         } />
