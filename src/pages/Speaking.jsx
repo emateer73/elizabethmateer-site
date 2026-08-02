@@ -33,63 +33,7 @@ const Speaking = () => {
                     </div>
                 </header>
 
-                <hr className="editorial-divider upcoming-divider" />
 
-                {/* Upcoming Talk Section */}
-                <section className="upcoming-talk-section">
-                    <div className="section-header-block">
-                        <span className="upcoming-badge">Upcoming Talk</span>
-                        <h2 className="section-heading text-center">Join the Next Masterclass</h2>
-                    </div>
-
-                    <div className="upcoming-talk-card">
-                        <div className="upcoming-image-wrapper">
-                            <img src={FFRImg} alt="Build With Your Brain: The Neuropsychology of Sustainable Entrepreneurship" className="upcoming-featured-image" />
-                        </div>
-                        
-                        <div className="upcoming-details">
-                            <span className="upcoming-host">Female Founders Rise Summer School for Founders</span>
-                            <h3 className="upcoming-title">Build With Your Brain: The Neuropsychology of Sustainable Entrepreneurship</h3>
-                            <div className="upcoming-speaker-info">
-                                <p className="upcoming-speaker"><strong>Speaker:</strong> Elizabeth Mateer, PhD</p>
-                                <p className="upcoming-founder">Founder, PsychDraft</p>
-                            </div>
-                            
-                            <div className="upcoming-description">
-                                <p>
-                                    Most founders have absorbed the same productivity advice: wake up earlier, block every hour, batch your admin, and follow someone else’s perfect routine. When that advice does not work, they often blame themselves.
-                                </p>
-                                <p>
-                                    In this free Summer School masterclass, neuropsychology fellow and PsychDraft founder Dr. Elizabeth Mateer will explain why sustainable entrepreneurship begins with understanding how your own brain works. Attendees will explore how their patterns of attention, motivation, decision-making, and stress influence the way they lead—and learn how to build around those patterns rather than against them.
-                                </p>
-                            </div>
-
-                            <div className="upcoming-takeaways">
-                                <h4>What Attendees Will Learn</h4>
-                                <ul>
-                                    <li>Understand your individual founder operating style and how it shapes the way you build and lead.</li>
-                                    <li>Structure your time, environment, and workload around how you function best.</li>
-                                    <li>Manage imposter syndrome, protect your attention, ask for support, and create a more sustainable definition of success.</li>
-                                </ul>
-                            </div>
-                            
-                            <div className="upcoming-cta-container">
-                                <Button 
-                                    href="https://luma.com/wln6qjdw" 
-                                    variant="primary" 
-                                    className="btn-upcoming-primary"
-                                >
-                                    Register for the Free Masterclass
-                                </Button>
-                                <p className="upcoming-note">
-                                    Free and open to founders, students, and anyone curious about building and leading more sustainably. Female Founders Rise membership is not required.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr className="editorial-divider" />
 
                 {/* Featured Talks Section */}
                 <section className="featured-talks-section">
@@ -97,6 +41,69 @@ const Speaking = () => {
                         <h2 className="section-heading text-center">Recent Engagements</h2>
                         <p className="section-subtitle text-center">Selected conversations, workshops, and invited talks.</p>
                     </div>
+
+                    <div className="featured-talks-grid" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
+                    <div className="signature-talk-card">
+                        <div className="talk-image-wrapper">
+                            <img src={FFRImg} alt="Build With Your Brain workshop for Female Founders Rise" className="talk-featured-image" />
+                        </div>
+                        
+                        <div className="talk-details">
+                            <span className="talk-badge">RECENT WORKSHOP</span>
+                            <h3 className="talk-title signature-focus">Build With Your Brain</h3>
+                            <h4 className="talk-subtitle">The Neuropsychology of Sustainable Entrepreneurship</h4>
+                            
+                            <div className="talk-context-line">
+                                <span className="context-bullet"></span>
+                                <p>Presented for Female Founders Rise Summer School for Founders.</p>
+                            </div>
+
+                            <p className="talk-description">
+                                A practical, research-informed workshop exploring why productivity problems are often assessment problems. The session examined how founders can better understand their patterns of attention, energy, motivation, decision-making, and stress—and build systems that work with their cognitive strengths rather than against them.
+                            </p>
+                            
+                            <div className="upcoming-takeaways" style={{ marginBottom: '1.5rem' }}>
+                                <h4>Key Themes</h4>
+                                <ul>
+                                    <li>Identifying the conditions under which you do your best work</li>
+                                    <li>Designing a week around attention and energy</li>
+                                    <li>Diagnosing friction before defaulting to more discipline</li>
+                                    <li>Managing imposter syndrome and separating self-worth from company performance</li>
+                                    <li>Using delegation and support as strategic resource allocation</li>
+                                </ul>
+                            </div>
+
+                            <p className="talk-results-line" style={{ fontFamily: 'var(--font-body)', fontSize: '0.9rem', color: 'var(--color-text-secondary)', marginBottom: '1.5rem', opacity: 0.85 }}>
+                                141 founders registered for the live session, which received an NPS of 78.
+                            </p>
+                            
+                            <div className="talk-ctas">
+                                <Button 
+                                    to="/build-with-your-brain" 
+                                    variant="primary" 
+                                    className="btn-talk-primary"
+                                    aria-label="View resources for the Build With Your Brain workshop"
+                                    onClick={() => {
+                                        if (typeof window !== 'undefined') {
+                                            if (window.plausible) window.plausible('build_with_your_brain_resources_clicked');
+                                            else if (window.fathom) window.fathom.trackEvent('build_with_your_brain_resources_clicked');
+                                            else console.log('Analytics event:', 'build_with_your_brain_resources_clicked');
+                                        }
+                                    }}
+                                >
+                                    VIEW THE TALK RESOURCES
+                                </Button>
+                                <Button 
+                                    to="/contact" 
+                                    variant="outline" 
+                                    className="btn-talk-secondary"
+                                >
+                                    INQUIRE ABOUT THIS WORKSHOP
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div className="signature-talk-card">
                         <div className="talk-image-wrapper">
@@ -134,6 +141,7 @@ const Speaking = () => {
                                 </Button>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </section>
 

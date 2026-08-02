@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Consulting.css';
 import Button from '../components/Button';
 
 const Consulting = () => {
-    const [openSections, setOpenSections] = useState({
-        psychotherapy: false,
-        coaching: false,
-        intensives: false
-    });
-
-    const toggleSection = (section) => {
-        setOpenSections(prev => ({
-            ...prev,
-            [section]: !prev[section]
-        }));
-    };
 
     return (
         <div className="consulting-landing-page">
