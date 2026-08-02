@@ -17,18 +17,7 @@ const Links = () => {
                     <h2 className="links-title">Neuropsychology Fellow &middot; Founder &middot; Writer</h2>
                 </header>
                 
-                <div className="links-section">
-                    <h3 className="links-section-label">Currently</h3>
-                    <div className="featured-action">
-                        {/* 💡 This section is designed to be easily swappable for future events/features */}
-                        <a href="https://luma.com/wln6qjdw" target="_blank" rel="noopener noreferrer" className="btn-prominent">
-                            Building With Your Brain
-                        </a>
-                        <p className="featured-supporting-text">
-                            A practical workshop on working with your attention, energy, and cognitive style instead of against them.
-                        </p>
-                    </div>
-                </div>
+
 
                 <div className="links-section">
                     <h3 className="links-section-label">Explore</h3>
