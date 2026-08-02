@@ -10,6 +10,7 @@ import FFRImg from "../assets/FFR.png";
 import MIT1 from "../assets/MIT1.jpg";
 import MIT2 from "../assets/MIT2.jpg";
 import MIT3 from "../assets/MIT3.jpg";
+import TheLastShowImg from "../assets/the last show.png";
 import './Speaking.css';
 
 const Speaking = () => {
@@ -218,6 +219,30 @@ const Speaking = () => {
                         <p className="section-subtitle text-center">Interviews, guest conversations, and media exploring identity, creativity, neurocognition, and human potential.</p>
                     </div>
                     
+                    <div className="media-cards-grid" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
+                    <div className="media-feature-card">
+                        <div className="media-thumbnail">
+                            <img src={TheLastShowImg} alt="Elizabeth Mateer discussing travel and identity on The Last Show with David Cooper" />
+                        </div>
+                        <div className="media-content">
+                            <span className="media-label">The Last Show with David Cooper</span>
+                            <h3 className="media-entry-title">How Travel Breaks Your Identity</h3>
+                            <p className="media-description">
+                                A conversation about why travel can disrupt our familiar sense of self, what happens when we step outside the environments and roles that usually define us, and how unfamiliar experiences can create space for identity, perspective, and personal growth to shift.
+                            </p>
+                            <div className="media-cta">
+                                <Button 
+                                    href="https://open.spotify.com/episode/60hTy4ytI5iNsyXLMr8Pyh?si=1y7LESbaRkyu-tQe5Zj7tA" 
+                                    variant="outline" 
+                                    className="btn-listen"
+                                    aria-label="Listen to the episode on Spotify"
+                                >
+                                    Listen on Spotify <ExternalLink size={14} style={{ marginLeft: '6px', opacity: 0.6 }} />
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="media-feature-card">
                         <div className="media-thumbnail">
                             <img src={NeuroImg} alt="The Neuroplasticity of Identity" />
@@ -236,12 +261,12 @@ const Speaking = () => {
                                     href="https://open.spotify.com/episode/4ZdtkoghB4Vj8Kvk97AYZZ?si=LsoHFDfUT4eynYUzXo1xeg&nd=1&dlsi=0d197ad2dbd742c7" 
                                     variant="outline" 
                                     className="btn-listen"
-                                    external
                                 >
                                     Listen to the Episode <ExternalLink size={14} style={{ marginLeft: '6px', opacity: 0.6 }} />
                                 </Button>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </section>
 
