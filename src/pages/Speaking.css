@@ -116,6 +116,122 @@
     font-style: italic;
 }
 
+/* SXSW Proposal Section */
+.sxsw-proposal-section {
+    padding: 0 var(--spacing-md);
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    margin-top: clamp(1rem, 3vw, 2.5rem);
+}
+
+.sxsw-proposal-card {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: clamp(2rem, 4vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 3rem);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 860px) {
+    .sxsw-proposal-card {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .sxsw-image-wrapper {
+        flex: 0 0 42%;
+    }
+    
+    .sxsw-details {
+        flex: 1;
+    }
+}
+
+.sxsw-image-wrapper {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    background-color: var(--color-bg-primary);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+}
+
+.sxsw-featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.sxsw-badge {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #fff;
+    background-color: var(--color-accent-terracotta);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.sxsw-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-accent-sage);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.sxsw-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    color: var(--color-text-heading);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.sxsw-description {
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    color: var(--color-text-primary);
+    line-height: 1.65;
+    margin-bottom: var(--spacing-md);
+}
+
+.sxsw-voting-open {
+    font-weight: 500;
+    color: var(--color-text-heading);
+}
+
+.sxsw-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.sxsw-voting-deadline {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    opacity: 0.85;
+    margin-top: 8px;
+}
+
 /* 2. Signature Talk Card */
 .signature-talk-card {
     background-color: var(--color-bg-secondary);

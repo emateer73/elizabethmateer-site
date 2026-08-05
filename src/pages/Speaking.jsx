@@ -11,6 +11,7 @@ import MIT1 from "../assets/MIT1.jpg";
 import MIT2 from "../assets/MIT2.jpg";
 import MIT3 from "../assets/MIT3.jpg";
 import TheLastShowImg from "../assets/the last show.png";
+import SxswImg from "../assets/27_SXSW_PanelPicker-Vote_1080x566.png";
 import './Speaking.css';
 
 const Speaking = () => {
@@ -34,10 +35,52 @@ const Speaking = () => {
                     </div>
                 </header>
 
-
+                {/* TEMPORARY SECTION: Remove or review after August 23, 2026 */}
+                <section className="sxsw-proposal-section">
+                    <div className="sxsw-proposal-card">
+                        <div className="sxsw-image-wrapper">
+                            <img src={SxswImg} alt="SXSW PanelPicker proposal for Diagnose, Don’t Discipline: Productivity for Smart People" className="sxsw-featured-image" />
+                        </div>
+                        <div className="sxsw-details">
+                            <span className="sxsw-badge">Community Voting Open</span>
+                            <span className="sxsw-eyebrow">SXSW 2027 PANELPICKER</span>
+                            <h2 className="sxsw-title">Diagnose, Don’t Discipline: Productivity for Smart People</h2>
+                            <p className="sxsw-description">
+                                Most productivity advice assumes every brain works the same way. It doesn’t.
+                            </p>
+                            <p className="sxsw-description">
+                                My proposed SXSW 2027 session reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation—then building systems that work with your brain instead of forcing it into someone else’s routine.
+                            </p>
+                            <p className="sxsw-description sxsw-voting-open">
+                                Community voting is now open through August 23, 2026.
+                            </p>
+                            <div className="sxsw-ctas">
+                                <Button 
+                                    href="https://participate.sxsw.com/flow/sxsw/sxsw27/community-voting-sxsw/page/community-voting/session/1784918802592001QKsy" 
+                                    variant="primary" 
+                                    className="btn-talk-primary"
+                                >
+                                    Vote for the Session
+                                </Button>
+                                <Button 
+                                    variant="outline" 
+                                    className="btn-talk-secondary"
+                                    onClick={() => {
+                                        const section = document.getElementById('recent-engagements');
+                                        if (section) section.scrollIntoView({ behavior: 'smooth' });
+                                    }}
+                                >
+                                    View My Speaking Work
+                                </Button>
+                            </div>
+                            <p className="sxsw-voting-deadline">Voting closes August 23 at 11:59 PM PT.</p>
+                        </div>
+                    </div>
+                </section>
+                {/* END TEMPORARY SECTION */}
 
                 {/* Featured Talks Section */}
-                <section className="featured-talks-section">
+                <section id="recent-engagements" className="featured-talks-section">
                     <div className="section-header-block">
                         <h2 className="section-heading text-center">Recent Engagements</h2>
                         <p className="section-subtitle text-center">Selected conversations, workshops, and invited talks.</p>
