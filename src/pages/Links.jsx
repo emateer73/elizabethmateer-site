@@ -20,6 +20,20 @@ const Links = () => {
 
 
                 <div className="links-section">
+                    <h3 className="links-section-label">Featured</h3>
+                    
+                    <div className="work-items-group">
+                        <div className="work-item" style={{ borderColor: 'var(--color-accent-terracotta)', borderLeftWidth: '3px' }}>
+                            <h4 className="work-item-title">Vote for SXSW 2027 PanelPicker</h4>
+                            <p className="work-item-subtext">Community voting is open for my session: Diagnose, Don’t Discipline: Productivity for Smart People</p>
+                            <a href="https://participate.sxsw.com/flow/sxsw/sxsw27/community-voting-sxsw/page/community-voting/session/1784918802592001QKsy" target="_blank" rel="noopener noreferrer" className="work-item-cta">
+                                Vote Now <ArrowRight size={14} className="inline-arrow" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="links-section">
                     <h3 className="links-section-label">Explore</h3>
                     
                     <div className="work-items-group">

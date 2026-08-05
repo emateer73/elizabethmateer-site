@@ -11,7 +11,7 @@ import MIT1 from "../assets/MIT1.jpg";
 import MIT2 from "../assets/MIT2.jpg";
 import MIT3 from "../assets/MIT3.jpg";
 import TheLastShowImg from "../assets/the last show.png";
-import SxswImg from "../assets/27_SXSW_PanelPicker-Vote_1080x566.png";
+import SxswImg from "../assets/sxsw panel picker.png";
 import './Speaking.css';
 
 const Speaking = () => {
