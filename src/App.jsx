@@ -10,6 +10,7 @@ import Speaking from './pages/Speaking';
 import Contact from './pages/Contact';
 
 import SearchingForHome from './pages/SearchingForHome';
+import ANewTypeOfBreakfast from './pages/ANewTypeOfBreakfast';
 
 import Links from './pages/Links';
 
@@ -33,6 +34,7 @@ function App() {
               <Route path="/writing" element={<Writing />} />
               <Route path="/books" element={<Books />} />
               <Route path="/books/searching-for-home" element={<SearchingForHome />} />
+              <Route path="/books/a-new-type-of-breakfast" element={<ANewTypeOfBreakfast />} />
               <Route path="/research" element={<Research />} />
               <Route path="/speaking" element={<Speaking />} />
               <Route path="/contact" element={<Contact />} />

@@ -23,7 +23,8 @@ const Books = () => {
                                 A New Type of Breakfast traces the long aftermath of early hurt and the ways neglect, loss, and silence shape us long after the original damage has passed. The title poem marks a breaking point: the dissolution of hope, followed by the quiet possibility of a new beginning.
                             </p>
                             <div className="book-actions">
-                                <Button href="https://www.finishinglinepress.com/product/a-new-type-of-breakfast-by-elizabeth-mateer/" variant="primary">Pre-order Now</Button>
+                                <Button to="/books/a-new-type-of-breakfast" variant="primary">Buy Now</Button>
+                                <Button to="/books/a-new-type-of-breakfast" variant="outline">Learn More</Button>
                             </div>
                         </div>
                     </div>
