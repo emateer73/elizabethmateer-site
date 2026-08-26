@@ -223,7 +223,7 @@
     margin-bottom: var(--spacing-sm);
 }
 
-.sxsw-voting-deadline {
+.sxsw-status-note {
     font-family: var(--font-body);
     font-size: 0.85rem;
     color: var(--color-text-secondary);

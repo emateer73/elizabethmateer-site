@@ -35,45 +35,35 @@ const Speaking = () => {
                     </div>
                 </header>
 
-                {/* TEMPORARY SECTION: Remove or review after August 23, 2026 */}
+                {/* TEMPORARY SECTION: Update again once SXSW announces the proposal decision, expected by the end of October 2026 */}
                 <section className="sxsw-proposal-section">
                     <div className="sxsw-proposal-card">
-                        <div className="sxsw-image-wrapper">
-                            <img src={SxswImg} alt="SXSW PanelPicker proposal for Diagnose, Don’t Discipline: Productivity for Smart People" className="sxsw-featured-image" />
+                        <div className="sxsw-image-wrapper" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '2rem', backgroundColor: 'var(--color-bg-primary)', height: '100%', minHeight: '300px' }}>
+                            <span className="sxsw-eyebrow" style={{ textAlign: 'center', marginBottom: '1rem', color: 'var(--color-text-secondary)' }}>SXSW 2027 PanelPicker</span>
+                            <h3 className="sxsw-title" style={{ textAlign: 'center', fontSize: '1.5rem', margin: '0' }}>Diagnose, Don’t Discipline:<br/>Productivity for Smart People</h3>
                         </div>
                         <div className="sxsw-details">
-                            <span className="sxsw-badge">Community Voting Open</span>
+                            <span className="sxsw-badge" style={{ backgroundColor: 'var(--color-text-secondary)' }}>Under Consideration</span>
                             <span className="sxsw-eyebrow">SXSW 2027 PANELPICKER</span>
                             <h2 className="sxsw-title">Diagnose, Don’t Discipline: Productivity for Smart People</h2>
                             <p className="sxsw-description">
-                                Most productivity advice assumes every brain works the same way. It doesn’t.
+                                My proposed SXSW 2027 session reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else’s routine.
                             </p>
                             <p className="sxsw-description">
-                                My proposed SXSW 2027 session reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation—then building systems that work with your brain instead of forcing it into someone else’s routine.
-                            </p>
-                            <p className="sxsw-description sxsw-voting-open">
-                                Community voting is now open through August 23, 2026.
+                                Community voting has now closed, and proposals are moving through the remaining SXSW evaluation process.
                             </p>
                             <div className="sxsw-ctas">
                                 <Button 
                                     href="https://participate.sxsw.com/flow/sxsw/sxsw27/community-voting-sxsw/page/community-voting/session/1784918802592001QKsy" 
-                                    variant="primary" 
-                                    className="btn-talk-primary"
-                                >
-                                    Vote for the Session
-                                </Button>
-                                <Button 
                                     variant="outline" 
                                     className="btn-talk-secondary"
-                                    onClick={() => {
-                                        const section = document.getElementById('recent-engagements');
-                                        if (section) section.scrollIntoView({ behavior: 'smooth' });
-                                    }}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
-                                    View My Speaking Work
+                                    View PanelPicker Proposal
                                 </Button>
                             </div>
-                            <p className="sxsw-voting-deadline">Voting closes August 23 at 11:59 PM PT.</p>
+                            <p className="sxsw-status-note">Programming decisions are expected by the end of October 2026.</p>
                         </div>
                     </div>
                 </section>
