@@ -25,7 +25,7 @@ const Home = () => {
                             CLINICAL NEUROPSYCHOLOGY FELLOW,<br/>WRITER, AND FOUNDER.
                         </p>
                         <p className="hero-primary-subtext animate-text delay-2">
-                            Neuropsychology fellow, AI founder, and poet — writing at the place where science, technology, and meaning-making meet.
+                            Neuropsychology fellow, founder, and poet — Writing on identity, creativity, and the brain.
                         </p>
                         <div className="hero-cta-group animate-text delay-3">
                             <Button to="/writing" variant="primary" className="btn-large btn-cta-primary">

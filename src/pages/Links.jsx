@@ -24,7 +24,7 @@ const Links = () => {
                         <div className="work-item">
                             <h4 className="work-item-title">A New Type of Breakfast</h4>
                             <p className="work-item-subtext">My newest poetry collection</p>
-                            <a href="https://www.finishinglinepress.com/product/a-new-type-of-breakfast-by-elizabeth-mateer/" target="_blank" rel="noopener noreferrer" className="work-item-cta">
+                            <a href="/books/a-new-type-of-breakfast" className="work-item-cta">
                                 Get the Book <ArrowRight size={14} className="inline-arrow" />
                             </a>
                         </div>
@@ -90,7 +90,7 @@ const Links = () => {
                         <div className="work-item">
                             <h4 className="work-item-title">A New Type of Breakfast</h4>
                             <p className="work-item-subtext">A poetry collection about intimacy, identity, and becoming</p>
-                            <a href="https://www.finishinglinepress.com/product/a-new-type-of-breakfast-by-elizabeth-mateer/" target="_blank" rel="noopener noreferrer" className="work-item-cta">
+                            <a href="/books/a-new-type-of-breakfast" className="work-item-cta">
                                 Get the Book <ArrowRight size={14} className="inline-arrow" />
                             </a>
                         </div>
