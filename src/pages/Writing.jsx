@@ -1,38 +1,13 @@
 import React from 'react';
 import Button from '../components/Button';
 import { ArrowUpRight } from 'lucide-react';
+import initialWritingPosts from '../data/writingPosts.json';
 import './Writing.css';
 
 const Writing = () => {
-    const [substackPosts, setSubstackPosts] = React.useState([]);
-    const [ptPosts, setPtPosts] = React.useState([]);
-    const [loading, setLoading] = React.useState(true);
+    const [substackPosts] = React.useState(initialWritingPosts.substackPosts || []);
+    const [ptPosts] = React.useState(initialWritingPosts.ptPosts || []);
 
-    React.useEffect(() => {
-        // Fetch Substack Feed
-        const fetchSubstack = fetch('https://api.rss2json.com/v1/api.json?rss_url=https://elizabethmateer.substack.com/feed')
-            .then(response => response.json())
-            .then(data => {
-                if (data.items && data.items.length > 0) {
-                    setSubstackPosts(data.items.slice(0, 3));
-                }
-            })
-            .catch(error => console.error('Error fetching Substack feed:', error));
-
-        // Fetch Psychology Today Feed
-        const fetchPT = fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.psychologytoday.com/us/blog/the-architecture-of-identity/feed')
-            .then(response => response.json())
-            .then(data => {
-                if (data.items && data.items.length > 0) {
-                    setPtPosts(data.items.slice(0, 3));
-                }
-            })
-            .catch(error => console.error('Error fetching PT feed:', error));
-
-        Promise.all([fetchSubstack, fetchPT]).finally(() => {
-            setLoading(false);
-        });
-    }, []);
 
     const stripHtml = (html) => {
         let tmp = document.createElement("DIV");
@@ -87,7 +62,9 @@ const Writing = () => {
                                     </div>
                                 )}
                             </>
-                        ) : !loading && <p>Latest essays loading...</p>}
+                        ) : (
+                            <p className="editorial-empty">Latest essays temporarily unavailable. Read on Substack below.</p>
+                        )}
 
                         <div className="pub-cta">
                             <Button href="https://elizabethmateer.substack.com/" target="_blank" variant="text" style={{ fontSize: '1.05rem' }}>Enter Where Attention Goes <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>
@@ -124,7 +101,9 @@ const Writing = () => {
                                     </div>
                                 )}
                             </>
-                        ) : !loading && <p>Latest articles loading...</p>}
+                        ) : (
+                            <p className="editorial-empty">Latest articles temporarily unavailable. View columns below.</p>
+                        )}
 
                         <div className="pub-cta">
                             <Button href="https://www.psychologytoday.com/us/contributors/elizabeth-mateer-phd" target="_blank" variant="text" style={{ fontSize: '1.05rem' }}>View All Columns <ArrowUpRight size={16} style={{ marginLeft: '4px' }} /></Button>

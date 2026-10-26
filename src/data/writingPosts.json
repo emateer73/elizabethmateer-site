@@ -1,0 +1,42 @@
+{
+  "substackPosts": [
+    {
+      "title": "The Moralization of Exhaustion",
+      "link": "https://elizabethmateer.substack.com/p/the-moralization-of-exhaustion",
+      "pubDate": "Sun, 10 May 2026 22:53:17 GMT",
+      "description": "A conversation about narcolepsy, identity, and self-compassion"
+    },
+    {
+      "title": "What Changes When You’re No Longer Writing from the Middle",
+      "link": "https://elizabethmateer.substack.com/p/what-changes-when-youre-no-longer",
+      "pubDate": "Sun, 05 Apr 2026 14:36:40 GMT",
+      "description": "On writing, distance, and what becomes possible after urgency fades"
+    },
+    {
+      "title": "Why Humans Need Stories",
+      "link": "https://elizabethmateer.substack.com/p/why-humans-need-stories",
+      "pubDate": "Wed, 04 Mar 2026 01:25:19 GMT",
+      "description": "How narrative helps us make sense of experience, and ourselves."
+    }
+  ],
+  "ptPosts": [
+    {
+      "title": "Identity Lag: Why Self-Image Updates Slower Than Your Résumé",
+      "link": "https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202608/identity-lag-why-self-image-updates-slower-than-your",
+      "pubDate": "Wed, 19 Aug 2026 16:56:47 -0400",
+      "description": "You got the title, but you still feel like the person you were three years ago. That gap is structural, not pathological, and it has a timeline."
+    },
+    {
+      "title": "A Clinician's Field Guide to Vetting AI Mental Health Tools",
+      "link": "https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202608/a-clinicians-field-guide-to-vetting-ai-mental-health-tools",
+      "pubDate": "Sun, 02 Aug 2026 10:24:21 -0400",
+      "description": "A six-question framework for clinicians and patients weighing AI's role in mental health care, from crisis blind spots to shifting state law."
+    },
+    {
+      "title": "Travel Doesn't Just Relax You, It Breaks Your Identity",
+      "link": "https://www.psychologytoday.com/us/blog/the-architecture-of-identity/202607/travel-doesnt-just-relax-you-it-breaks-your-identity",
+      "pubDate": "Thu, 16 Jul 2026 14:27:17 -0400",
+      "description": "You don't need a trip to relax — you need one to disrupt you. Neuroscience shows how travel temporarily unsettles your identity, and why that's exactly the point."
+    }
+  ]
+}
