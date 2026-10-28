@@ -50,13 +50,7 @@
 }
 
 .speaking-intro {
-    text-align: left;
-}
-
-@media (min-width: 768px) {
-    .speaking-intro {
-        text-align: center;
-    }
+    text-align: center;
 }
 
 .editorial-lead {
@@ -143,6 +137,7 @@
         align-items: center;
     }
     
+    .sxsw-image-column,
     .sxsw-image-wrapper {
         flex: 0 0 42%;
     }
@@ -150,6 +145,13 @@
     .sxsw-details {
         flex: 1;
     }
+}
+
+.sxsw-image-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
 }
 
 .sxsw-image-wrapper {

@@ -12,6 +12,7 @@ import MIT2 from "../assets/MIT2.jpg";
 import MIT3 from "../assets/MIT3.jpg";
 import TheLastShowImg from "../assets/the last show.png";
 import SxswImg from "../assets/sxsw27.png";
+import DiagnoseSxswImg from "../assets/diagnose27sxsw.png";
 import './Speaking.css';
 
 const Speaking = () => {
@@ -24,13 +25,7 @@ const Speaking = () => {
                     <h1 className="page-title text-center">Speaking & Workshops</h1>
                     <div className="speaking-intro">
                         <p className="editorial-lead">
-                            Dr. Elizabeth Mateer speaks at the intersection of psychology, neurocognition, founder performance, identity, creativity, and human potential — translating complex ideas into intellectually rigorous, emotionally resonant, and practically useful conversations.
-                        </p>
-                        <p className="editorial-body">
-                            Her work explores how people think, build, adapt, create, and construct meaning during periods of ambition, uncertainty, reinvention, and rapid technological change. Recent conversations have explored founder psychology, decision-making under uncertainty, identity shifts, cognitive flexibility, creativity, burnout, and sustainable performance.
-                        </p>
-                        <p className="speaking-audiences-subtle">
-                            Recent invited conversations include the MIT Sloan Fellows MBA, Boston Tech Week, founder communities, academic institutions, healthcare organizations, and interdisciplinary audiences. In March 2027, she leads a Core Conversation at SXSW.
+                            Dr. Elizabeth Mateer speaks on performance, identity, and creativity through the lens of neuropsychology, turning clinical rigor into ideas people can use. Recent conversations include the MIT Sloan Fellows MBA and Boston Tech Week; in March 2027 she leads a Core Conversation at SXSW.
                         </p>
                     </div>
                 </header>
@@ -44,15 +39,20 @@ const Speaking = () => {
 
                     <div className="featured-talks-grid" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
                         <div className="sxsw-proposal-card">
-                            <div className="sxsw-image-wrapper">
-                                <img src={SxswImg} alt="SXSW 2027 · Diagnose, Don’t Discipline: Productivity for Smart People" className="sxsw-featured-image" />
+                            <div className="sxsw-image-column">
+                                <div className="sxsw-image-wrapper">
+                                    <img src={SxswImg} alt="SXSW 2027 · Diagnose, Don’t Discipline: Productivity for Smart People" className="sxsw-featured-image" />
+                                </div>
+                                <div className="sxsw-image-wrapper">
+                                    <img src={DiagnoseSxswImg} alt="Elizabeth Mateer presenting Diagnose, Don't Discipline at SXSW 2027" className="sxsw-featured-image" />
+                                </div>
                             </div>
                             <div className="sxsw-details">
                                 <span className="sxsw-badge">CONFIRMED</span>
                                 <span className="sxsw-eyebrow">SXSW 2027 · CORE CONVERSATION</span>
                                 <h2 className="sxsw-title">Diagnose, Don’t Discipline: Productivity for Smart People</h2>
                                 <p className="sxsw-description">
-                                    Selected for SXSW 2027 in Austin, March 15–21. This Core Conversation reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else's routine. As a Core Conversation, most of the session is interactive — a room working through what has and hasn't worked for them, and why.
+                                    Selected for SXSW 2027 in Austin, March 15–21. This Core Conversation reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else’s routine. As a Core Conversation, most of the session is interactive — a room working through what has and hasn’t worked for you, and why.
                                 </p>
                                 <div className="sxsw-ctas">
                                     <Button 
