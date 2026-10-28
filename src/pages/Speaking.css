@@ -132,8 +132,7 @@
     flex-direction: column;
     gap: clamp(2rem, 4vw, 3rem);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
-    margin: 0 auto;
-    max-width: 1000px;
+    margin: 0 var(--spacing-md);
     position: relative;
     overflow: hidden;
 }

@@ -73,6 +73,24 @@
     line-height: 1.6;
 }
 
+.hero-eyebrow-tag {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--color-accent-terracotta);
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-eyebrow-tag:hover {
+    color: var(--color-text-heading);
+    opacity: 0.85;
+}
+
 .hero-cta-group {
     display: flex;
     gap: 16px; /* spacing between buttons */
@@ -366,6 +384,11 @@
     line-height: 1.5;
     margin-bottom: var(--spacing-lg);
     flex-grow: 1;
+}
+
+.work-card-note {
+    display: block;
+    margin-top: 0.5rem;
 }
 
 .work-cta {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import { ArrowRight, BookOpen, Mic, PenTool, Brain, User, Zap, Globe, Compass } from 'lucide-react';
 import './Home.css';
@@ -25,8 +26,11 @@ const Home = () => {
                             CLINICAL NEUROPSYCHOLOGY FELLOW,<br/>WRITER, AND FOUNDER.
                         </p>
                         <p className="hero-primary-subtext animate-text delay-2">
-                            Neuropsychology fellow, founder, and poet — Writing on identity, creativity, and the brain.
+                            Neuropsychology fellow, founder, and poet — writing on identity, creativity, performance, and the brain.
                         </p>
+                        <Link to="/speaking" className="hero-eyebrow-tag animate-text delay-3">
+                            SPEAKING AT SXSW 2027 · AUSTIN, MARCH
+                        </Link>
                         <div className="hero-cta-group animate-text delay-3">
                             <Button to="/writing" variant="primary" className="btn-large btn-cta-primary">
                                 Read Writing
@@ -81,7 +85,10 @@ const Home = () => {
                     <div className="work-cards-grid">
                         <div className="work-card">
                             <h3>Speaking</h3>
-                            <p>Talks on neuropsychology, identity, creativity, and performance.</p>
+                            <p>
+                                Talks on neuropsychology, identity, creativity, and performance.
+                                <span className="work-card-note">Speaking at SXSW 2027.</span>
+                            </p>
                             <Button to="/speaking" variant="text" className="work-cta">Invite to Speak →</Button>
                         </div>
                         <div className="work-card">

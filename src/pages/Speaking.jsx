@@ -30,44 +30,10 @@ const Speaking = () => {
                             Her work explores how people think, build, adapt, create, and construct meaning during periods of ambition, uncertainty, reinvention, and rapid technological change. Recent conversations have explored founder psychology, decision-making under uncertainty, identity shifts, cognitive flexibility, creativity, burnout, and sustainable performance.
                         </p>
                         <p className="speaking-audiences-subtle">
-                            Recent invited conversations include the MIT Sloan Fellows MBA, Boston Tech Week, founder communities, academic institutions, healthcare organizations, and interdisciplinary audiences.
+                            Recent invited conversations include the MIT Sloan Fellows MBA, Boston Tech Week, founder communities, academic institutions, healthcare organizations, and interdisciplinary audiences. In March 2027, she leads a Core Conversation at SXSW.
                         </p>
                     </div>
                 </header>
-
-                {/* TEMPORARY SECTION: Update again once SXSW announces the proposal decision, expected by the end of October 2026 */}
-                <section className="sxsw-proposal-section">
-                    <div className="sxsw-proposal-card">
-                        <div className="sxsw-image-wrapper" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '2rem', backgroundColor: 'var(--color-bg-primary)', height: '100%', minHeight: '300px' }}>
-                            <span className="sxsw-eyebrow" style={{ textAlign: 'center', marginBottom: '1rem', color: 'var(--color-text-secondary)' }}>SXSW 2027 PanelPicker</span>
-                            <h3 className="sxsw-title" style={{ textAlign: 'center', fontSize: '1.5rem', margin: '0' }}>Diagnose, Don’t Discipline:<br/>Productivity for Smart People</h3>
-                        </div>
-                        <div className="sxsw-details">
-                            <span className="sxsw-badge" style={{ backgroundColor: 'var(--color-text-secondary)' }}>Under Consideration</span>
-                            <span className="sxsw-eyebrow">SXSW 2027 PANELPICKER</span>
-                            <h2 className="sxsw-title">Diagnose, Don’t Discipline: Productivity for Smart People</h2>
-                            <p className="sxsw-description">
-                                My proposed SXSW 2027 session reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else’s routine.
-                            </p>
-                            <p className="sxsw-description">
-                                Community voting has now closed, and proposals are moving through the remaining SXSW evaluation process.
-                            </p>
-                            <div className="sxsw-ctas">
-                                <Button 
-                                    href="https://participate.sxsw.com/flow/sxsw/sxsw27/community-voting-sxsw/page/community-voting/session/1784918802592001QKsy" 
-                                    variant="outline" 
-                                    className="btn-talk-secondary"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    View PanelPicker Proposal
-                                </Button>
-                            </div>
-                            <p className="sxsw-status-note">Programming decisions are expected by the end of October 2026.</p>
-                        </div>
-                    </div>
-                </section>
-                {/* END TEMPORARY SECTION */}
 
                 {/* Featured Talks Section */}
                 <section id="recent-engagements" className="featured-talks-section">
@@ -77,7 +43,33 @@ const Speaking = () => {
                     </div>
 
                     <div className="featured-talks-grid" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
-                    <div className="signature-talk-card">
+                        <div className="sxsw-proposal-card">
+                            <div className="sxsw-image-wrapper" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '2rem', backgroundColor: 'var(--color-bg-primary)', height: '100%', minHeight: '300px' }}>
+                                <span className="sxsw-eyebrow" style={{ textAlign: 'center', marginBottom: '1rem', color: 'var(--color-text-secondary)' }}>SXSW 2027 · CORE CONVERSATION</span>
+                                <h3 className="sxsw-title" style={{ textAlign: 'center', fontSize: '1.5rem', margin: '0' }}>Diagnose, Don’t Discipline:<br/>Productivity for Smart People</h3>
+                            </div>
+                            <div className="sxsw-details">
+                                <span className="sxsw-badge">CONFIRMED</span>
+                                <span className="sxsw-eyebrow">SXSW 2027 · CORE CONVERSATION</span>
+                                <h2 className="sxsw-title">Diagnose, Don’t Discipline: Productivity for Smart People</h2>
+                                <p className="sxsw-description">
+                                    Selected for SXSW 2027 in Austin, March 15–21. This Core Conversation reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else's routine. As a Core Conversation, most of the session is interactive — a room working through what has and hasn't worked for them, and why.
+                                </p>
+                                <div className="sxsw-ctas">
+                                    <Button 
+                                        href="https://schedule.sxsw.com/2027/events/PP1165658" 
+                                        variant="outline" 
+                                        className="btn-talk-secondary"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        VIEW SESSION ON SXSW
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="signature-talk-card">
                         <div className="talk-image-wrapper">
                             <img src={FFRImg} alt="Build With Your Brain workshop for Female Founders Rise" className="talk-featured-image" />
                         </div>
