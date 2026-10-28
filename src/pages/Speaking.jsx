@@ -11,7 +11,6 @@ import MIT1 from "../assets/MIT1.jpg";
 import MIT2 from "../assets/MIT2.jpg";
 import MIT3 from "../assets/MIT3.jpg";
 import TheLastShowImg from "../assets/the last show.png";
-import SxswImg from "../assets/sxsw27.png";
 import DiagnoseSxswImg from "../assets/diagnose27sxsw.png";
 import './Speaking.css';
 
@@ -39,13 +38,8 @@ const Speaking = () => {
 
                     <div className="featured-talks-grid" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
                         <div className="sxsw-proposal-card">
-                            <div className="sxsw-image-column">
-                                <div className="sxsw-image-wrapper">
-                                    <img src={SxswImg} alt="SXSW 2027 · Diagnose, Don’t Discipline: Productivity for Smart People" className="sxsw-featured-image" />
-                                </div>
-                                <div className="sxsw-image-wrapper">
-                                    <img src={DiagnoseSxswImg} alt="Elizabeth Mateer presenting Diagnose, Don't Discipline at SXSW 2027" className="sxsw-featured-image" />
-                                </div>
+                            <div className="sxsw-image-wrapper">
+                                <img src={DiagnoseSxswImg} alt="Elizabeth Mateer presenting Diagnose, Don't Discipline at SXSW 2027" className="sxsw-featured-image" />
                             </div>
                             <div className="sxsw-details">
                                 <span className="sxsw-badge">CONFIRMED</span>
