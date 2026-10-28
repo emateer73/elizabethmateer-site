@@ -11,7 +11,7 @@ import MIT1 from "../assets/MIT1.jpg";
 import MIT2 from "../assets/MIT2.jpg";
 import MIT3 from "../assets/MIT3.jpg";
 import TheLastShowImg from "../assets/the last show.png";
-import SxswImg from "../assets/sxsw panel picker.png";
+import SxswImg from "../assets/27_SXSW_PanelPicker-Vote_1080x566.png";
 import './Speaking.css';
 
 const Speaking = () => {
@@ -44,9 +44,8 @@ const Speaking = () => {
 
                     <div className="featured-talks-grid" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
                         <div className="sxsw-proposal-card">
-                            <div className="sxsw-image-wrapper" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '2rem', backgroundColor: 'var(--color-bg-primary)', height: '100%', minHeight: '300px' }}>
-                                <span className="sxsw-eyebrow" style={{ textAlign: 'center', marginBottom: '1rem', color: 'var(--color-text-secondary)' }}>SXSW 2027 · CORE CONVERSATION</span>
-                                <h3 className="sxsw-title" style={{ textAlign: 'center', fontSize: '1.5rem', margin: '0' }}>Diagnose, Don’t Discipline:<br/>Productivity for Smart People</h3>
+                            <div className="sxsw-image-wrapper">
+                                <img src={SxswImg} alt="SXSW 2027 · Diagnose, Don’t Discipline: Productivity for Smart People" className="sxsw-featured-image" />
                             </div>
                             <div className="sxsw-details">
                                 <span className="sxsw-badge">CONFIRMED</span>
