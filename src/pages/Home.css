@@ -527,3 +527,97 @@
         padding: 1rem;
     }
 }
+
+/* ===== Brand refresh: new homepage sections ===== */
+
+/* Through-line statement */
+.throughline-section {
+    padding: 4.5rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.throughline-statement {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-text-heading);
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* Proof bar (text-based, two rows) */
+.proof-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.proof-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+}
+
+.proof-row .featured-in-label {
+    margin-bottom: 0;
+}
+
+.proof-names {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Three facets reuse .work-cards-grid / .work-card */
+.facets-section {
+    padding: 4rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+/* Ventures & community */
+.ventures-strip {
+    padding: 3.5rem 0;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-secondary);
+}
+
+.ventures-container {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.venture-line {
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.venture-line strong {
+    color: var(--color-text-heading);
+    font-weight: 600;
+}
+
+.venture-line a {
+    color: var(--color-text-heading);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+    transition: border-color 0.3s ease;
+}
+
+.venture-line a:hover {
+    border-bottom-color: var(--color-text-heading);
+}

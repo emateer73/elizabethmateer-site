@@ -104,3 +104,32 @@
     height: 100%;
     object-fit: cover;
 }
+/* ===== Brand refresh: Poetry page intro + readings note ===== */
+.books-intro {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    max-width: 640px;
+    margin: 0 auto var(--spacing-2xl, 3rem);
+}
+
+.readings-note {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+.readings-note a {
+    color: var(--color-text-heading);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+    transition: border-color 0.3s ease;
+}
+
+.readings-note a:hover {
+    border-bottom-color: var(--color-text-heading);
+}

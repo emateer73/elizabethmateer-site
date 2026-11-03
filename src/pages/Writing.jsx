@@ -2,9 +2,11 @@ import React from 'react';
 import Button from '../components/Button';
 import { ArrowUpRight } from 'lucide-react';
 import initialWritingPosts from '../data/writingPosts.json';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Writing.css';
 
 const Writing = () => {
+    useDocumentTitle('Writing — Elizabeth Mateer, Ph.D.');
     const [substackPosts] = React.useState(initialWritingPosts.substackPosts || []);
     const [ptPosts] = React.useState(initialWritingPosts.ptPosts || []);
 

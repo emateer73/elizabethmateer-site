@@ -1,11 +1,12 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Button from '../components/Button';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Contact.css';
 
 const Contact = () => {
-    // REPLACE "CONTACT_FORM_ID" WITH YOUR ACTUAL FORMSPREE FORM ID
     const [state, handleSubmit] = useForm("mykdprbk");
+    useDocumentTitle('Contact — Elizabeth Mateer, Ph.D.');
 
     if (state.succeeded) {
         return (

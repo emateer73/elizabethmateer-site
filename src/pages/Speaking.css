@@ -57,7 +57,7 @@
 .editorial-lead {
     font-family: var(--font-heading);
     font-size: clamp(1.2rem, 2.5vw, 1.45rem);
-    font-style: italic;
+    font-style: normal;
     color: var(--color-text-heading);
     line-height: 1.65;
     margin-bottom: var(--spacing-lg);

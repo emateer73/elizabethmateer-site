@@ -98,3 +98,30 @@
     margin-bottom: var(--spacing-xl);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+/* ===== Brand refresh: Research & Publications folded into About ===== */
+.about-research {
+    margin-top: var(--spacing-2xl, 3rem);
+    padding-top: var(--spacing-xl, 2rem);
+    border-top: 1px solid var(--color-border);
+}
+
+.research-philosophy-quote {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    font-style: italic;
+    border-left: 2px solid var(--color-accent-terracotta, #c8705a);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.research-subheading {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin: 2rem 0 0.75rem;
+}

@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Writing from './pages/Writing';
 import Books from './pages/Books';
-import Research from './pages/Research';
 import Speaking from './pages/Speaking';
 import Contact from './pages/Contact';
 
@@ -14,10 +13,6 @@ import ANewTypeOfBreakfast from './pages/ANewTypeOfBreakfast';
 
 import Links from './pages/Links';
 
-import Consulting from './pages/Consulting';
-import ConsultingInquiry from './pages/ConsultingInquiry';
-import PrivateWork from './pages/PrivateWork';
-import PrivateWorkInquiry from './pages/PrivateWorkInquiry';
 import FoundersMind from './pages/FoundersMind';
 import BuildWithYourBrain from './pages/BuildWithYourBrain';
 
@@ -32,16 +27,20 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/writing" element={<Writing />} />
-              <Route path="/books" element={<Books />} />
+              <Route path="/poetry" element={<Books />} />
+              <Route path="/books" element={<Navigate to="/poetry" replace />} />
               <Route path="/books/searching-for-home" element={<SearchingForHome />} />
               <Route path="/books/a-new-type-of-breakfast" element={<ANewTypeOfBreakfast />} />
-              <Route path="/research" element={<Research />} />
+              <Route path="/poetry/searching-for-home" element={<Navigate to="/books/searching-for-home" replace />} />
+              <Route path="/poetry/a-new-type-of-breakfast" element={<Navigate to="/books/a-new-type-of-breakfast" replace />} />
               <Route path="/speaking" element={<Speaking />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/consulting" element={<Consulting />} />
-              <Route path="/consulting-inquiry" element={<ConsultingInquiry />} />
-              <Route path="/private-work" element={<Navigate to="/consulting" replace />} />
-              <Route path="/private-work-inquiry" element={<PrivateWorkInquiry />} />
+              {/* Research folded into About; Consulting retired — preserve inbound links */}
+              <Route path="/research" element={<Navigate to="/about" replace />} />
+              <Route path="/consulting" element={<Navigate to="/contact" replace />} />
+              <Route path="/consulting-inquiry" element={<Navigate to="/contact" replace />} />
+              <Route path="/private-work" element={<Navigate to="/contact" replace />} />
+              <Route path="/private-work-inquiry" element={<Navigate to="/contact" replace />} />
               <Route path="/founders-mind" element={<FoundersMind />} />
               <Route path="/build-with-your-brain" element={<BuildWithYourBrain />} />
             </Routes>
