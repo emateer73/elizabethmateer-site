@@ -5,7 +5,7 @@ import './About.css';
 import './Research.css';
 
 const About = () => {
-    useDocumentTitle('About — Elizabeth Mateer, Ph.D.');
+    useDocumentTitle('About | Elizabeth Mateer, Ph.D.');
 
     return (
         <div className="about-page">
@@ -31,19 +31,19 @@ const About = () => {
                         </p>
 
                         <p className="bio-paragraph">
-                            Across my clinical work and my writing, I'm interested in one thing: how people construct meaning — through art, through work, and through the stories they tell about their own lives. My research looks at the neuropsychological foundations of attention, resilience, and self-authorship, and at how we navigate change and rebuild a coherent sense of self over time.
+                            Across my clinical work and my writing, I'm interested in one thing: how people construct meaning, through art, through work, and through the stories they tell about their own lives. My research looks at the neuropsychological foundations of attention, resilience, and self-authorship, and at how we navigate change and rebuild a coherent sense of self over time.
                         </p>
 
                         <p className="bio-paragraph">
-                            Clinically, I conduct neuropsychological evaluations across diverse medical and psychiatric populations, and I'm currently completing advanced training as a Clinical Fellow in Psychology affiliated with Harvard Medical School. My research focuses on attention and traumatic brain injury, with an emphasis on translating complex findings into something that's actually useful in everyday life — and on how cognition shapes creativity, decision-making, and long-term growth.
+                            Clinically, I conduct neuropsychological evaluations across diverse medical and psychiatric populations, and I'm currently completing advanced training as a Clinical Fellow in Psychology affiliated with Harvard Medical School. My research focuses on attention and traumatic brain injury, with an emphasis on translating complex findings into something that's actually useful in everyday life, and on how cognition shapes creativity, decision-making, and long-term growth.
                         </p>
 
                         <p className="bio-paragraph">
-                            I'm also a poet. I've written two collections, <em>Searching for Home</em> (2024) and <em>A New Type of Breakfast</em> (2026) — the same questions about identity and belonging that drive my research, worked out on the page.
+                            I'm also a poet. I've written two collections, <em>Searching for Home</em> (2024) and <em>A New Type of Breakfast</em> (2026), the same questions about identity and belonging that drive my research, worked out on the page.
                         </p>
 
                         <p className="bio-paragraph">
-                            And I'm the founder of <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>PsychDraft</a>, an AI-assisted platform for clinical documentation in neuropsychology — my interest in systems design and cognitive workflow applied to the future of the profession.
+                            And I'm the founder of <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>PsychDraft</a>, a documentation platform that gives neuropsychologists their time back, so they can spend it on the part of the work that actually matters: being present with the person in front of them. Technology in service of being more human, not less.
                         </p>
 
                         <div className="credentials-section">
@@ -77,7 +77,7 @@ const About = () => {
                             <h2 className="section-heading">Research &amp; Selected Publications</h2>
 
                             <p className="research-philosophy-quote">
-                                "My work examines how cognitive systems shape identity, agency, and recovery. I'm particularly interested in attention as a structural mechanism — how it organizes experience, influences meaning-making, and determines how we reconstruct ourselves after neurological disruption."
+                                "My work examines how cognitive systems shape identity, agency, and recovery. I'm particularly interested in attention as a structural mechanism, how it organizes experience, influences meaning-making, and determines how we reconstruct ourselves after neurological disruption."
                             </p>
 
                             <h4 className="research-subheading">Key Topics</h4>

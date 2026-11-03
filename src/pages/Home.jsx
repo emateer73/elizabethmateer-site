@@ -6,7 +6,7 @@ import './Home.css';
 import PortraitImage from '../assets/profile6.png';
 
 const Home = () => {
-    useDocumentTitle('Elizabeth Mateer, Ph.D. | Neuropsychologist & Poet');
+    useDocumentTitle('Elizabeth Mateer, Ph.D. | Neuropsychology Fellow & Poet');
 
     return (
         <div className="home-page">
@@ -23,10 +23,10 @@ const Home = () => {
                             Elizabeth Mateer, Ph.D.
                         </h1>
                         <p className="hero-subtitle animate-text delay-1">
-                            Neuropsychologist &amp; Poet
+                            Neuropsychology Fellow &amp; Poet
                         </p>
                         <p className="hero-primary-subtext animate-text delay-2">
-                            I study how the brain builds a self — and I write about what that feels like.
+                            I study how the brain builds a self, and I write about what that feels like.
                         </p>
                         <Link to="/speaking" className="hero-eyebrow-tag animate-text delay-3">
                             SPEAKING AT SXSW 2027 · AUSTIN, MARCH
@@ -46,7 +46,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Through-line statement — says the connection out loud */}
+            {/* Through-line statement, says the connection out loud */}
             <section className="throughline-section">
                 <div className="container">
                     <p className="throughline-statement">
@@ -69,7 +69,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Three facets — one subject, several instruments */}
+            {/* Three facets, one subject, several instruments */}
             <section className="facets-section section">
                 <div className="container">
                     <div className="work-cards-grid">
@@ -80,7 +80,7 @@ const Home = () => {
                         </div>
                         <div className="work-card">
                             <h3>Speaking</h3>
-                            <p>Talks that turn the research into something a room can use — most recently MIT Sloan, Boston Tech Week, and SXSW 2027.</p>
+                            <p>Talks that turn the research into something a room can use, most recently MIT Sloan, Boston Tech Week, and SXSW 2027.</p>
                             <Button to="/speaking" variant="text" className="work-cta">See speaking →</Button>
                         </div>
                         <div className="work-card">
@@ -93,7 +93,7 @@ const Home = () => {
             </section>
 
             {/*
-              A TASTE OF THE WORK — waiting on Elizabeth's chosen lines.
+              A TASTE OF THE WORK, waiting on Elizabeth's chosen lines.
               Drop 4–6 lines of poetry here as a <section className="taste-section"> so a
               visitor actually reads her on the homepage. Left out until she picks the lines.
             */}
@@ -102,11 +102,11 @@ const Home = () => {
             <section className="ventures-strip section">
                 <div className="container ventures-container">
                     <p className="venture-line">
-                        <strong>PsychDraft</strong> — I'm the founder, rethinking neuropsychological documentation with AI.{' '}
+                        <strong>PsychDraft</strong>, the platform I founded to give clinicians their time back, so they can spend it being present with the people in front of them.{' '}
                         <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer">Explore PsychDraft →</a>
                     </p>
                     <p className="venture-line">
-                        <strong>Searching for Home Collective</strong> — I founded and curate this literary salon in Boston.{' '}
+                        <strong>Searching for Home Collective</strong>, the literary salon I founded and curate in Boston.{' '}
                         <a href="https://www.searchingforhomecollective.com/" target="_blank" rel="noopener noreferrer">Explore the Collective →</a>
                     </p>
                 </div>

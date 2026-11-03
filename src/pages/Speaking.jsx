@@ -16,7 +16,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Speaking.css';
 
 const Speaking = () => {
-    useDocumentTitle('Speaking — Elizabeth Mateer, Ph.D.');
+    useDocumentTitle('Speaking | Elizabeth Mateer, Ph.D.');
     return (
         <div className="speaking-page">
             <div className="container speaking-container">
@@ -26,7 +26,7 @@ const Speaking = () => {
                     <h1 className="page-title text-center">Speaking & Workshops</h1>
                     <div className="speaking-intro">
                         <p className="editorial-lead">
-                            I speak on attention, identity, and performance — turning clinical research into something a room can actually use. Recent rooms: the MIT Sloan Fellows MBA, Boston Tech Week, and a Core Conversation at SXSW 2027.
+                            I speak on attention, identity, and performance, turning clinical research into something a room can actually use. Recent rooms: the MIT Sloan Fellows MBA, Boston Tech Week, and a Core Conversation at SXSW 2027.
                         </p>
                     </div>
                 </header>
@@ -48,7 +48,7 @@ const Speaking = () => {
                                 <span className="sxsw-eyebrow">SXSW 2027 · CORE CONVERSATION</span>
                                 <h2 className="sxsw-title">Diagnose, Don’t Discipline: Productivity for Smart People</h2>
                                 <p className="sxsw-description">
-                                    Selected for SXSW 2027 in Austin, March 15–21. This Core Conversation reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else’s routine. As a Core Conversation, most of the session is interactive — a room working through what has and hasn’t worked for you, and why.
+                                    Selected for SXSW 2027 in Austin, March 15–21. This Core Conversation reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else’s routine. As a Core Conversation, most of the session is interactive, a room working through what has and hasn’t worked for you, and why.
                                 </p>
                                 <div className="sxsw-ctas">
                                     <Button 
@@ -80,7 +80,7 @@ const Speaking = () => {
                             </div>
 
                             <p className="talk-description">
-                                A practical, research-informed workshop exploring why productivity problems are often assessment problems. The session examined how founders can better understand their patterns of attention, energy, motivation, decision-making, and stress—and build systems that work with their cognitive strengths rather than against them.
+                                A practical, research-informed workshop exploring why productivity problems are often assessment problems. The session examined how founders can better understand their patterns of attention, energy, motivation, decision-making, and stress, and build systems that work with their cognitive strengths rather than against them.
                             </p>
                             
                             <div className="upcoming-takeaways" style={{ marginBottom: '1.5rem' }}>

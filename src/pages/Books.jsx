@@ -6,14 +6,14 @@ import BreakfastCover from '../assets/a new type of breakfast book cover.jpg';
 import './Books.css';
 
 const Books = () => {
-    useDocumentTitle('Poetry — Elizabeth Mateer, Ph.D.');
+    useDocumentTitle('Poetry | Elizabeth Mateer, Ph.D.');
 
     return (
         <div className="books-page">
             <div className="container">
                 <h1 className="page-title text-center">Poetry</h1>
                 <p className="books-intro text-center">
-                    Two collections about belonging and the long work of becoming yourself — the same questions I study, worked out on the page.
+                    Two collections about belonging and the long work of becoming yourself, the same questions I study, worked out on the page.
                 </p>
 
                 <div className="books-grid">

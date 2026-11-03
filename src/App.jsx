@@ -35,7 +35,7 @@ function App() {
               <Route path="/poetry/a-new-type-of-breakfast" element={<Navigate to="/books/a-new-type-of-breakfast" replace />} />
               <Route path="/speaking" element={<Speaking />} />
               <Route path="/contact" element={<Contact />} />
-              {/* Research folded into About; Consulting retired — preserve inbound links */}
+              {/* Research folded into About; Consulting retired; redirects preserve inbound links */}
               <Route path="/research" element={<Navigate to="/about" replace />} />
               <Route path="/consulting" element={<Navigate to="/contact" replace />} />
               <Route path="/consulting-inquiry" element={<Navigate to="/contact" replace />} />

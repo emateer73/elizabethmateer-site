@@ -6,7 +6,7 @@ import './Contact.css';
 
 const Contact = () => {
     const [state, handleSubmit] = useForm("mykdprbk");
-    useDocumentTitle('Contact — Elizabeth Mateer, Ph.D.');
+    useDocumentTitle('Contact | Elizabeth Mateer, Ph.D.');
 
     if (state.succeeded) {
         return (
