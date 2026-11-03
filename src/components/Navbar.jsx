@@ -18,10 +18,8 @@ const Navbar = () => {
     const navLinks = [
         { name: 'About', path: '/about' },
         { name: 'Writing', path: '/writing' },
-        { name: 'Books', path: '/books' },
-        { name: 'Research', path: '/research' },
         { name: 'Speaking', path: '/speaking' },
-        { name: 'Consulting', path: '/consulting' },
+        { name: 'Poetry', path: '/poetry' },
         { name: 'Contact', path: '/contact' },
     ];
 

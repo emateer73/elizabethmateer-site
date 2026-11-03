@@ -296,7 +296,7 @@ const BuildWithYourBrain = () => {
                         </Button>
                     </div>
                     <p style={{ marginTop: '24px', fontSize: '0.85rem', fontStyle: 'italic', color: 'var(--color-text-secondary)' }}>
-                        Bookmark this page — these tools are designed to be revisited regularly as your company and cognitive demands scale.
+                        Bookmark this page, these tools are designed to be revisited regularly as your company and cognitive demands scale.
                     </p>
                 </div>
             </header>
@@ -434,11 +434,11 @@ const BuildWithYourBrain = () => {
                         <div className="results-dashboard">
                             <div className="results-heading">
                                 <h3>Your Founder Mind Configuration</h3>
-                                <p>Your highest patterns are not labels. Think of them as clues about where you create leverage — and where your strengths may need structure.</p>
+                                <p>Your highest patterns are not labels. Think of them as clues about where you create leverage, and where your strengths may need structure.</p>
                             </div>
 
                             <div className="results-config-note" style={{ marginBottom: '32px' }}>
-                                <strong>Reflection Note:</strong> Most founders are not just one type. Your founder mind is usually a configuration. Pay attention to your top two patterns — especially where one creates energy and the other creates friction. If your top scores are close, that may reflect a blended founder profile rather than a single dominant pattern.
+                                <strong>Reflection Note:</strong> Most founders are not just one type. Your founder mind is usually a configuration. Pay attention to your top two patterns, especially where one creates energy and the other creates friction. If your top scores are close, that may reflect a blended founder profile rather than a single dominant pattern.
                             </div>
 
                             <div className="results-primary-deck">

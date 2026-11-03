@@ -127,7 +127,7 @@ const FoundersMind = () => {
             createdMeta = true;
         }
         const prevDesc = metaDesc.getAttribute('content');
-        metaDesc.setAttribute('content', 'Explore cognitive profiles, frameworks, reflection tools, and scientific research from The Founder’s Mind — Dr. Elizabeth Mateer’s signature talk on entrepreneurship psychology.');
+        metaDesc.setAttribute('content', 'Explore cognitive profiles, frameworks, reflection tools, and scientific research from The Founder’s Mind, Dr. Elizabeth Mateer’s signature talk on entrepreneurship psychology.');
 
         return () => {
             if (createdMeta) {
@@ -246,9 +246,9 @@ const FoundersMind = () => {
                     <p className="fm-hero-credibility">Presented in founder, academic, and interdisciplinary settings, including Boston Tech Week.</p>
                     
                     <p className="fm-hero-intro">
-                        Building something ambitious is not only an execution problem — it is also a cognitive and psychological challenge involving attention, working memory, identity, emotional regulation, uncertainty tolerance, and decision-making.
+                        Building something ambitious is not only an execution problem, it is also a cognitive and psychological challenge involving attention, working memory, identity, emotional regulation, uncertainty tolerance, and decision-making.
                         <br /><br />
-                        This page includes selected frameworks, reflection tools, and research explored through The Founder’s Mind — a research-informed conversation on the psychology of building, curated by <strong>Elizabeth Mateer, PhD</strong> — Founder, PsychDraft.
+                        This page includes selected frameworks, reflection tools, and research explored through The Founder’s Mind, a research-informed conversation on the psychology of building, curated by <strong>Elizabeth Mateer, PhD</strong>, Founder, PsychDraft.
                     </p>
 
                     <div className="fm-hero-ctas">
@@ -275,7 +275,7 @@ const FoundersMind = () => {
                         </Button>
                     </div>
                     <p style={{ marginTop: '24px', fontSize: '0.85rem', fontStyle: 'italic', color: 'var(--color-text-secondary)' }}>
-                        Bookmark this page — these tools are designed to be revisited regularly as your company and cognitive demands scale.
+                        Bookmark this page, these tools are designed to be revisited regularly as your company and cognitive demands scale.
                     </p>
                 </div>
             </header>
@@ -287,7 +287,7 @@ const FoundersMind = () => {
                         <h3 className="fm-about-title">About the Talk</h3>
                         <div className="fm-about-content">
                             <p className="fm-about-text">
-                                The Founder’s Mind explores the hidden psychological demands of entrepreneurship and ambitious work — including cognitive load, identity shifts, burnout risk, creativity, attention, emotional regulation, and decision-making under uncertainty.
+                                The Founder’s Mind explores the hidden psychological demands of entrepreneurship and ambitious work, including cognitive load, identity shifts, burnout risk, creativity, attention, emotional regulation, and decision-making under uncertainty.
                             </p>
                             <p className="fm-about-text">
                                 Originally developed for founder communities, the talk has since expanded into broader conversations on human performance, reinvention, and meaningful work.
@@ -416,11 +416,11 @@ const FoundersMind = () => {
                         <div className="results-dashboard">
                             <div className="results-heading">
                                 <h3>Your Founder Mind Configuration</h3>
-                                <p>Your highest patterns are not labels. Think of them as clues about where you create leverage — and where your strengths may need structure.</p>
+                                <p>Your highest patterns are not labels. Think of them as clues about where you create leverage, and where your strengths may need structure.</p>
                             </div>
 
                             <div className="results-config-note" style={{ marginBottom: '32px' }}>
-                                <strong>Reflection Note:</strong> Most founders are not just one type. Your founder mind is usually a configuration. Pay attention to your top two patterns — especially where one creates energy and the other creates friction. If your top scores are close, that may reflect a blended founder profile rather than a single dominant pattern.
+                                <strong>Reflection Note:</strong> Most founders are not just one type. Your founder mind is usually a configuration. Pay attention to your top two patterns, especially where one creates energy and the other creates friction. If your top scores are close, that may reflect a blended founder profile rather than a single dominant pattern.
                             </div>
 
                             <div className="results-primary-deck">

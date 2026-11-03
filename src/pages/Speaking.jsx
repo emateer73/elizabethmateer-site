@@ -12,9 +12,11 @@ import MIT2 from "../assets/MIT2.jpg";
 import MIT3 from "../assets/MIT3.jpg";
 import TheLastShowImg from "../assets/the last show.png";
 import DiagnoseSxswImg from "../assets/diagnose27sxsw.png";
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Speaking.css';
 
 const Speaking = () => {
+    useDocumentTitle('Speaking | Elizabeth Mateer, Ph.D.');
     return (
         <div className="speaking-page">
             <div className="container speaking-container">
@@ -24,7 +26,7 @@ const Speaking = () => {
                     <h1 className="page-title text-center">Speaking & Workshops</h1>
                     <div className="speaking-intro">
                         <p className="editorial-lead">
-                            Dr. Elizabeth Mateer speaks on performance, identity, and creativity through the lens of neuropsychology, turning clinical rigor into ideas people can use. Recent conversations include the MIT Sloan Fellows MBA and Boston Tech Week; in March 2027 she leads a Core Conversation at SXSW.
+                            I speak on attention, identity, and performance, turning clinical research into something a room can actually use. Recent rooms: the MIT Sloan Fellows MBA, Boston Tech Week, and a Core Conversation at SXSW 2027.
                         </p>
                     </div>
                 </header>
@@ -46,7 +48,7 @@ const Speaking = () => {
                                 <span className="sxsw-eyebrow">SXSW 2027 · CORE CONVERSATION</span>
                                 <h2 className="sxsw-title">Diagnose, Don’t Discipline: Productivity for Smart People</h2>
                                 <p className="sxsw-description">
-                                    Selected for SXSW 2027 in Austin, March 15–21. This Core Conversation reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else’s routine. As a Core Conversation, most of the session is interactive — a room working through what has and hasn’t worked for you, and why.
+                                    Selected for SXSW 2027 in Austin, March 15–21. This Core Conversation reframes productivity as a diagnostic process: understanding your own patterns of attention, energy, motivation, and emotional regulation, then building systems that work with your brain instead of forcing it into someone else’s routine. As a Core Conversation, most of the session is interactive, a room working through what has and hasn’t worked for you, and why.
                                 </p>
                                 <div className="sxsw-ctas">
                                     <Button 
@@ -78,7 +80,7 @@ const Speaking = () => {
                             </div>
 
                             <p className="talk-description">
-                                A practical, research-informed workshop exploring why productivity problems are often assessment problems. The session examined how founders can better understand their patterns of attention, energy, motivation, decision-making, and stress—and build systems that work with their cognitive strengths rather than against them.
+                                A practical, research-informed workshop exploring why productivity problems are often assessment problems. The session examined how founders can better understand their patterns of attention, energy, motivation, decision-making, and stress, and build systems that work with their cognitive strengths rather than against them.
                             </p>
                             
                             <div className="upcoming-takeaways" style={{ marginBottom: '1.5rem' }}>
@@ -316,28 +318,7 @@ const Speaking = () => {
                             <span className="theme-number">03</span>
                             <h3 className="theme-title">The Neuropsychology of Creativity</h3>
                             <p className="theme-text">
-                                Exploring how memory, attention, identity, and cognitive flexibility coalesce to shape breakthrough ideas and personal meaning.
-                            </p>
-                        </div>
-                        <div className="theme-card">
-                            <span className="theme-number">04</span>
-                            <h3 className="theme-title">Cognitive Flexibility & Reinvention</h3>
-                            <p className="theme-text">
-                                Understanding how the brain adapts to rapid shifts and how to build deep psychological resilience and cognitive agility.
-                            </p>
-                        </div>
-                        <div className="theme-card">
-                            <span className="theme-number">05</span>
-                            <h3 className="theme-title">Attention, Performance & Mental Load</h3>
-                            <p className="theme-text">
-                                Managing cognitive bandwidth, cultivating deep focus, and supporting the nervous system in high-stakes, hyper-stimulated environments.
-                            </p>
-                        </div>
-                        <div className="theme-card">
-                            <span className="theme-number">06</span>
-                            <h3 className="theme-title">AI, Cognition & Human Meaning</h3>
-                            <p className="theme-text">
-                                Exploring what artificial intelligence reveals about cognition, creativity, identity, and what it means to think.
+                                How memory, attention, identity, and cognitive flexibility come together to shape breakthrough ideas and personal meaning.
                             </p>
                         </div>
                     </div>
@@ -380,12 +361,12 @@ const Speaking = () => {
                 <section className="invite-speaking-section">
                     <div className="invite-speaking-card">
                         <span className="invite-eyebrow">Engagement Inquiry</span>
-                        <h2 className="invite-title">Invite Elizabeth to Speak</h2>
+                        <h2 className="invite-title">Invite Me to Speak</h2>
                         <p className="invite-lead">
-                            Elizabeth speaks with select organizations, founder communities, universities, literary institutions, healthcare teams, and interdisciplinary groups.
+                            I speak with organizations, founder communities, universities, literary institutions, and healthcare teams.
                         </p>
                         <p className="invite-body">
-                            Topics are often customized to specific audience needs while remaining deeply grounded in psychological science, neurocognition, identity, creativity, and human performance.
+                            I tailor each talk to the audience, but it stays grounded in the same things: psychological science, attention and identity, creativity, and how people actually perform under pressure.
                         </p>
                         
                         <div className="invite-cta-wrapper">

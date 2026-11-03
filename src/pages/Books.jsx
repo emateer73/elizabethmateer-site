@@ -1,15 +1,20 @@
 import React from 'react';
 import Button from '../components/Button';
-import { Users, Mic, BookOpen, Coffee } from 'lucide-react';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import SearchingHomeCover from '../assets/searching-for-home.webp';
 import BreakfastCover from '../assets/a new type of breakfast book cover.jpg';
 import './Books.css';
 
 const Books = () => {
+    useDocumentTitle('Poetry | Elizabeth Mateer, Ph.D.');
+
     return (
         <div className="books-page">
             <div className="container">
-                <h1 className="page-title text-center">Books</h1>
+                <h1 className="page-title text-center">Poetry</h1>
+                <p className="books-intro text-center">
+                    Two collections about belonging and the long work of becoming yourself, the same questions I study, worked out on the page.
+                </p>
 
                 <div className="books-grid">
                     <div className="book-card">
@@ -48,10 +53,10 @@ const Books = () => {
                 </div>
 
                 <section className="events-section">
-                    <h2 className="section-title">Events & Readings</h2>
-                    <div className="events-placeholder">
-                        <p>Upcoming dates to be announced soon.</p>
-                    </div>
+                    <p className="readings-note">
+                        Readings and events go out first to{' '}
+                        <a href="https://elizabethmateer.substack.com/" target="_blank" rel="noopener noreferrer">my newsletter →</a>
+                    </p>
                 </section>
             </div>
         </div>

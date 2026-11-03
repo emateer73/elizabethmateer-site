@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
-import { ArrowRight, BookOpen, Mic, PenTool, Brain, User, Zap, Globe, Compass } from 'lucide-react';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Home.css';
-import PsychTodayLogo from '../assets/psychology today.png';
-import NRTimesLogo from '../assets/nr times new logo.png';
-import PortraitImage from '../assets/profile6.png'; // Updated portrait image
+import PortraitImage from '../assets/profile6.png';
 
 const Home = () => {
+    useDocumentTitle('Elizabeth Mateer, Ph.D. | Neuropsychology Fellow & Poet');
+
     return (
         <div className="home-page">
             {/* Hero Section */}
@@ -23,101 +23,92 @@ const Home = () => {
                             Elizabeth Mateer, Ph.D.
                         </h1>
                         <p className="hero-subtitle animate-text delay-1">
-                            CLINICAL NEUROPSYCHOLOGY FELLOW,<br/>WRITER, AND FOUNDER.
+                            Neuropsychology Fellow &amp; Poet
                         </p>
                         <p className="hero-primary-subtext animate-text delay-2">
-                            Neuropsychology fellow, founder, and poet — writing on identity, creativity, performance, and the brain.
+                            I study how the brain builds a self, and I write about what that feels like.
                         </p>
                         <Link to="/speaking" className="hero-eyebrow-tag animate-text delay-3">
                             SPEAKING AT SXSW 2027 · AUSTIN, MARCH
                         </Link>
                         <div className="hero-cta-group animate-text delay-3">
                             <Button to="/writing" variant="primary" className="btn-large btn-cta-primary">
-                                Read Writing
+                                Read the Writing
                             </Button>
-                            <Button to="/contact" variant="outline" className="btn-large btn-cta-outline">
-                                Work With Me
+                            <Button to="/speaking" variant="outline" className="btn-large btn-cta-outline">
+                                Invite Me to Speak
                             </Button>
                         </div>
                         <p className="hero-credentials animate-text delay-4">
-                            Clinical Fellow in Psychology at Harvard Medical School · Founder, PsychDraft · Founder & Literary Curator, Searching for Home Collective
+                            Clinical Fellow in Psychology at Harvard Medical School · Founder, PsychDraft · Founder &amp; Literary Curator, Searching for Home Collective
                         </p>
                     </div>
                 </div>
             </section>
 
-            {/* Featured In Section */}
-            <section className="featured-in-section">
+            {/* Through-line statement, says the connection out loud */}
+            <section className="throughline-section">
                 <div className="container">
-                    <span className="featured-in-label">Featured In</span>
-                    <div className="featured-logos">
-                        <img src={NRTimesLogo} alt="NR Times" className="logo-nr-times" />
-                        <img src={PsychTodayLogo} alt="Psychology Today" />
-                    </div>
-                </div>
-            </section>
-
-            {/* Writing Section */}
-            <section className="writing-preview-section section">
-                <div className="container text-center">
-                    <h2 className="section-label" style={{marginBottom: "1rem"}}>Writing</h2>
-                    <p className="writing-preview-body">
-                        Essays on identity, attention, and meaning across Substack and Psychology Today.
+                    <p className="throughline-statement">
+                        I work one question from several directions: how people build, lose, and rebuild a sense of self. The neuropsychology is how I study it, the poetry is how I live it, the talks are how I teach it.
                     </p>
-                    <div className="writing-preview-links">
-                        <a href="https://elizabethmateer.substack.com/" target="_blank" rel="noopener noreferrer" className="writing-preview-link">
-                            Where Attention Goes →
-                        </a>
-                        <a href="https://www.psychologytoday.com/us/blog/the-architecture-of-identity" target="_blank" rel="noopener noreferrer" className="writing-preview-link">
-                            Psychology Today →
-                        </a>
-                        <Button to="/writing" variant="text" className="writing-preview-link-btn">
-                            Read all writing →
-                        </Button>
+                </div>
+            </section>
+
+            {/* Proof bar */}
+            <section className="featured-in-section">
+                <div className="container proof-bar">
+                    <div className="proof-row">
+                        <span className="featured-in-label">Featured In</span>
+                        <p className="proof-names">Psychology Today · Applied Neuropsychology: Adult</p>
+                    </div>
+                    <div className="proof-row">
+                        <span className="featured-in-label">Spoken At</span>
+                        <p className="proof-names">SXSW 2027 · MIT Sloan Fellows MBA · Boston Tech Week</p>
                     </div>
                 </div>
             </section>
 
-            {/* Work Section */}
-            <section className="work-section section bg-light">
+            {/* Three facets, one subject, several instruments */}
+            <section className="facets-section section">
                 <div className="container">
-                    <h2 className="section-label text-center" style={{marginBottom: "3rem"}}>Work</h2>
                     <div className="work-cards-grid">
                         <div className="work-card">
+                            <h3>Writing</h3>
+                            <p>Essays and a Psychology Today column on identity, attention, and becoming.</p>
+                            <Button to="/writing" variant="text" className="work-cta">Read the writing →</Button>
+                        </div>
+                        <div className="work-card">
                             <h3>Speaking</h3>
-                            <p>
-                                Talks on neuropsychology, identity, creativity, and performance.
-                                <span className="work-card-note">Speaking at SXSW 2027.</span>
-                            </p>
-                            <Button to="/speaking" variant="text" className="work-cta">Invite to Speak →</Button>
+                            <p>Talks that turn the research into something a room can use, most recently MIT Sloan, Boston Tech Week, and SXSW 2027.</p>
+                            <Button to="/speaking" variant="text" className="work-cta">See speaking →</Button>
                         </div>
                         <div className="work-card">
-                            <h3>Consulting</h3>
-                            <p>Strategic advisory at the intersection of psychology, culture, and systems thinking.</p>
-                            <Button to="/consulting" variant="text" className="work-cta">Explore Consulting →</Button>
-                        </div>
-                        <div className="work-card">
-                            <h3>Searching for Home Collective</h3>
-                            <p>A literary salon and creative platform for writers drawn to craft, risk, and meaningful exchange.</p>
-                            <Button href="https://www.searchingforhomecollective.com/" target="_blank" variant="text" className="work-cta">Explore the Collective →</Button>
+                            <h3>Poetry</h3>
+                            <p>Two collections about belonging and the long work of becoming yourself.</p>
+                            <Button to="/poetry" variant="text" className="work-cta">Read the poetry →</Button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Venture Section */}
-            <section className="venture-section section">
-                <div className="container venture-container">
-                    <span className="venture-label">Venture</span>
-                    <h2 className="venture-heading">PsychDraft</h2>
-                    <p className="venture-body">
-                        An AI-assisted platform reimagining neuropsychological documentation through systems design and clinical precision.
+            {/*
+              A TASTE OF THE WORK, waiting on Elizabeth's chosen lines.
+              Drop 4–6 lines of poetry here as a <section className="taste-section"> so a
+              visitor actually reads her on the homepage. Left out until she picks the lines.
+            */}
+
+            {/* Ventures & community */}
+            <section className="ventures-strip section">
+                <div className="container ventures-container">
+                    <p className="venture-line">
+                        <strong>PsychDraft</strong>, the platform I founded to give clinicians their time back, so they can spend it being present with the people in front of them.{' '}
+                        <a href="https://www.psychdraft.com" target="_blank" rel="noopener noreferrer">Explore PsychDraft →</a>
                     </p>
-                    <div className="venture-cta">
-                        <Button href="https://www.psychdraft.com" target="_blank" variant="text" className="btn-venture-link">
-                            Explore PsychDraft →
-                        </Button>
-                    </div>
+                    <p className="venture-line">
+                        <strong>Searching for Home Collective</strong>, the literary salon I founded and curate in Boston.{' '}
+                        <a href="https://www.searchingforhomecollective.com/" target="_blank" rel="noopener noreferrer">Explore the Collective →</a>
+                    </p>
                 </div>
             </section>
         </div>
