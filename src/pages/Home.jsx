@@ -46,6 +46,18 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Seasonal callout: holiday book & pajama drive */}
+            <section className="holiday-callout-section">
+                <div className="container holiday-callout">
+                    <p className="holiday-callout-text">
+                        This holiday season I&rsquo;m collecting new books and pajamas for Boston kids.
+                    </p>
+                    <Button to="/book-drive" variant="outline" className="holiday-callout-btn">
+                        The Book Drive →
+                    </Button>
+                </div>
+            </section>
+
             {/* Through-line statement, says the connection out loud */}
             <section className="throughline-section">
                 <div className="container">
