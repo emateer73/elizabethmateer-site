@@ -16,6 +16,8 @@ import Links from './pages/Links';
 import FoundersMind from './pages/FoundersMind';
 import BuildWithYourBrain from './pages/BuildWithYourBrain';
 
+import BookDrive from './pages/BookDrive';
+
 function App() {
   return (
     <Router>
@@ -43,6 +45,7 @@ function App() {
               <Route path="/private-work-inquiry" element={<Navigate to="/contact" replace />} />
               <Route path="/founders-mind" element={<FoundersMind />} />
               <Route path="/build-with-your-brain" element={<BuildWithYourBrain />} />
+              <Route path="/book-drive" element={<BookDrive />} />
             </Routes>
           </Layout>
         } />
