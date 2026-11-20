@@ -59,11 +59,14 @@ const BookDrive = () => {
 
                         <div className="bd-help-card">
                             <span className="bd-card-number">02</span>
-                            <h3 className="bd-card-title">Drop off in person</h3>
+                            <h3 className="bd-card-title">Give in person</h3>
                             <p className="bd-card-text">
-                                Leave new books or pajamas in the collection box at The Towers at Longfellow
-                                (Tower&nbsp;4 lobby). More collection points around Boston are being added.
+                                Prefer to hand off books or pajamas directly? Get in touch and we&rsquo;ll
+                                coordinate a drop-off somewhere in Boston.
                             </p>
+                            <Button to="/contact" variant="outline" className="bd-btn">
+                                Get in touch
+                            </Button>
                         </div>
                     </div>
                 </section>
