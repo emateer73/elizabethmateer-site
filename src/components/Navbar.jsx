@@ -21,6 +21,7 @@ const Navbar = () => {
         { name: 'Speaking', path: '/speaking' },
         { name: 'Poetry', path: '/poetry' },
         { name: 'Contact', path: '/contact' },
+        { name: 'Book Drive', path: '/book-drive', cta: true },
     ];
 
     return (
@@ -39,7 +40,7 @@ const Navbar = () => {
                         <li key={link.name}>
                             <Link
                                 to={link.path}
-                                className={location.pathname === link.path ? 'active' : ''}
+                                className={`${location.pathname === link.path ? 'active' : ''}${link.cta ? ' navbar-cta' : ''}`}
                                 onClick={closeMenu}
                             >
                                 {link.name}
