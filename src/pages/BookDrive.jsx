@@ -6,6 +6,22 @@ import './BookDrive.css';
 
 const WISHLIST_URL = 'https://www.amazon.com/hz/wishlist/ls/2F31NCGUPC037';
 
+const HollyDivider = () => (
+    <div className="bd-ornament" role="presentation" aria-hidden="true">
+        <span className="bd-ornament-rule" />
+        <svg className="bd-holly" viewBox="0 0 72 30" xmlns="http://www.w3.org/2000/svg">
+            <path className="bd-holly-leaf" transform="translate(36 13) rotate(-22)"
+                d="M0,0 C7,-6 15,-6 22,0 C15,6 7,6 0,0 Z" />
+            <path className="bd-holly-leaf" transform="translate(36 13) scale(-1 1) rotate(-22)"
+                d="M0,0 C7,-6 15,-6 22,0 C15,6 7,6 0,0 Z" />
+            <circle className="bd-holly-berry" cx="36" cy="18" r="2.6" />
+            <circle className="bd-holly-berry" cx="31.3" cy="21" r="2.6" />
+            <circle className="bd-holly-berry" cx="40.7" cy="21" r="2.6" />
+        </svg>
+        <span className="bd-ornament-rule" />
+    </div>
+);
+
 const BookDrive = () => {
     useDocumentTitle('Holiday Book & Pajama Drive | Elizabeth Mateer, Ph.D.');
 
@@ -23,7 +39,7 @@ const BookDrive = () => {
                     </p>
                 </header>
 
-                <hr className="bd-divider" />
+                <HollyDivider />
 
                 {/* Why */}
                 <section className="bd-section bd-why">
@@ -71,7 +87,7 @@ const BookDrive = () => {
                     </div>
                 </section>
 
-                <hr className="bd-divider" />
+                <HollyDivider />
 
                 {/* What's welcome + dates */}
                 <section className="bd-section bd-details">
@@ -89,7 +105,7 @@ const BookDrive = () => {
                     </div>
                 </section>
 
-                <hr className="bd-divider" />
+                <HollyDivider />
 
                 {/* About Beyond Bedtime */}
                 <section className="bd-section bd-partner">

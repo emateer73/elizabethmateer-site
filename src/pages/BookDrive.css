@@ -4,7 +4,7 @@
    ------------------------------------------------------------- */
 
 .bookdrive-page {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0 var(--spacing-lg) 0;
     background-color: var(--color-bg-primary);
 }
 
@@ -13,19 +13,42 @@
     margin: 0 auto;
 }
 
-/* Dividers */
-.bd-divider {
-    border: none;
-    border-top: 1px solid var(--color-border);
-    max-width: 160px;
-    margin: clamp(2.5rem, 5vw, 3.5rem) auto;
-    opacity: 0.55;
+/* Holly-sprig section ornament */
+.bd-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    max-width: 360px;
+    margin: clamp(1.1rem, 2.4vw, 1.7rem) auto;
+}
+
+.bd-ornament-rule {
+    flex: 1;
+    height: 1px;
+    max-width: 90px;
+    background-color: var(--color-border);
+    opacity: 0.7;
+}
+
+.bd-holly {
+    width: 58px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.bd-holly-leaf {
+    fill: var(--color-accent-sage);
+}
+
+.bd-holly-berry {
+    fill: var(--color-accent-terracotta);
 }
 
 /* Hero */
 .bd-hero {
     text-align: center;
-    padding: var(--spacing-lg) var(--spacing-md) 0 var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md);
     max-width: 760px;
     margin: 0 auto;
 }
@@ -200,7 +223,7 @@
 /* CTA */
 .bd-cta-section {
     padding: 0 var(--spacing-md);
-    margin-top: clamp(2.5rem, 5vw, 4rem);
+    margin-top: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .bd-cta-card {
